@@ -1,0 +1,82 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="AdminMasterPage.master.cs" Inherits="AdminMasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Railway Reservation System - Admin</title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+            <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+              
+                <a class="navbar-brand" href="#">Railway Reservation System - Admin</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+      
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container">
+
+        <div class="row">
+
+            <div class="col-md-3">
+                
+                <div class="list-group">
+                    <a href="Home_Admin.aspx" class="list-group-item">Home</a>
+                    <a href="Train_Management.aspx" class="list-group-item">Train Management</a>
+                    <a href="Route_Management.aspx" class="list-group-item">Route Management</a>
+                    <a href="Booking_Management.aspx" class="list-group-item">Booking Management</a
+                    ><a href="Account_Management.aspx" class="list-group-item">Account Management</a>
+                    <a href="Report.aspx" class="list-group-item">Report</a>
+                </div>
+            </div>
+
+            <div class="col-md-9">
+
+                        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+
+            </div>
+
+        </div>
+
+    </div>
+    <!-- /.container -->
+
+    <div class="container">
+
+        <hr>
+
+        <!-- Footer -->
+        <footer>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p style="text-align:right">Copyright &copy; Railway Reservation System 2017</p>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+    <!-- /.container -->
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    </form>
+</body>
+</html>
