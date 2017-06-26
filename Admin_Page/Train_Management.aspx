@@ -4,7 +4,7 @@
     <style type="text/css">
         .auto-style1 {
             width: 100%;
-            height: 424px;
+            height: 262px;
         }
         .auto-style2 {
             height: 30px;
@@ -48,10 +48,25 @@
         .auto-style18 {
             height: 38px;
         }
+        .auto-style23 {
+            width: 53px;
+            height: 24px;
+        }
+        .auto-style24 {
+            width: 125px;
+            height: 24px;
+        }
+        .auto-style25 {
+            width: 19px;
+            height: 24px;
+        }
+        .auto-style26 {
+            height: 24px;
+        }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-    <asp:Panel ID="Panel1" runat="server" Height="426px">
+    <asp:Panel ID="Panel1" runat="server" Height="512px">
         <table class="auto-style1">
             <tr>
                 <td class="auto-style2" colspan="4">Train Management</td>
@@ -93,18 +108,51 @@
                 </td>
             </tr>
             <tr>
+                <td class="auto-style23"></td>
+                <td class="auto-style24"></td>
+                <td class="auto-style25"></td>
+                <td class="auto-style26">
+                    <br />
+                    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" DeleteCommand="DELETE FROM [Trains] WHERE [Train_ID] = @Train_ID" InsertCommand="INSERT INTO [Trains] ([Train_ID], [Name], [Capacity]) VALUES (@Train_ID, @Name, @Capacity)" SelectCommand="SELECT * FROM [Trains]" UpdateCommand="UPDATE [Trains] SET [Name] = @Name, [Capacity] = @Capacity WHERE [Train_ID] = @Train_ID">
+                        <DeleteParameters>
+                            <asp:Parameter Name="Train_ID" Type="String" />
+                        </DeleteParameters>
+                        <InsertParameters>
+                            <asp:Parameter Name="Train_ID" Type="String" />
+                            <asp:Parameter Name="Name" Type="String" />
+                            <asp:Parameter Name="Capacity" Type="Int32" />
+                        </InsertParameters>
+                        <UpdateParameters>
+                            <asp:Parameter Name="Name" Type="String" />
+                            <asp:Parameter Name="Capacity" Type="Int32" />
+                            <asp:Parameter Name="Train_ID" Type="String" />
+                        </UpdateParameters>
+                    </asp:SqlDataSource>
+                </td>
+            </tr>
+            <tr>
                 <td class="auto-style7">&nbsp;</td>
                 <td class="auto-style10">&nbsp;</td>
                 <td class="auto-style9">&nbsp;</td>
                 <td>
-                    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [Trains]"></asp:SqlDataSource>
                     <br />
-                    <br />
-                    <br />
-                    <br />
-                    <br />
-                    <br />
-                    <br />
+                    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" BackColor="#CCCCCC" BorderColor="#999999" BorderStyle="Solid" BorderWidth="3px" CellPadding="4" CellSpacing="2" DataKeyNames="Train_ID" DataSourceID="SqlDataSource1" ForeColor="Black" Width="903px">
+                        <Columns>
+                            <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" />
+                            <asp:BoundField DataField="Train_ID" HeaderText="Train_ID" ReadOnly="True" SortExpression="Train_ID" />
+                            <asp:BoundField DataField="Name" HeaderText="Name" SortExpression="Name" />
+                            <asp:BoundField DataField="Capacity" HeaderText="Capacity" SortExpression="Capacity" />
+                        </Columns>
+                        <FooterStyle BackColor="#CCCCCC" />
+                        <HeaderStyle BackColor="Black" Font-Bold="True" ForeColor="White" />
+                        <PagerStyle BackColor="#CCCCCC" ForeColor="Black" HorizontalAlign="Left" />
+                        <RowStyle BackColor="White" />
+                        <SelectedRowStyle BackColor="#000099" Font-Bold="True" ForeColor="White" />
+                        <SortedAscendingCellStyle BackColor="#F1F1F1" />
+                        <SortedAscendingHeaderStyle BackColor="#808080" />
+                        <SortedDescendingCellStyle BackColor="#CAC9C9" />
+                        <SortedDescendingHeaderStyle BackColor="#383838" />
+                    </asp:GridView>
                     <br />
                 </td>
             </tr>
