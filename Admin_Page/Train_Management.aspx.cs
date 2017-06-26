@@ -7,11 +7,13 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
+
 public partial class Admin_Page_Train_Management : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
         lbl_feedback.Visible = false;
+        lbl_feedback1.Visible = false;
     }
 
 
@@ -40,7 +42,7 @@ public partial class Admin_Page_Train_Management : System.Web.UI.Page
                 lbl_feedback.Visible = true;
                 GridView1.DataBind();
                 trainclear();
-                
+
             }
 
             con.Close();
@@ -63,4 +65,24 @@ public partial class Admin_Page_Train_Management : System.Web.UI.Page
         tb_trainname.Text = "";
         tb_traincapacity.Text = "";
     }
+
+
+
+    protected void GridView1_RowUpdated(object sender, GridViewUpdatedEventArgs e)
+    {
+        lbl_feedback1.Text = "TRAIN HAS BEEN UPDATED SUCCESSFULLY";
+        lbl_feedback1.Visible = true;
+        GridView1.DataBind();
+    }
+
+    protected void GridView1_RowDeleted(object sender, GridViewDeletedEventArgs e)
+    {
+
+
+        lbl_feedback1.Text = "TRAIN HAS BEEN DELETED SUCCESSFULLY";
+        lbl_feedback1.Visible = true;
+        GridView1.DataBind();
+    }
 }
+
+

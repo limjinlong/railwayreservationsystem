@@ -63,19 +63,34 @@
         .auto-style26 {
             height: 24px;
         }
+        .auto-style27 {
+            width: 53px;
+            height: 29px;
+        }
+        .auto-style28 {
+            width: 125px;
+            height: 29px;
+        }
+        .auto-style29 {
+            width: 19px;
+            height: 29px;
+        }
+        .auto-style30 {
+            height: 29px;
+        }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-    <asp:Panel ID="Panel1" runat="server" Height="512px">
+    <asp:Panel ID="Panel1" runat="server" Height="562px">
         <table class="auto-style1">
             <tr>
                 <td class="auto-style2" colspan="4">Train Management</td>
             </tr>
             <tr>
-                <td class="auto-style7">&nbsp;</td>
-                <td class="auto-style10">Train ID</td>
-                <td class="auto-style9">:</td>
-                <td>
+                <td class="auto-style27"></td>
+                <td class="auto-style28">Train ID</td>
+                <td class="auto-style29">:</td>
+                <td class="auto-style30">
                     <asp:TextBox ID="tb_trainid" runat="server" Width="300px"></asp:TextBox>
                 </td>
             </tr>
@@ -136,7 +151,7 @@
                 <td class="auto-style9">&nbsp;</td>
                 <td>
                     <br />
-                    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" BackColor="#CCCCCC" BorderColor="#999999" BorderStyle="Solid" BorderWidth="3px" CellPadding="4" CellSpacing="2" DataKeyNames="Train_ID" DataSourceID="SqlDataSource1" ForeColor="Black" Width="903px">
+                    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" BackColor="#CCCCCC" BorderColor="#999999" BorderStyle="Solid" BorderWidth="3px" CellPadding="6" CellSpacing="4" DataKeyNames="Train_ID" DataSourceID="SqlDataSource1" ForeColor="Black" Width="737px" OnRowUpdated="GridView1_RowUpdated" OnRowDeleted="GridView1_RowDeleted">
                         <Columns>
                             <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" />
                             <asp:BoundField DataField="Train_ID" HeaderText="Train_ID" ReadOnly="True" SortExpression="Train_ID" />
@@ -153,6 +168,9 @@
                         <SortedDescendingCellStyle BackColor="#CAC9C9" />
                         <SortedDescendingHeaderStyle BackColor="#383838" />
                     </asp:GridView>
+                    <br />
+                    <asp:Label ID="lbl_feedback1" runat="server" ForeColor="Lime" Text="[Feedback Msg]"></asp:Label>
+                    <br />
                     <br />
                 </td>
             </tr>
