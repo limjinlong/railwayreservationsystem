@@ -45,8 +45,8 @@
         }
         .auto-style12 {
         }
-        .auto-style16 {
-            width: 300px;
+        .auto-style17 {
+            margin-left: 10px;
         }
     </style>
    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
@@ -70,7 +70,7 @@
                 <td class="auto-style12">Route ID</td>
                 <td class="auto-style13">:</td>
                 <td class="auto-style14">
-                    <asp:TextBox ID="TextBox3" runat="server" Width="300px"></asp:TextBox>
+                    <asp:TextBox ID="tb_routeid" runat="server" Width="300px"></asp:TextBox>
                 </td>
             </tr>
             <tr>
@@ -78,7 +78,7 @@
                 <td class="auto-style12">Origin</td>
                 <td class="auto-style10">:</td>
                 <td class="auto-style5">
-                    <asp:TextBox ID="TextBox4" runat="server" Width="300px"></asp:TextBox>
+                    <asp:TextBox ID="tb_origin" runat="server" Width="300px"></asp:TextBox>
                 </td>
             </tr>
             <tr>
@@ -86,7 +86,7 @@
                 <td class="auto-style12">Destination</td>
                 <td class="auto-style13">:</td>
                 <td class="auto-style14">
-                    <asp:TextBox ID="TextBox5" runat="server" Width="300px"></asp:TextBox>
+                    <asp:TextBox ID="tb_destination" runat="server" Width="300px"></asp:TextBox>
                 </td>
             </tr>
             <tr>
@@ -94,7 +94,7 @@
                 <td class="auto-style12">Date</td>
                 <td class="auto-style13">:</td>
                 <td class="auto-style14">                  
-                    <input type="text" id="datepicker" class="auto-style16" />
+                    <asp:TextBox ID="tb_date" runat="server" TextMode="Date" Width="300px"></asp:TextBox>
                 </td>
             </tr>
             <tr>
@@ -102,7 +102,7 @@
                 <td class="auto-style12">Time</td>
                 <td class="auto-style9">:</td>
                 <td>
-                    <asp:TextBox ID="TextBox6" runat="server" Width="300px"></asp:TextBox>
+                    <asp:TextBox ID="tb_time" runat="server" Width="300px"></asp:TextBox>
                 </td>
             </tr>
             <tr>
@@ -110,7 +110,7 @@
                 <td class="auto-style12">Train ID</td>
                 <td class="auto-style9">:</td>
                 <td>
-                    <asp:DropDownList ID="DropDownList1" runat="server" Width="149px">
+                    <asp:DropDownList ID="ddl_trainid" runat="server" Width="149px">
                     </asp:DropDownList>
                 </td>
             </tr>
@@ -119,7 +119,8 @@
                 <td class="auto-style12">Price</td>
                 <td class="auto-style13">:</td>
                 <td class="auto-style14">
-                    <asp:TextBox ID="TextBox7" runat="server" Width="300px"></asp:TextBox>
+                    <asp:Label ID="Label1" runat="server" Text="RM"></asp:Label>
+                    <asp:TextBox ID="tb_price" runat="server" Width="258px" CssClass="auto-style17"></asp:TextBox>
                 </td>
             </tr>
             <tr>
@@ -127,9 +128,11 @@
                 <td class="auto-style12">&nbsp;</td>
                 <td class="auto-style13">&nbsp;</td>
                 <td class="auto-style14">
-                    <asp:Button ID="Button1" runat="server" Text="Add Route" Width="132px" />
+                    <asp:Button ID="btn_addroute" runat="server" Text="Add Route" Width="132px" OnClick="btn_addroute_Click" />
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <asp:Button ID="Button2" runat="server" Text="Clear" Width="132px" />
+                    <asp:Button ID="btn_clear" runat="server" Text="Clear" Width="132px" />
+                    <br />
+                    <asp:Label ID="lbl_feedback" runat="server" ForeColor="Lime" Text="[Feedback Msg]"></asp:Label>
                 </td>
             </tr>
             <tr>
@@ -142,7 +145,10 @@
                     <br />
                 </td>
                 <td class="auto-style9">&nbsp;</td>
-                <td>&nbsp;</td>
+                <td>
+                    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [Routes]"></asp:SqlDataSource>
+                    <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [Train_ID] FROM [Trains]"></asp:SqlDataSource>
+                </td>
             </tr>
         </table>
 </asp:Panel>
