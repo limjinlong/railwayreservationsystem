@@ -50,10 +50,6 @@ public partial class Admin_Page_Train_Management : System.Web.UI.Page
         }
     }
 
-    private void ShowAsync()
-    {
-        throw new NotImplementedException();
-    }
 
     protected void btn_clear_Click(object sender, EventArgs e)
     {
