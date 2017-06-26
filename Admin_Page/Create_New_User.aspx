@@ -69,9 +69,9 @@
                     <td class="auto-style7">Role</td>
                     <td class="auto-style8">:</td>
                     <td class="auto-style9">
-                        <asp:RadioButton ID="rb_admin" runat="server" Text="Admin" />
+                        <asp:RadioButton ID="rb_admin" runat="server" Text="Admin" Checked="True" GroupName="1" />
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <asp:RadioButton ID="rb_frontdesk" runat="server" Text="Front Desk" />
+                        <asp:RadioButton ID="rb_frontdesk" runat="server" Text="Front Desk" GroupName="1" />
                     </td>
                 </tr>
                 <tr>
@@ -92,9 +92,9 @@
                     <td class="auto-style7">Gender</td>
                     <td class="auto-style8">:</td>
                     <td class="auto-style9">
-                        <asp:RadioButton ID="rb_male" runat="server" Text="Male" />
+                        <asp:RadioButton ID="rb_male" runat="server" Text="Male" Checked="True" GroupName="2" />
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <asp:RadioButton ID="rb_female" runat="server" Text="Female" />
+                        <asp:RadioButton ID="rb_female" runat="server" Text="Female" GroupName="2" />
                     </td>
                 </tr>
                 <tr>
@@ -156,11 +156,15 @@
                         <asp:Button ID="btn_add" runat="server" Text="Add" Width="148px" OnClick="btn_add_Click" />
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         <asp:Button ID="btn_cancel" runat="server" Text="Cancel" Width="127px" />
+                        <br />
+                        <asp:Label ID="lbl_feedback" runat="server" ForeColor="Lime" Text="[Feedback Msg]"></asp:Label>
                     </td>
                 </tr>
             </table>
         </asp:Panel>
     </form>
         </div>
+    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [Admins]"></asp:SqlDataSource>
+    <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [FrontDesks]"></asp:SqlDataSource>
 </body>
 </html>
