@@ -153,7 +153,7 @@
                     <td class="auto-style7">&nbsp;</td>
                     <td class="auto-style5">&nbsp;</td>
                     <td class="auto-style21">
-                        <asp:Button ID="btn_add" runat="server" Text="Add" Width="148px" />
+                        <asp:Button ID="btn_add" runat="server" Text="Add" Width="148px" OnClick="btn_add_Click" />
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         <asp:Button ID="btn_cancel" runat="server" Text="Cancel" Width="127px" />
                     </td>
