@@ -69,52 +69,53 @@
                     <td class="auto-style7">Role</td>
                     <td class="auto-style8">:</td>
                     <td class="auto-style9">
-                        <asp:RadioButton ID="RadioButton1" runat="server" Text="Admin" />
+                        <asp:RadioButton ID="rb_admin" runat="server" Text="Admin" />
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <asp:RadioButton ID="RadioButton2" runat="server" Text="Front Desk" />
+                        <asp:RadioButton ID="rb_frontdesk" runat="server" Text="Front Desk" />
                     </td>
                 </tr>
                 <tr>
                     <td class="auto-style7">ID:</td>
                     <td class="auto-style8">&nbsp;</td>
                     <td class="auto-style9">
-                        <asp:TextBox ID="TextBox9" runat="server" Width="308px"></asp:TextBox>
+                        <asp:TextBox ID="tb_id" runat="server" Width="308px"></asp:TextBox>
                     </td>
                 </tr>
                 <tr>
                     <td class="auto-style7">Name</td>
                     <td class="auto-style5">:</td>
                     <td class="auto-style21">
-                        <asp:TextBox ID="TextBox2" runat="server" Width="308px"></asp:TextBox>
+                        <asp:TextBox ID="tb_name" runat="server" Width="308px"></asp:TextBox>
                     </td>
                 </tr>
                 <tr>
                     <td class="auto-style7">Gender</td>
                     <td class="auto-style8">:</td>
                     <td class="auto-style9">
-                        <asp:DropDownList ID="DropDownList1" runat="server" Width="149px">
-                        </asp:DropDownList>
+                        <asp:RadioButton ID="rb_male" runat="server" Text="Male" />
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <asp:RadioButton ID="rb_female" runat="server" Text="Female" />
                     </td>
                 </tr>
                 <tr>
                     <td class="auto-style7">NRIC</td>
                     <td class="auto-style5">:</td>
                     <td class="auto-style21">
-                        <asp:TextBox ID="TextBox4" runat="server" Width="308px"></asp:TextBox>
+                        <asp:TextBox ID="tb_nric" runat="server" Width="308px"></asp:TextBox>
                     </td>
                 </tr>
                 <tr>
                     <td class="auto-style7">Email</td>
                     <td class="auto-style5">:</td>
                     <td class="auto-style21">
-                        <asp:TextBox ID="TextBox5" runat="server" Width="308px"></asp:TextBox>
+                        <asp:TextBox ID="tb_email" runat="server" Width="308px"></asp:TextBox>
                     </td>
                 </tr>
                 <tr>
                     <td class="auto-style7">H/P No.</td>
                     <td class="auto-style5">:</td>
                     <td class="auto-style21">
-                        <asp:TextBox ID="TextBox6" runat="server" Width="308px"></asp:TextBox>
+                        <asp:TextBox ID="tb_phone" runat="server" Width="308px"></asp:TextBox>
                     </td>
                 </tr>
                 <tr>
@@ -123,7 +124,7 @@
                     <td class="auto-style7">Address</td>
                     <td class="auto-style18">:</td>
                     <td class="auto-style19">
-                        <asp:TextBox ID="TextBox7" runat="server" Width="308px"></asp:TextBox>
+                        <asp:TextBox ID="tb_address" runat="server" Width="308px"></asp:TextBox>
                     </td>
                 </tr>
                 <tr>
@@ -131,30 +132,30 @@
                     <td class="auto-style7">Username</td>
                     <td class="auto-style18">:</td>
                     <td class="auto-style19">
-                        <asp:TextBox ID="TextBox8" runat="server" Width="308px"></asp:TextBox>
+                        <asp:TextBox ID="tb_username" runat="server" Width="308px"></asp:TextBox>
                     </td>
                 </tr>
                 <tr>
                     <td class="auto-style7">Password:</td>
                     <td class="auto-style5">:</td>
                     <td class="auto-style21">
-                        <asp:TextBox ID="TextBox10" runat="server" Width="308px" TextMode="Password"></asp:TextBox>
+                        <asp:TextBox ID="tb_password" runat="server" Width="308px" TextMode="Password"></asp:TextBox>
                     </td>
                 </tr>
                 <tr>
                     <td class="auto-style7">Confirm Password</td>
                     <td class="auto-style5">:</td>
                     <td class="auto-style21">
-                        <asp:TextBox ID="TextBox11" runat="server" Width="308px" TextMode="Password"></asp:TextBox>
+                        <asp:TextBox ID="tb_confirmpassword" runat="server" Width="308px" TextMode="Password"></asp:TextBox>
                     </td>
                 </tr>
                 <tr>
                     <td class="auto-style7">&nbsp;</td>
                     <td class="auto-style5">&nbsp;</td>
                     <td class="auto-style21">
-                        <asp:Button ID="Button2" runat="server" Text="Add" Width="148px" />
+                        <asp:Button ID="btn_add" runat="server" Text="Add" Width="148px" />
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <asp:Button ID="Button3" runat="server" Text="Cancel" Width="127px" />
+                        <asp:Button ID="btn_cancel" runat="server" Text="Cancel" Width="127px" />
                     </td>
                 </tr>
             </table>
