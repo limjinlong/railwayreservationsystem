@@ -12,7 +12,7 @@ public partial class Admin_Page_Account_Management : System.Web.UI.Page
 
     }
 
-    protected void Button1_Click(object sender, EventArgs e)
+    protected void btn_delete_Click(object sender, EventArgs e)
     {
 
     }
