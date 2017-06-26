@@ -7,6 +7,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
+
 public partial class Admin_Page_Train_Management : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
@@ -76,6 +77,8 @@ public partial class Admin_Page_Train_Management : System.Web.UI.Page
 
     protected void GridView1_RowDeleted(object sender, GridViewDeletedEventArgs e)
     {
+
+
         lbl_feedback1.Text = "TRAIN HAS BEEN DELETED SUCCESSFULLY";
         lbl_feedback1.Visible = true;
         GridView1.DataBind();
@@ -83,4 +86,3 @@ public partial class Admin_Page_Train_Management : System.Web.UI.Page
 }
 
 
-}

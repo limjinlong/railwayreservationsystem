@@ -6,10 +6,8 @@
             width: 100%;
             height: 575px;
         }
-        .auto-style3 {
-        }
         .auto-style4 {
-            width: 70px;
+            width: 53px;
             height: 31px;
         }
         .auto-style5 {
@@ -48,6 +46,16 @@
         .auto-style17 {
             margin-left: 10px;
         }
+        .auto-style18 {
+            height: 12px;
+        }
+        .auto-style19 {
+            width: 53px;
+            height: 32px;
+        }
+        .auto-style20 {
+            width: 53px;
+        }
     </style>
    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
   <link rel="stylesheet" href="/resources/demos/style.css">
@@ -63,10 +71,10 @@
     <asp:Panel ID="Panel1" runat="server" Height="579px">
         <table class="auto-style1">
             <tr>
-                <td class="auto-style3" colspan="4">Route Management</td>
+                <td class="auto-style18" colspan="4">Route Management</td>
             </tr>
             <tr>
-                <td class="auto-style11"></td>
+                <td class="auto-style19"></td>
                 <td class="auto-style12">Route ID</td>
                 <td class="auto-style13">:</td>
                 <td class="auto-style14">
@@ -82,7 +90,7 @@
                 </td>
             </tr>
             <tr>
-                <td class="auto-style11"></td>
+                <td class="auto-style19"></td>
                 <td class="auto-style12">Destination</td>
                 <td class="auto-style13">:</td>
                 <td class="auto-style14">
@@ -90,7 +98,7 @@
                 </td>
             </tr>
             <tr>
-                <td class="auto-style11"></td>
+                <td class="auto-style19"></td>
                 <td class="auto-style12">Date</td>
                 <td class="auto-style13">:</td>
                 <td class="auto-style14">                  
@@ -98,7 +106,7 @@
                 </td>
             </tr>
             <tr>
-                <td class="auto-style6">&nbsp;</td>
+                <td class="auto-style20">&nbsp;</td>
                 <td class="auto-style12">Time</td>
                 <td class="auto-style9">:</td>
                 <td>
@@ -106,7 +114,7 @@
                 </td>
             </tr>
             <tr>
-                <td class="auto-style6">&nbsp;</td>
+                <td class="auto-style20">&nbsp;</td>
                 <td class="auto-style12">Train ID</td>
                 <td class="auto-style9">:</td>
                 <td>
@@ -115,7 +123,7 @@
                 </td>
             </tr>
             <tr>
-                <td class="auto-style11"></td>
+                <td class="auto-style19"></td>
                 <td class="auto-style12">Price</td>
                 <td class="auto-style13">:</td>
                 <td class="auto-style14">
@@ -124,7 +132,7 @@
                 </td>
             </tr>
             <tr>
-                <td class="auto-style11">&nbsp;</td>
+                <td class="auto-style19">&nbsp;</td>
                 <td class="auto-style12">&nbsp;</td>
                 <td class="auto-style13">&nbsp;</td>
                 <td class="auto-style14">
@@ -136,7 +144,7 @@
                 </td>
             </tr>
             <tr>
-                <td class="auto-style6">&nbsp;</td>
+                <td class="auto-style20">&nbsp;</td>
                 <td class="auto-style7">
                     <br />
                     <br />

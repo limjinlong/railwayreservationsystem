@@ -63,6 +63,21 @@
         .auto-style26 {
             height: 24px;
         }
+        .auto-style27 {
+            width: 53px;
+            height: 29px;
+        }
+        .auto-style28 {
+            width: 125px;
+            height: 29px;
+        }
+        .auto-style29 {
+            width: 19px;
+            height: 29px;
+        }
+        .auto-style30 {
+            height: 29px;
+        }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
@@ -72,10 +87,10 @@
                 <td class="auto-style2" colspan="4">Train Management</td>
             </tr>
             <tr>
-                <td class="auto-style7">&nbsp;</td>
-                <td class="auto-style10">Train ID</td>
-                <td class="auto-style9">:</td>
-                <td>
+                <td class="auto-style27"></td>
+                <td class="auto-style28">Train ID</td>
+                <td class="auto-style29">:</td>
+                <td class="auto-style30">
                     <asp:TextBox ID="tb_trainid" runat="server" Width="300px"></asp:TextBox>
                 </td>
             </tr>
