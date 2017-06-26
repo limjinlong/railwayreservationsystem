@@ -38,8 +38,9 @@ public partial class Admin_Page_Train_Management : System.Web.UI.Page
                 cmd1.ExecuteNonQuery();
                 lbl_feedback.Text = "NEW TRAIN HAS BEEN ADDED SUCCESSFULLY";
                 lbl_feedback.Visible = true;
+                GridView1.DataBind();
                 trainclear();
-
+                
             }
 
             con.Close();
