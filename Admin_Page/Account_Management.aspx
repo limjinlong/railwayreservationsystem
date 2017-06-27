@@ -91,15 +91,19 @@
                     <asp:ListItem>FrontDesk</asp:ListItem>
                     <asp:ListItem>Member</asp:ListItem>
                     </asp:DropDownList>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Name:<asp:TextBox ID="tb_name" runat="server"></asp:TextBox>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; NRIC:<asp:TextBox ID="tb_nric" runat="server"></asp:TextBox>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <asp:Button ID="btn_filter" runat="server" Text="Filter" Width="86px" />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;<asp:DropDownList ID="ddl_choice" runat="server">
+                        <asp:ListItem>Name</asp:ListItem>
+                        <asp:ListItem>NRIC</asp:ListItem>
+                    </asp:DropDownList>
+                    &nbsp;:
+                    <asp:TextBox ID="tb_choice" runat="server" Width="177px"></asp:TextBox>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+                    <asp:Button ID="btn_filter" runat="server" Text="Filter" Width="86px" OnClick="btn_filter_Click" />
                 </td>
             </tr>
             <tr>
                 <td class="auto-style2">&nbsp;</td>
-                <td class="auto-style26">Result:<asp:DropDownList ID="ddl_result" runat="server" Width="355px">
+                <td class="auto-style26">Result:<asp:DropDownList ID="ddl_result" runat="server" Width="422px">
                     </asp:DropDownList>
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     <asp:Button ID="btn_show" runat="server" OnClick="btn_show_Click" Text="Show" Width="81px" />
