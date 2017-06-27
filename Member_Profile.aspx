@@ -63,17 +63,30 @@
             <tr>
                 <td class="auto-style21">&nbsp;</td>
                 <td class="auto-style17">
+                    <asp:Label ID="Label16" runat="server" Font-Size="X-Large" Text="ID"></asp:Label>
+                </td>
+                <td class="auto-style15">
+                    <asp:Label ID="Label15" runat="server" Font-Size="Large" Text=":"></asp:Label>
+                </td>
+                <td class="auto-style22">
+                    <asp:TextBox ID="tb_ID" runat="server" Enabled="False" Width="500px"></asp:TextBox>
+                </td>
+                <td class="auto-style24">
+                    <asp:Button ID="btn_Edit" runat="server" Font-Size="Medium" Height="40px" OnClick="btn_Edit_Click" Text="Edit" Width="80px" />
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style21">&nbsp;</td>
+                <td class="auto-style17">
                     <asp:Label ID="Label1" runat="server" Font-Size="X-Large" Text="Name"></asp:Label>
                 </td>
                 <td class="auto-style15">
                     <asp:Label ID="Label8" runat="server" Font-Size="Large" Text=":"></asp:Label>
                 </td>
                 <td class="auto-style22">
-                    <asp:TextBox ID="TextBox1" runat="server" Width="500px"></asp:TextBox>
+                    <asp:TextBox ID="tb_Name" runat="server" Enabled="False" Width="500px"></asp:TextBox>
                 </td>
-                <td class="auto-style24">
-                    <asp:Button ID="Button1" runat="server" Font-Size="Medium" Height="40px" Text="Edit" Width="80px" />
-                </td>
+                <td class="auto-style24">&nbsp;</td>
             </tr>
             <tr>
                 <td class="auto-style4">&nbsp;</td>
@@ -84,23 +97,10 @@
                     <asp:Label ID="Label9" runat="server" Font-Size="Large" Text=":"></asp:Label>
                 </td>
                 <td class="auto-style20">
-                    <asp:TextBox ID="TextBox2" runat="server" Width="500px"></asp:TextBox>
+                    <asp:TextBox ID="tb_NRIC" runat="server" Width="500px" Enabled="False"></asp:TextBox>
                 </td>
-                <td class="auto-style5">&nbsp;</td>
-            </tr>
-            <tr>
-                <td class="auto-style21">&nbsp;</td>
-                <td class="auto-style17">
-                    <asp:Label ID="Label4" runat="server" Font-Size="X-Large" Text="Phone No"></asp:Label>
-                </td>
-                <td class="auto-style15">
-                    <asp:Label ID="Label10" runat="server" Font-Size="Large" Text=":"></asp:Label>
-                </td>
-                <td class="auto-style22">
-                    <asp:TextBox ID="TextBox3" runat="server" Width="500px"></asp:TextBox>
-                </td>
-                <td class="auto-style24">
-                    <asp:Button ID="Button2" runat="server" Font-Size="Medium" Height="40px" Text="Save" Width="80px" />
+                <td class="auto-style5">
+                    <asp:Button ID="btn_Save" runat="server" Font-Size="Medium" Height="40px" OnClick="btn_Save_Click" Text="Save" Width="80px" />
                 </td>
             </tr>
             <tr>
@@ -109,10 +109,24 @@
                     <asp:Label ID="Label5" runat="server" Font-Size="X-Large" Text="E-mail"></asp:Label>
                 </td>
                 <td class="auto-style15">
+                    <asp:Label ID="Label10" runat="server" Font-Size="Large" Text=":"></asp:Label>
+                </td>
+                <td class="auto-style22">
+                    <asp:TextBox ID="tb_Email" runat="server" Width="500px" Enabled="False"></asp:TextBox>
+                </td>
+                <td class="auto-style24">
+                    &nbsp;</td>
+            </tr>
+            <tr>
+                <td class="auto-style21">&nbsp;</td>
+                <td class="auto-style17">
+                    <asp:Label ID="Label4" runat="server" Font-Size="X-Large" Text="Phone No"></asp:Label>
+                </td>
+                <td class="auto-style15">
                     <asp:Label ID="Label11" runat="server" Font-Size="Large" Text=":"></asp:Label>
                 </td>
                 <td class="auto-style22">
-                    <asp:TextBox ID="TextBox4" runat="server" Width="500px"></asp:TextBox>
+                    <asp:TextBox ID="tb_PhoneNo" runat="server" Enabled="False" Width="500px"></asp:TextBox>
                 </td>
                 <td class="auto-style23">&nbsp;</td>
             </tr>
@@ -125,7 +139,7 @@
                     <asp:Label ID="Label12" runat="server" Font-Size="Large" Text=":"></asp:Label>
                 </td>
                 <td class="auto-style22">
-                    <asp:TextBox ID="TextBox5" runat="server" Width="500px"></asp:TextBox>
+                    <asp:TextBox ID="tb_Gender" runat="server" Width="500px" Enabled="False"></asp:TextBox>
                 </td>
                 <td class="auto-style23">&nbsp;</td>
             </tr>
@@ -138,7 +152,7 @@
                     <asp:Label ID="Label13" runat="server" Font-Size="Large" Text=":"></asp:Label>
                 </td>
                 <td class="auto-style22">
-                    <asp:TextBox ID="TextBox6" runat="server" Width="500px"></asp:TextBox>
+                    <asp:TextBox ID="tb_Username" runat="server" Width="500px" Enabled="False"></asp:TextBox>
                 </td>
                 <td class="auto-style23">&nbsp;</td>
             </tr>
@@ -151,7 +165,7 @@
                     <asp:Label ID="Label14" runat="server" Font-Size="Large" Text=":"></asp:Label>
                 </td>
                 <td class="auto-style22">
-                    <asp:TextBox ID="TextBox7" runat="server" Width="500px"></asp:TextBox>
+                    <asp:TextBox ID="tb_Password" runat="server" Width="500px" Enabled="False"></asp:TextBox>
                 </td>
                 <td class="auto-style23">&nbsp;</td>
             </tr>
@@ -170,6 +184,7 @@
                 <td class="auto-style23">&nbsp;</td>
             </tr>
         </table>
+        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [Members]"></asp:SqlDataSource>
         <br />
     </asp:Panel>
 </asp:Content>
