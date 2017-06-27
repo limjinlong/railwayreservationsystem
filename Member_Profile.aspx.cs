@@ -10,6 +10,7 @@ using System.Web.UI.WebControls;
 
 public partial class Member_Profile : System.Web.UI.Page
 {
+    
     SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
     
     protected void Page_Load(object sender, EventArgs e)
@@ -35,7 +36,7 @@ public partial class Member_Profile : System.Web.UI.Page
     protected void btn_Save_Click(object sender, EventArgs e)
     {
         con.Open();
-        string query = "Update Members set Name ='" + tb_Name.Text + "',NRIC ='" + tb_NRIC.Text + "',Email ='" + tb_Email.Text + "',Phone_No ='" + tb_PhoneNo.Text + "',Gender ='" + tb_Gender.Text + "',Username ='" + tb_Username.Text + "',Password ='" + tb_Password.Text + "' where ID = '" + tb_ID.Text + "'" ;
+        string query = "Update Members set Name ='" + tb_Name.Text + "', NRIC ='" + tb_NRIC.Text + "', Email ='" + tb_Email.Text + "', Phone_No ='" + tb_PhoneNo.Text + "', Gender ='" + tb_Gender.Text + "', Username ='" + tb_Username.Text + "', Password ='" + tb_Password.Text + "' where ID = '" + tb_ID.Text + "'";
         SqlCommand cmd = new SqlCommand(query, con);
         cmd.ExecuteNonQuery();
 
@@ -59,8 +60,9 @@ public partial class Member_Profile : System.Web.UI.Page
         tb_Gender.Text = dt.Rows[0][5].ToString();
         tb_Username.Text = dt.Rows[0][6].ToString();
         tb_Password.Text = dt.Rows[0][7].ToString();
-
+        
         con.Close();
     }
+
 
 }
