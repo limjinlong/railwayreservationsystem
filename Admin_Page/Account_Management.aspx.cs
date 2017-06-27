@@ -14,6 +14,7 @@ public partial class Admin_Page_Account_Management : System.Web.UI.Page
     {
         if (!IsPostBack)
         {
+            //Load RESULT Drop Down List
             SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
             SqlDataAdapter da = new SqlDataAdapter("select ID, Name, NRIC, ISNULL(ID,'') + ' - ' + ISNULL(Name,'') + ' ' + ISNULL(NRIC,'') as info from Admins", con);
             SqlDataAdapter da2 = new SqlDataAdapter("select ID, Name, NRIC, ISNULL(ID,'') + ' - ' + ISNULL(Name,'') + ' ' + ISNULL(NRIC,'') as info from FrontDesks", con);
@@ -38,4 +39,14 @@ public partial class Admin_Page_Account_Management : System.Web.UI.Page
     {
 
     }
+
+    protected void ddl_result_SelectedIndexChanged(object sender, EventArgs e)
+    {
+        //Fill Up Information
+        string searchid = ddl_result.SelectedValue;
+        lbl_id.Text = searchid;
+        lbl_name.Text = "hahaha";
+        Response.Write("testing");
+    }
+
 }

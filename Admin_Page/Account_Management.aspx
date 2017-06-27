@@ -103,7 +103,7 @@
             </tr>
             <tr>
                 <td class="auto-style2">&nbsp;</td>
-                <td class="auto-style26">Result:<asp:DropDownList ID="ddl_result" runat="server" Width="355px">
+                <td class="auto-style26">Result:<asp:DropDownList ID="ddl_result" runat="server" Width="355px" OnSelectedIndexChanged="ddl_result_SelectedIndexChanged" OnTextChanged="ddl_result_TextChanged">
                     </asp:DropDownList>
                 </td>
             </tr>
