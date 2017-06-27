@@ -80,6 +80,11 @@ public partial class Admin_Page_Account_Management : System.Web.UI.Page
             DataSet ds = new DataSet();
             da.Fill(ds);
             lbl_name.Text = ds.Tables[0].Rows[0]["Name"].ToString();
+            lbl_gender.Text = ds.Tables[0].Rows[0]["Gender"].ToString();
+            lbl_nric.Text = ds.Tables[0].Rows[0]["NRIC"].ToString();
+            lbl_email.Text = ds.Tables[0].Rows[0]["Email"].ToString();
+            lbl_phone.Text = ds.Tables[0].Rows[0]["Phone_No"].ToString();
+            lbl_address.Text = ds.Tables[0].Rows[0]["Address"].ToString();
             DataBind();
         }
         else if (role == 2)
@@ -88,6 +93,11 @@ public partial class Admin_Page_Account_Management : System.Web.UI.Page
             DataSet ds = new DataSet();
             da.Fill(ds);
             lbl_name.Text = ds.Tables[0].Rows[0]["Name"].ToString();
+            lbl_gender.Text = ds.Tables[0].Rows[0]["Gender"].ToString();
+            lbl_nric.Text = ds.Tables[0].Rows[0]["NRIC"].ToString();
+            lbl_email.Text = ds.Tables[0].Rows[0]["Email"].ToString();
+            lbl_phone.Text = ds.Tables[0].Rows[0]["Phone_No"].ToString();
+            lbl_address.Text = ds.Tables[0].Rows[0]["Address"].ToString();
             DataBind();
         }
         else if (role == 3)
@@ -96,6 +106,11 @@ public partial class Admin_Page_Account_Management : System.Web.UI.Page
             DataSet ds = new DataSet();
             da.Fill(ds);
             lbl_name.Text = ds.Tables[0].Rows[0]["Name"].ToString();
+            lbl_gender.Text = ds.Tables[0].Rows[0]["Gender"].ToString();
+            lbl_nric.Text = ds.Tables[0].Rows[0]["NRIC"].ToString();
+            lbl_email.Text = ds.Tables[0].Rows[0]["Email"].ToString();
+            lbl_phone.Text = ds.Tables[0].Rows[0]["Phone_No"].ToString();
+            lbl_address.Text = "-";
             DataBind();
         }
 
@@ -105,5 +120,74 @@ public partial class Admin_Page_Account_Management : System.Web.UI.Page
     protected void btn_delete_Click(object sender, EventArgs e)
     {
 
+    }
+
+    protected void btn_filter_Click(object sender, EventArgs e)
+    {
+        if (ddl_choice.SelectedIndex == 0)
+        {
+            if (ddl_choice.SelectedIndex == 0)
+            {
+                //all role, search by name
+            }
+            else if (ddl_choice.SelectedIndex == 1)
+            {
+                //all role, search by nric
+            }
+        }
+        else if (ddl_role.SelectedIndex == 1)
+        {
+            if (tb_choice.Text == "")
+            {
+                //search all admin
+            }
+            else
+            {
+                if (ddl_choice.SelectedIndex == 0)
+                {
+                    //admin role, search by name
+                }
+                else if (ddl_choice.SelectedIndex == 1)
+                {
+                    //admin role, search by nric
+                }
+            }
+        }
+        else if (ddl_role.SelectedIndex == 2)
+        {
+            if (tb_choice.Text == "")
+            {
+                //search front desk role
+            }
+            else
+            {
+                if (ddl_choice.SelectedIndex == 0)
+                {
+                    //frontdesk role, search by name
+                }
+                else if (ddl_choice.SelectedIndex == 1)
+                {
+                    //frontdesk role, search by nric
+                }
+            }
+        }
+        else if (ddl_role.SelectedIndex == 3)
+        {
+            if (tb_choice.Text == "")
+            {
+                //search all member 
+            }
+            else
+            {
+                if (ddl_choice.SelectedIndex == 0)
+                {
+                    //member role, search by name
+                }
+                else if (ddl_choice.SelectedIndex == 1)
+                {
+                    //member role, search by nric
+                }
+            }
+        }
     }
 }

@@ -36,7 +36,11 @@ public partial class Member_Profile : System.Web.UI.Page
     protected void btn_Save_Click(object sender, EventArgs e)
     {
         con.Open();
+<<<<<<< HEAD
         string query = "Update Members set Name ='" + tb_Name.Text + "', NRIC ='" + tb_NRIC.Text + "', Email ='" + tb_Email.Text + "', Phone_No ='" + tb_PhoneNo.Text + "', Gender ='" + tb_Gender.Text + "', Username ='" + tb_Username.Text + "', Password ='" + tb_Password.Text + "' where ID = '" + tb_ID.Text + "'";
+=======
+        string query = "Update Members set Name ='" + tb_Name.Text + "',NRIC ='" + tb_NRIC.Text + "',Email ='" + tb_Email.Text + "',Phone_No ='" + tb_PhoneNo.Text + "',Gender ='" + tb_Gender.Text + "',Username ='" + tb_Username.Text + "',Password ='" + tb_Password.Text + "' where ID = '" + tb_ID.Text + "'";
+>>>>>>> c92948c53b4b7009f9c8fd09e4deb54cd2974006
         SqlCommand cmd = new SqlCommand(query, con);
         cmd.ExecuteNonQuery();
 
