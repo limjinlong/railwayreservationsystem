@@ -84,22 +84,26 @@
             <tr>
                 <td class="auto-style24"></td>
                 <td class="auto-style3">
-                    <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" OnClientClick="OpenNewWindow()" Text="Create New User" />
+                    <asp:Button ID="btn_create" runat="server" OnClick="Button1_Click" OnClientClick="OpenNewWindow()" Text="Create New User" />
                 </td>
             </tr>
             <tr>
                 <td class="auto-style25"></td>
-                <td class="auto-style26">Role:<asp:DropDownList ID="DropDownList1" runat="server">
+                <td class="auto-style26">Role:<asp:DropDownList ID="ddl_role" runat="server">
+                    <asp:ListItem>All</asp:ListItem>
+                    <asp:ListItem>Admin</asp:ListItem>
+                    <asp:ListItem>FrontDesk</asp:ListItem>
+                    <asp:ListItem>Member</asp:ListItem>
                     </asp:DropDownList>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Name:<asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; NRIC:<asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Name:<asp:TextBox ID="tb_name" runat="server"></asp:TextBox>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; NRIC:<asp:TextBox ID="tb_nric" runat="server"></asp:TextBox>
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <asp:Button ID="Button2" runat="server" Text="Filter" />
+                    <asp:Button ID="btn_filter" runat="server" Text="Filter" />
                 </td>
             </tr>
             <tr>
                 <td class="auto-style2">&nbsp;</td>
-                <td class="auto-style26">Result:<asp:DropDownList ID="DropDownList2" runat="server" Width="355px">
+                <td class="auto-style26">Result:<asp:DropDownList ID="ddl_result" runat="server" Width="355px">
                     </asp:DropDownList>
                 </td>
             </tr>
@@ -118,42 +122,42 @@
                 <td class="auto-style7">&nbsp;ID</td>
                 <td class="auto-style8">:</td>
                 <td class="auto-style9">
-                    <asp:Label ID="Label1" runat="server" Text="[ID]"></asp:Label>
+                    <asp:Label ID="lbl_id" runat="server" Text="[ID]"></asp:Label>
                 </td>
             </tr>
             <tr>
                 <td class="auto-style7">Name</td>
                 <td class="auto-style5">:</td>
                 <td>
-                    <asp:Label ID="Label2" runat="server" Text="[Name]"></asp:Label>
+                    <asp:Label ID="lbl_name" runat="server" Text="[Name]"></asp:Label>
                 </td>
             </tr>
             <tr>
                 <td class="auto-style7">Gender</td>
                 <td class="auto-style8">:</td>
                 <td class="auto-style9">
-                    <asp:Label ID="Label3" runat="server" Text="[Gender]"></asp:Label>
+                    <asp:Label ID="lbl_gender" runat="server" Text="[Gender]"></asp:Label>
                 </td>
             </tr>
             <tr>
                 <td class="auto-style7">NRIC</td>
                 <td class="auto-style5">:</td>
                 <td>
-                    <asp:Label ID="Label4" runat="server" Text="[NRIC]"></asp:Label>
+                    <asp:Label ID="lbl_nric" runat="server" Text="[NRIC]"></asp:Label>
                 </td>
             </tr>
             <tr>
                 <td class="auto-style7">Email</td>
                 <td class="auto-style5">:</td>
                 <td>
-                    <asp:Label ID="Label5" runat="server" Text="[Email]"></asp:Label>
+                    <asp:Label ID="lbl_email" runat="server" Text="[Email]"></asp:Label>
                 </td>
             </tr>
             <tr>
                 <td class="auto-style7">H/P No.</td>
                 <td class="auto-style5">:</td>
                 <td>
-                    <asp:Label ID="Label6" runat="server" Text="[H/P No.]"></asp:Label>
+                    <asp:Label ID="lbl_phone" runat="server" Text="[H/P No.]"></asp:Label>
                 </td>
             </tr>
             <tr>
@@ -162,7 +166,7 @@
                 <td class="auto-style7">Address</td>
                 <td class="auto-style18">:</td>
                 <td class="auto-style19">
-                    <asp:Label ID="Label7" runat="server" Text="[Address]"></asp:Label>
+                    <asp:Label ID="lbl_address" runat="server" Text="[Address]"></asp:Label>
                 </td>
             </tr>
             <tr>
@@ -173,7 +177,7 @@
                 <td class="auto-style6">&nbsp;</td>
                 <td class="auto-style5">&nbsp;</td>
                 <td>
-                    <asp:Button ID="Button5" runat="server" Text="Delete" Width="148px" />
+                    <asp:Button ID="btn_delete" runat="server" Text="Delete" Width="148px" OnClick="btn_delete_Click" />
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </td>
             </tr>
         </table>
