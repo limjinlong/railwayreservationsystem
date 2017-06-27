@@ -83,6 +83,26 @@ public partial class Admin_Page_Train_Management : System.Web.UI.Page
         lbl_feedback1.Visible = true;
         GridView1.DataBind();
     }
+
+    protected void GridView1_RowDataBound1(object sender, GridViewRowEventArgs e)
+    {
+        if (e.Row.RowState != DataControlRowState.Edit) // check for RowState
+        {
+            if (e.Row.RowType == DataControlRowType.DataRow) //check for RowType
+            {
+                string id = e.Row.Cells[0].Text; // Get the id to be deleted
+                                                 //cast the ShowDeleteButton link to linkbutton
+                LinkButton lb = (LinkButton)e.Row.Cells[4].Controls[0];
+                if (lb != null)
+                {
+                    //attach the JavaScript function with the ID as the paramter
+                    lb.Attributes.Add("onclick", "return ConfirmOnDelete('" + id + "');");
+                }
+            }
+        }
+    }
+
+   
 }
 
 

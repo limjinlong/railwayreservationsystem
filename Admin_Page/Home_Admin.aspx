@@ -1,6 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/AdminMasterPage.master" AutoEventWireup="true" CodeFile="Home_Admin.aspx.cs" Inherits="Home_Admin" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+    
     <style type="text/css">
     .auto-style1 {
         width: 100%;
@@ -47,6 +48,7 @@
 </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+    
     <asp:Panel ID="Panel1" runat="server" Height="426px" BorderColor="Black">
     <table class="auto-style1">
         <tr>
@@ -126,7 +128,7 @@
             <td class="auto-style6">&nbsp;</td>
             <td class="auto-style5">&nbsp;</td>
             <td>
-                <asp:Button ID="btn_save" runat="server" Text="Save" Width="148px" />
+                <asp:Button ID="btn_save" runat="server" Text="Save" Width="148px"  />
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <asp:Button ID="btn_reset" runat="server" Text="Reset" Width="127px" />
             </td>

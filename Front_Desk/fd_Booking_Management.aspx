@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/AdminMasterPage.master" AutoEventWireup="true" CodeFile="Booking_Management.aspx.cs" Inherits="Admin_Page_Booking_Management" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="fd_Booking_Management.aspx.cs" Inherits="Admin_Page_Booking_Management" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
     <style type="text/css">
@@ -7,23 +7,24 @@
             height: 333px;
         }
         .auto-style4 {
-            width: 40px;
+            width: 342px;
         }
         .auto-style12 {
         width: 800px;
     }
     .auto-style13 {
         margin-top: 0px;
-    }
+            margin-left: 0px;
+        }
     .auto-style14 {
-        width: 40px;
+        width: 342px;
         height: 44px;
     }
     .auto-style15 {
         height: 44px;
     }
     .auto-style16 {
-        width: 40px;
+        width: 342px;
         height: 38px;
     }
     .auto-style17 {
@@ -45,8 +46,10 @@
         <table class="auto-style1">
             <tr>
                 <td class="auto-style14"></td>
-                <td class="auto-style15">Booking Management<div class="auto-style12" style="overflow-x: auto;">
-                    <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AutoGenerateColumns="False" CssClass="auto-style13" DataKeyNames="Booking_ID" DataSourceID="SqlDataSource1" Height="16px" Width="1149px" BackColor="#CCCCCC" BorderColor="#999999" BorderStyle="Solid" BorderWidth="3px" CellPadding="4" CellSpacing="2" ForeColor="Black" OnRowDeleted="GridView1_RowDeleted" OnRowUpdated="GridView1_RowUpdated" OnRowDataBound="GridView1_RowDataBound">
+                <td class="auto-style15">
+                    <h1>Booking Management</h1>
+                    <div class="auto-style12" style="overflow-x: auto;">
+                    <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AutoGenerateColumns="False" CssClass="auto-style13" DataKeyNames="Booking_ID" DataSourceID="SqlDataSource1" Height="16px" Width="1193px" BackColor="#CCCCCC" BorderColor="#999999" BorderStyle="Solid" BorderWidth="3px" CellPadding="4" CellSpacing="2" ForeColor="Black" OnRowDeleted="GridView1_RowDeleted" OnRowUpdated="GridView1_RowUpdated" OnRowDataBound="GridView1_RowDataBound">
                         <Columns>
                             <asp:BoundField DataField="Booking_ID" HeaderText="Booking_ID" ReadOnly="True" SortExpression="Booking_ID" />
                             <asp:BoundField DataField="Seat_ID" HeaderText="Seat_ID" SortExpression="Seat_ID" />

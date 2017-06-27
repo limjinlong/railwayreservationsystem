@@ -13,6 +13,7 @@ public partial class Admin_Page_Route_Management : System.Web.UI.Page
     protected void Page_Load(object sender, EventArgs e)
     {
         lbl_feedback.Visible = false;
+        lbl_feedback1.Visible = false;
         refreshtrain(); //refresh train ID drop down list
     }
 
@@ -43,6 +44,7 @@ public partial class Admin_Page_Route_Management : System.Web.UI.Page
                 cmd1.ExecuteNonQuery();
                 lbl_feedback.Text = "NEW ROUTE HAS BEEN ADDED SUCCESSFULLY";
                 lbl_feedback.Visible = true;
+                GridView1.DataBind();
                 routeclear();
 
             }
@@ -77,6 +79,40 @@ public partial class Admin_Page_Route_Management : System.Web.UI.Page
             ddl_trainid.DataSource = dt;
             ddl_trainid.DataTextField = "Train_ID";
             DataBind();
+        }
+    }
+
+    protected void GridView1_RowUpdated(object sender, GridViewUpdatedEventArgs e)
+    {
+        lbl_feedback1.Text = "ROUTE HAS BEEN UPDATED SUCCESSFULLY";
+        lbl_feedback1.Visible = true;
+        GridView1.DataBind();
+    }
+
+    protected void GridView1_RowDeleted(object sender, GridViewDeletedEventArgs e)
+    {
+        lbl_feedback1.Text = "ROUTE HAS BEEN DELETED SUCCESSFULLY";
+        lbl_feedback1.Visible = true;
+        GridView1.DataBind();
+    }
+
+
+
+    protected void GridView1_RowDataBound(object sender, GridViewRowEventArgs e)
+    {
+        if (e.Row.RowState != DataControlRowState.Edit) // check for RowState
+        {
+            if (e.Row.RowType == DataControlRowType.DataRow) //check for RowType
+            {
+                string id = e.Row.Cells[0].Text; // Get the id to be deleted
+                                                 //cast the ShowDeleteButton link to linkbutton
+                LinkButton lb = (LinkButton)e.Row.Cells[8].Controls[0];
+                if (lb != null)
+                {
+                    //attach the JavaScript function with the ID as the paramter
+                    lb.Attributes.Add("onclick", "return ConfirmOnDelete('" + id + "');");
+                }
+            }
         }
     }
 }
