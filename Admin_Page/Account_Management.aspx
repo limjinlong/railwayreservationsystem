@@ -3,6 +3,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
     <style type="text/css">
 
+
         .auto-style27 {
             width: 100%;
             height: 172px;
