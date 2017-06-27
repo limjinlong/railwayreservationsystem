@@ -62,7 +62,7 @@
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-    <h1>Registeration</h1>
+    <h1>Registration</h1>
     <table class="auto-style1">
         <tr>
             <td class="auto-style9">&nbsp;</td>
