@@ -8,6 +8,7 @@
         }
         .auto-style4 {
             width: 342px;
+            height: 42px;
         }
         .auto-style12 {
         width: 800px;
@@ -30,6 +31,9 @@
     .auto-style17 {
         height: 38px;
     }
+        .auto-style18 {
+            height: 42px;
+        }
     </style>
          <script type="text/javascript">
         function ConfirmOnDelete(item)
@@ -42,7 +46,7 @@
     </script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-    <asp:Panel ID="Panel1" runat="server" Height="505px">
+    <asp:Panel ID="Panel1" runat="server" Height="540px">
         <table class="auto-style1">
             <tr>
                 <td class="auto-style14"></td>
@@ -89,8 +93,8 @@
                 <td class="auto-style17"></td>
             </tr>
             <tr>
-                <td class="auto-style4">&nbsp;</td>
-                <td>
+                <td class="auto-style4"></td>
+                <td class="auto-style18">
                     <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" DeleteCommand="DELETE FROM [Bookings] WHERE [Booking_ID] = @Booking_ID" InsertCommand="INSERT INTO [Bookings] ([Booking_ID], [Seat_ID], [Train_ID], [Train_Name], [Route_ID], [Origin], [Destination], [Date], [Time], [Price], [Member_ID], [Member_Name], [Member_NRIC]) VALUES (@Booking_ID, @Seat_ID, @Train_ID, @Train_Name, @Route_ID, @Origin, @Destination, @Date, @Time, @Price, @Member_ID, @Member_Name, @Member_NRIC)" SelectCommand="SELECT * FROM [Bookings]" UpdateCommand="UPDATE [Bookings] SET [Seat_ID] = @Seat_ID, [Train_ID] = @Train_ID, [Train_Name] = @Train_Name, [Route_ID] = @Route_ID, [Origin] = @Origin, [Destination] = @Destination, [Date] = @Date, [Time] = @Time, [Price] = @Price, [Member_ID] = @Member_ID, [Member_Name] = @Member_Name, [Member_NRIC] = @Member_NRIC WHERE [Booking_ID] = @Booking_ID">
                         <DeleteParameters>
                             <asp:Parameter Name="Booking_ID" Type="Int32" />
@@ -127,7 +131,7 @@
                         </UpdateParameters>
                     </asp:SqlDataSource>
                 </td>
-                <td>&nbsp;</td>
+                <td class="auto-style18"></td>
             </tr>
         </table>
     </asp:Panel>

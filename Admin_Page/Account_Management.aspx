@@ -2,17 +2,38 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
     <style type="text/css">
-        .auto-style1 {
+
+
+        .auto-style27 {
             width: 100%;
+            height: 172px;
         }
         .auto-style2 {
             width: 57px;
+        }
+        .auto-style24 {
+            width: 57px;
+            height: 43px;
         }
         .auto-style3 {
             text-align: right;
             height: 43px;
         }
-    .auto-style20 {
+        .auto-style25 {
+            width: 57px;
+            height: 54px;
+        }
+        .auto-style26 {
+            height: 54px;
+        }
+        .auto-style1 {
+            width: 100%;
+        }
+        .auto-style21 {
+            height: 28px;
+            width: 57px;
+        }
+        .auto-style20 {
         height: 28px;
     }
     .auto-style7 {
@@ -26,13 +47,14 @@
     .auto-style9 {
         height: 37px;
     }
-    .auto-style6 {
-        width: 168px;
-    }
     .auto-style5 {
         width: 18px;
     }
-    .auto-style10 {
+        .auto-style23 {
+            width: 57px;
+            height: 38px;
+        }
+        .auto-style10 {
         width: 203px;
         height: 38px;
     }
@@ -43,36 +65,10 @@
     .auto-style19 {
         height: 38px;
     }
-        .auto-style21 {
-            height: 28px;
-            width: 57px;
-        }
-        .auto-style23 {
-            width: 57px;
-            height: 38px;
-        }
-        .auto-style24 {
-            width: 57px;
-            height: 43px;
-        }
-        .auto-style25 {
-            width: 57px;
-            height: 54px;
-        }
-        .auto-style26 {
-            height: 54px;
-        }
-        .auto-style27 {
-            width: 100%;
-            height: 172px;
-        }
+        .auto-style6 {
+        width: 168px;
+    }
     </style>
-        <script type="text/javascript">
-        function OpenNewWindow() {
-            window.open('Create_New_User.aspx', '_blank', 'location=no,resizable=no,fullscreen=no,menubar=no');
-            
-        }
-    </script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
     <asp:Panel ID="Panel1" runat="server" Height="610px">
@@ -150,8 +146,8 @@
             </tr>
             <tr>
                 <td class="auto-style7">Email</td>
-                <td class="auto-style5">:</td>
-                <td>
+                <td class="auto-style8">:</td>
+                <td class="auto-style9">
                     <asp:Label ID="lbl_email" runat="server" Text="[Email]"></asp:Label>
                 </td>
             </tr>
