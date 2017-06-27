@@ -9,14 +9,7 @@
         .auto-style4 {
             width: 40px;
         }
-        .auto-style5 {
-            width: 40px;
-            height: 203px;
-        }
-        .auto-style6 {
-            height: 203px;
-        }
-    .auto-style12 {
+        .auto-style12 {
         width: 800px;
     }
     .auto-style13 {
@@ -29,17 +22,23 @@
     .auto-style15 {
         height: 44px;
     }
+    .auto-style16 {
+        width: 40px;
+        height: 38px;
+    }
+    .auto-style17 {
+        height: 38px;
+    }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-    <asp:Panel ID="Panel1" runat="server" Height="463px">
+    <asp:Panel ID="Panel1" runat="server" Height="505px">
         <table class="auto-style1">
             <tr>
                 <td class="auto-style14"></td>
                 <td class="auto-style15">Booking Management<div class="auto-style12" style="overflow-x: auto;">
-                    <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AutoGenerateColumns="False" CssClass="auto-style13" DataKeyNames="Booking_ID" DataSourceID="SqlDataSource1" Height="16px" Width="1149px">
+                    <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AutoGenerateColumns="False" CssClass="auto-style13" DataKeyNames="Booking_ID" DataSourceID="SqlDataSource1" Height="16px" Width="1149px" BackColor="#CCCCCC" BorderColor="#999999" BorderStyle="Solid" BorderWidth="3px" CellPadding="4" CellSpacing="2" ForeColor="Black">
                         <Columns>
-                            <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" />
                             <asp:BoundField DataField="Booking_ID" HeaderText="Booking_ID" ReadOnly="True" SortExpression="Booking_ID" />
                             <asp:BoundField DataField="Seat_ID" HeaderText="Seat_ID" SortExpression="Seat_ID" />
                             <asp:BoundField DataField="Train_ID" HeaderText="Train_ID" SortExpression="Train_ID" />
@@ -53,17 +52,28 @@
                             <asp:BoundField DataField="Member_ID" HeaderText="Member_ID" SortExpression="Member_ID" />
                             <asp:BoundField DataField="Member_Name" HeaderText="Member_Name" SortExpression="Member_Name" />
                             <asp:BoundField DataField="Member_NRIC" HeaderText="Member_NRIC" SortExpression="Member_NRIC" />
+                            <asp:CommandField ShowEditButton="True" />
+                            <asp:CommandField ShowDeleteButton="True" />
                         </Columns>
+                        <FooterStyle BackColor="#CCCCCC" />
+                        <HeaderStyle BackColor="Black" Font-Bold="True" ForeColor="White" />
+                        <PagerStyle BackColor="#CCCCCC" ForeColor="Black" HorizontalAlign="Left" />
+                        <RowStyle BackColor="White" />
+                        <SelectedRowStyle BackColor="#000099" Font-Bold="True" ForeColor="White" />
+                        <SortedAscendingCellStyle BackColor="#F1F1F1" />
+                        <SortedAscendingHeaderStyle BackColor="Gray" />
+                        <SortedDescendingCellStyle BackColor="#CAC9C9" />
+                        <SortedDescendingHeaderStyle BackColor="#383838" />
                     </asp:GridView>
                     </div>
                 </td>
                 <td class="auto-style15"></td>
             </tr>
             <tr>
-                <td class="auto-style5"></td>
-                <td class="auto-style6">
-                    &nbsp;</td>
-                <td class="auto-style6">&nbsp;</td>
+                <td class="auto-style16"></td>
+                <td class="auto-style17">
+                    </td>
+                <td class="auto-style17"></td>
             </tr>
             <tr>
                 <td class="auto-style4">&nbsp;</td>
@@ -107,9 +117,6 @@
                 <td>&nbsp;</td>
             </tr>
         </table>
-        <br />
-        <br />
-        <br />
     </asp:Panel>
 </asp:Content>
 

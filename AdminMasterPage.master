@@ -33,12 +33,15 @@
                     <div class="col-md-3" style="width:200px">
 
                         <div class="list-group">
+                           
                             <a href="Home_Admin.aspx" class="list-group-item">Home</a>
-                            <a href="Train_Management.aspx" class="list-group-item">Train Management</a>
-                            <a href="Route_Management.aspx" class="list-group-item">Route Management</a>
-                            <a href="Booking_Management.aspx" class="list-group-item">Booking Management</a><a href="Account_Management.aspx" class="list-group-item">Account Management</a>
-                            <a href="Report.aspx" class="list-group-item">Report</a>
-                        </div>
+                             <a href="Train_Management.aspx" class="list-group-item">Train Management</a>
+                             <a href="Route_Management.aspx" class="list-group-item">Route Management</a>
+                             <a href="Booking_Management.aspx" class="list-group-item">Booking Management</a>
+                             <a href="Account_Management.aspx" class="list-group-item">Account Management</a>
+                             <a href="Report.aspx" class="list-group-item">Report</a>
+
+                           </div>
                     </div>
 
                     <div class="col-md-9">

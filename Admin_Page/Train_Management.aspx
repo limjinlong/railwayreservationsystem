@@ -151,12 +151,13 @@
                 <td class="auto-style9">&nbsp;</td>
                 <td>
                     <br />
-                    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" BackColor="#CCCCCC" BorderColor="#999999" BorderStyle="Solid" BorderWidth="3px" CellPadding="6" CellSpacing="4" DataKeyNames="Train_ID" DataSourceID="SqlDataSource1" ForeColor="Black" Width="737px" OnRowUpdated="GridView1_RowUpdated" OnRowDeleted="GridView1_RowDeleted">
+                    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" BackColor="#CCCCCC" BorderColor="#999999" BorderStyle="Solid" BorderWidth="3px" CellPadding="6" CellSpacing="4" DataKeyNames="Train_ID" DataSourceID="SqlDataSource1" ForeColor="Black" Width="521px" OnRowUpdated="GridView1_RowUpdated" OnRowDeleted="GridView1_RowDeleted">
                         <Columns>
-                            <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" />
                             <asp:BoundField DataField="Train_ID" HeaderText="Train_ID" ReadOnly="True" SortExpression="Train_ID" />
                             <asp:BoundField DataField="Name" HeaderText="Name" SortExpression="Name" />
                             <asp:BoundField DataField="Capacity" HeaderText="Capacity" SortExpression="Capacity" />
+                            <asp:CommandField ShowEditButton="True" />
+                            <asp:CommandField ShowDeleteButton="True" />
                         </Columns>
                         <FooterStyle BackColor="#CCCCCC" />
                         <HeaderStyle BackColor="Black" Font-Bold="True" ForeColor="White" />
