@@ -30,6 +30,15 @@
         height: 38px;
     }
     </style>
+         <script type="text/javascript">
+        function ConfirmOnDelete(item)
+        {
+          if (confirm("Are you sure to delete: " + item + "?")==true)
+            return true;
+          else
+            return false;
+        }
+    </script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
     <asp:Panel ID="Panel1" runat="server" Height="505px">
@@ -37,7 +46,7 @@
             <tr>
                 <td class="auto-style14"></td>
                 <td class="auto-style15">Booking Management<div class="auto-style12" style="overflow-x: auto;">
-                    <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AutoGenerateColumns="False" CssClass="auto-style13" DataKeyNames="Booking_ID" DataSourceID="SqlDataSource1" Height="16px" Width="1149px" BackColor="#CCCCCC" BorderColor="#999999" BorderStyle="Solid" BorderWidth="3px" CellPadding="4" CellSpacing="2" ForeColor="Black">
+                    <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AutoGenerateColumns="False" CssClass="auto-style13" DataKeyNames="Booking_ID" DataSourceID="SqlDataSource1" Height="16px" Width="1149px" BackColor="#CCCCCC" BorderColor="#999999" BorderStyle="Solid" BorderWidth="3px" CellPadding="4" CellSpacing="2" ForeColor="Black" OnRowDeleted="GridView1_RowDeleted" OnRowUpdated="GridView1_RowUpdated" OnRowDataBound="GridView1_RowDataBound">
                         <Columns>
                             <asp:BoundField DataField="Booking_ID" HeaderText="Booking_ID" ReadOnly="True" SortExpression="Booking_ID" />
                             <asp:BoundField DataField="Seat_ID" HeaderText="Seat_ID" SortExpression="Seat_ID" />
@@ -72,6 +81,7 @@
             <tr>
                 <td class="auto-style16"></td>
                 <td class="auto-style17">
+                    <asp:Label ID="lbl_feedback" runat="server" ForeColor="Lime" Text="[Feedback Msg]"></asp:Label>
                     </td>
                 <td class="auto-style17"></td>
             </tr>
