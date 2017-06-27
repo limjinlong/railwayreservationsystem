@@ -7,11 +7,13 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
+
 public partial class Admin_Page_Train_Management : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
         lbl_feedback.Visible = false;
+        lbl_feedback1.Visible = false;
     }
 
 
@@ -38,6 +40,7 @@ public partial class Admin_Page_Train_Management : System.Web.UI.Page
                 cmd1.ExecuteNonQuery();
                 lbl_feedback.Text = "NEW TRAIN HAS BEEN ADDED SUCCESSFULLY";
                 lbl_feedback.Visible = true;
+                GridView1.DataBind();
                 trainclear();
 
             }
@@ -50,10 +53,6 @@ public partial class Admin_Page_Train_Management : System.Web.UI.Page
         }
     }
 
-    private void ShowAsync()
-    {
-        throw new NotImplementedException();
-    }
 
     protected void btn_clear_Click(object sender, EventArgs e)
     {
@@ -66,4 +65,44 @@ public partial class Admin_Page_Train_Management : System.Web.UI.Page
         tb_trainname.Text = "";
         tb_traincapacity.Text = "";
     }
+
+
+
+    protected void GridView1_RowUpdated(object sender, GridViewUpdatedEventArgs e)
+    {
+        lbl_feedback1.Text = "TRAIN HAS BEEN UPDATED SUCCESSFULLY";
+        lbl_feedback1.Visible = true;
+        GridView1.DataBind();
+    }
+
+    protected void GridView1_RowDeleted(object sender, GridViewDeletedEventArgs e)
+    {
+
+
+        lbl_feedback1.Text = "TRAIN HAS BEEN DELETED SUCCESSFULLY";
+        lbl_feedback1.Visible = true;
+        GridView1.DataBind();
+    }
+
+    protected void GridView1_RowDataBound1(object sender, GridViewRowEventArgs e)
+    {
+        if (e.Row.RowState != DataControlRowState.Edit) // check for RowState
+        {
+            if (e.Row.RowType == DataControlRowType.DataRow) //check for RowType
+            {
+                string id = e.Row.Cells[0].Text; // Get the id to be deleted
+                                                 //cast the ShowDeleteButton link to linkbutton
+                LinkButton lb = (LinkButton)e.Row.Cells[4].Controls[0];
+                if (lb != null)
+                {
+                    //attach the JavaScript function with the ID as the paramter
+                    lb.Attributes.Add("onclick", "return ConfirmOnDelete('" + id + "');");
+                }
+            }
+        }
+    }
+
+   
 }
+
+
