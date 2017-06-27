@@ -98,13 +98,15 @@
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Name:<asp:TextBox ID="tb_name" runat="server"></asp:TextBox>
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; NRIC:<asp:TextBox ID="tb_nric" runat="server"></asp:TextBox>
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <asp:Button ID="btn_filter" runat="server" Text="Filter" />
+                    <asp:Button ID="btn_filter" runat="server" Text="Filter" Width="86px" />
                 </td>
             </tr>
             <tr>
                 <td class="auto-style2">&nbsp;</td>
-                <td class="auto-style26">Result:<asp:DropDownList ID="ddl_result" runat="server" Width="355px" OnSelectedIndexChanged="ddl_result_SelectedIndexChanged" OnTextChanged="ddl_result_TextChanged">
+                <td class="auto-style26">Result:<asp:DropDownList ID="ddl_result" runat="server" Width="355px">
                     </asp:DropDownList>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <asp:Button ID="btn_show" runat="server" OnClick="btn_show_Click" Text="Show" Width="81px" />
                 </td>
             </tr>
         </table>

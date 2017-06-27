@@ -25,11 +25,11 @@ public partial class Admin_Page_Create_New_User : System.Web.UI.Page
                 string query = null;
                 if (rb_admin.Checked == true)
                 {
-                    query = "select count(*) from Admins where Admin_ID ='" + tb_id.Text + "'";
+                    query = "select count(*) from Admins where ID ='" + tb_id.Text + "'";
                 }
                 else if (rb_frontdesk.Checked == true)
                 {
-                    query = "select count(*) from FrontDesks where FD_ID ='" + tb_id.Text + "'";
+                    query = "select count(*) from FrontDesks where ID ='" + tb_id.Text + "'";
                 }
                 SqlCommand cmd = new SqlCommand(query, con);
                 int check = Convert.ToInt32(cmd.ExecuteScalar().ToString());
@@ -42,11 +42,11 @@ public partial class Admin_Page_Create_New_User : System.Web.UI.Page
                     string query1 = null;
                     if (rb_admin.Checked == true)
                     {
-                        query1 = "insert into Admins (Admin_ID, Name, NRIC, Email, Phone_No, Address, Photo, Gender, Username, Password) values (@id,@name,@nric,@email,@phone,@address,@photo,@gender,@username,@password)";
+                        query1 = "insert into Admins (ID, Name, NRIC, Email, Phone_No, Address, Photo, Gender, Username, Password) values (@id,@name,@nric,@email,@phone,@address,@photo,@gender,@username,@password)";
                     }
                     else if (rb_frontdesk.Checked == true)
                     {
-                        query1 = "insert into FrontDesks (FD_ID, Name, NRIC, Email, Phone_No, Address, Photo, Gender, Username, Password) values (@id,@name,@nric,@email,@phone,@address,@photo,@gender,@username,@password)";
+                        query1 = "insert into FrontDesks (ID, Name, NRIC, Email, Phone_No, Address, Photo, Gender, Username, Password) values (@id,@name,@nric,@email,@phone,@address,@photo,@gender,@username,@password)";
                     }
                     
                     SqlCommand cmd1 = new SqlCommand(query1, con);
