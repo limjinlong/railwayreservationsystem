@@ -98,6 +98,8 @@ public partial class Admin_Page_Account_Management : System.Web.UI.Page
             lbl_name.Text = ds.Tables[0].Rows[0]["Name"].ToString();
             DataBind();
         }
+
+        con.Close();
     }
 
     protected void btn_delete_Click(object sender, EventArgs e)
