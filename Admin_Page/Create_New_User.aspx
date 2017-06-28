@@ -155,7 +155,7 @@
                     <td class="auto-style21">
                         <asp:Button ID="btn_add" runat="server" Text="Add" Width="148px" OnClick="btn_add_Click" />
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <asp:Button ID="btn_cancel" runat="server" Text="Cancel" Width="127px" />
+                        <asp:Button ID="btn_cancel" runat="server" Text="Cancel" Width="127px" OnClick="btn_cancel_Click" />
                         <br />
                         <asp:Label ID="lbl_feedback" runat="server" ForeColor="Lime" Text="[Feedback Msg]"></asp:Label>
                     </td>
