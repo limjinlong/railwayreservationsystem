@@ -69,6 +69,11 @@
         width: 168px;
     }
     </style>
+    <script type="text/javascript">
+        function OpenNewWindow() {
+            window.open('Create_New_User.aspx', 'location=no,resizable=no', true);
+        }
+</script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
     <asp:Panel ID="Panel1" runat="server" Height="553px">
@@ -179,7 +184,7 @@
                 <td class="auto-style6">&nbsp;</td>
                 <td class="auto-style5">&nbsp;</td>
                 <td>
-                    <asp:Button ID="btn_delete" runat="server" Text="Delete" Width="148px" OnClick="btn_delete_Click" />
+                    <asp:Button ID="btn_delete" runat="server" Text="Delete" Width="148px" OnClick="btn_delete_Click" OnClientClick="return confirm('Are you sure you want to delete?'); "/>
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </td>
             </tr>
         </table>

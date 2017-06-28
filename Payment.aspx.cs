@@ -5,12 +5,15 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-public partial class Home_Admin : System.Web.UI.Page
+public partial class Payment : System.Web.UI.Page
 {
+    
+
     protected void Page_Load(object sender, EventArgs e)
     {
-        string uname = (string)(Session["admin"]);
-        tb_username.Text = uname;
+        
     }
+
+
 
 }

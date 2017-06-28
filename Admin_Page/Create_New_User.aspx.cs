@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data.SqlClient;
+using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -9,6 +10,7 @@ using System.Web.UI.WebControls;
 
 public partial class Admin_Page_Create_New_User : System.Web.UI.Page
 {
+    SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
     protected void Page_Load(object sender, EventArgs e)
     {
         lbl_feedback.Visible = false;
@@ -18,7 +20,6 @@ public partial class Admin_Page_Create_New_User : System.Web.UI.Page
     {
         if (tb_password.Text.Equals(tb_confirmpassword.Text))
         {
-            SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
             try
             {
                 con.Open();
@@ -56,8 +57,12 @@ public partial class Admin_Page_Create_New_User : System.Web.UI.Page
                     cmd1.Parameters.AddWithValue("@email", tb_email.Text);
                     cmd1.Parameters.AddWithValue("@phone", tb_phone.Text);
                     cmd1.Parameters.AddWithValue("@address", tb_address.Text);
-                    //cmd1.Parameters.AddWithValue("@photo", FileUpload1.FileName);
-                    cmd1.Parameters.AddWithValue("@photo", "xxx");
+
+                    Stream fs = FileUpload1.PostedFile.InputStream;
+                    BinaryReader br = new BinaryReader(fs);
+                    byte[] bytes = br.ReadBytes((Int32)fs.Length);
+
+                    cmd1.Parameters.AddWithValue("@photo", bytes);
                     if (rb_male.Checked == true)
                     {
                         cmd1.Parameters.AddWithValue("@gender", "Male");
