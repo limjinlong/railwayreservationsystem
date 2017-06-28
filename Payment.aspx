@@ -75,7 +75,7 @@
         </tr>
         <tr>
             <td class="auto-style12"></td>
-            <td class="auto-style17">Credit Cards Accepted</td>
+            <td class="auto-style17">Credit Cards </td>
             <td class="auto-style14">:</td>
             <td class="auto-style15" colspan="3">
                 <asp:CheckBox ID="cb_visa" runat="server" Text="Visa" />
@@ -117,69 +117,6 @@
             <td class="auto-style20">:</td>
             <td class="auto-style21" colspan="3">
                 <asp:TextBox ID="TextBox4" runat="server" Width="415px"></asp:TextBox>
-            </td>
-            <td class="auto-style18"></td>
-        </tr>
-        <tr>
-            <td class="auto-style18"></td>
-            <td class="auto-style19">Country</td>
-            <td class="auto-style20">:</td>
-            <td class="auto-style21" colspan="3">
-                <asp:TextBox ID="TextBox5" runat="server" Width="415px"></asp:TextBox>
-            </td>
-            <td class="auto-style18"></td>
-        </tr>
-        <tr>
-            <td class="auto-style18"></td>
-            <td class="auto-style19">Address</td>
-            <td class="auto-style20">:</td>
-            <td class="auto-style21" colspan="3">
-                <asp:TextBox ID="TextBox6" runat="server" Width="415px"></asp:TextBox>
-            </td>
-            <td class="auto-style18"></td>
-        </tr>
-        <tr>
-            <td class="auto-style18"></td>
-            <td class="auto-style19">City</td>
-            <td class="auto-style20">:</td>
-            <td class="auto-style21" colspan="3">
-                <asp:TextBox ID="TextBox7" runat="server" Width="415px"></asp:TextBox>
-            </td>
-            <td class="auto-style18"></td>
-        </tr>
-        <tr>
-            <td class="auto-style18"></td>
-            <td class="auto-style19">State</td>
-            <td class="auto-style20">:</td>
-            <td class="auto-style21" colspan="3">
-                <asp:TextBox ID="TextBox8" runat="server" Width="415px"></asp:TextBox>
-            </td>
-            <td class="auto-style18"></td>
-        </tr>
-        <tr>
-            <td class="auto-style18"></td>
-            <td class="auto-style19">Postal Code</td>
-            <td class="auto-style20">:</td>
-            <td class="auto-style21" colspan="3">
-                <asp:TextBox ID="TextBox9" runat="server" Width="415px"></asp:TextBox>
-            </td>
-            <td class="auto-style18"></td>
-        </tr>
-        <tr>
-            <td class="auto-style18"></td>
-            <td class="auto-style19">Phone No</td>
-            <td class="auto-style20">:</td>
-            <td class="auto-style21" colspan="3">
-                <asp:TextBox ID="TextBox10" runat="server" Width="415px"></asp:TextBox>
-            </td>
-            <td class="auto-style18"></td>
-        </tr>
-        <tr>
-            <td class="auto-style18"></td>
-            <td class="auto-style19">Email</td>
-            <td class="auto-style20">:</td>
-            <td class="auto-style21" colspan="3">
-                <asp:TextBox ID="TextBox11" runat="server" Width="415px"></asp:TextBox>
             </td>
             <td class="auto-style18"></td>
         </tr>

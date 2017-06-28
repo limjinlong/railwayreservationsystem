@@ -9,7 +9,7 @@ public partial class Booking_History : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-
+        
     }
 
 
@@ -17,8 +17,5 @@ public partial class Booking_History : System.Web.UI.Page
 
 
 
-    protected void btn_SearchBooking_Click(object sender, EventArgs e)
-    {
-
-    }
+    
 }

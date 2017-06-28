@@ -15,7 +15,11 @@ public partial class Member_Profile : System.Web.UI.Page
     
     protected void Page_Load(object sender, EventArgs e)
     {
-        LoadData();
+        if(!IsPostBack)
+        {
+            LoadData();
+        }
+        
 
     }
 
