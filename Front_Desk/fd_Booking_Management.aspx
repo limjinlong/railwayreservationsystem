@@ -71,14 +71,15 @@
                         <tr>
                             <td class="auto-style20">Search:</td>
                             <td class="auto-style22">
-                                <asp:TextBox ID="txt_search" runat="server" CssClass="auto-style21" OnTextChanged="txt_search_TextChanged" placeHolder="Enter Details Except Booking ID"></asp:TextBox>
+                                <asp:TextBox ID="txt_search" runat="server" CssClass="auto-style21"  placeHolder="Enter Details Except Booking ID" Width="265px"></asp:TextBox>
                             </td>
                             <td class="auto-style23">
-                                <asp:Button ID="btn_Search" runat="server" Text="Search" OnClick="txt_search_TextChanged" />
+                                &nbsp;
+                                <asp:Button ID="btn_Search" runat="server" Text="Search" OnClick="txt_search_Click" />
                             </td>
                             <td>
                                 <asp:Button ID="btn_Refresh" runat="server" OnClick="Refresh_Click" Text="Refresh" />
-                                <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txt_search" ErrorMessage="Please fill in the text box!" ForeColor="Red"></asp:RequiredFieldValidator>
+                                <asp:Label ID="lbl_requiredsearch" runat="server" ForeColor="Red" Text="Label"></asp:Label>
                             </td>
                         </tr>
                         <tr>
@@ -88,9 +89,9 @@
                             <td>&nbsp;</td>
                         </tr>
                     </table>
-                    <div class="auto-style12" style="overflow-x: auto;">
+                    <div class="auto-style12" style="overflow-x: auto;"> 
                         <asp:Panel ID="Panel2" runat="server" Width="1020px">
-                            <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AutoGenerateColumns="False" BackColor="#CCCCCC" BorderColor="#999999" BorderStyle="Solid" BorderWidth="3px" CellPadding="4" CellSpacing="2" CssClass="auto-style13" DataKeyNames="Booking_ID" DataSourceID="SqlDataSource1" ForeColor="Black" Height="16px" OnRowDataBound="GridView1_RowDataBound" OnRowDeleted="GridView1_RowDeleted" OnRowUpdated="GridView1_RowUpdated" Width="1193px">
+                            <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AutoGenerateColumns="False" BackColor="#CCCCCC" BorderColor="#999999" BorderStyle="Solid" BorderWidth="3px" CellPadding="4" CellSpacing="2" CssClass="auto-style13" DataKeyNames="Booking_ID" DataSourceID="SqlDataSource1" ForeColor="Black" Height="16px" OnRowDataBound="GridView1_RowDataBound" OnRowDeleted="GridView1_RowDeleted" OnRowUpdated="GridView1_RowUpdated" Width="1198px">
                                 <Columns>
                                     <asp:BoundField DataField="Booking_ID" HeaderText="Booking_ID" ReadOnly="True" SortExpression="Booking_ID" />
                                     <asp:BoundField DataField="Seat_ID" HeaderText="Seat_ID" SortExpression="Seat_ID" />
@@ -106,7 +107,11 @@
                                     <asp:BoundField DataField="Member_Name" HeaderText="Member_Name" SortExpression="Member_Name" />
                                     <asp:BoundField DataField="Member_NRIC" HeaderText="Member_NRIC" SortExpression="Member_NRIC" />
                                     <asp:CommandField ShowEditButton="True" />
-                                    <asp:CommandField ShowDeleteButton="True" />
+                                    <asp:TemplateField ShowHeader="False">
+                                        <ItemTemplate>
+                                            <asp:LinkButton ID="LinkButton1" runat="server" CausesValidation="False" CommandName="Delete" ForeColor="Black" Text="Delete"  OnClientClick="return confirm('Are you sure you want to delete?'); " ></asp:LinkButton>
+                                        </ItemTemplate>
+                                    </asp:TemplateField>
                                 </Columns>
                                 <FooterStyle BackColor="#CCCCCC" />
                                 <HeaderStyle BackColor="Black" Font-Bold="True" ForeColor="White" />
@@ -119,7 +124,7 @@
                                 <SortedDescendingHeaderStyle BackColor="#383838" />
                             </asp:GridView>
                         </asp:Panel>
-                    </div>
+                    </div> 
                     <div class="auto-style12" style="overflow-x: auto;">
                     <asp:Panel ID="Panel3" runat="server">
                         <asp:GridView ID="GridView2" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" BackColor="#CCCCCC" BorderColor="#999999" BorderStyle="Solid" BorderWidth="3px" CellPadding="4" CellSpacing="2" CssClass="auto-style13" DataKeyNames="Booking_ID" DataSourceID="SqlDataSource2" ForeColor="Black" Height="16px" OnRowDataBound="GridView1_RowDataBound" OnRowDeleted="GridView1_RowDeleted" OnRowUpdated="GridView1_RowUpdated" Width="1511px">
@@ -137,7 +142,12 @@
                                 <asp:BoundField DataField="Member_ID" HeaderText="Member_ID" SortExpression="Member_ID" />
                                 <asp:BoundField DataField="Member_Name" HeaderText="Member_Name" SortExpression="Member_Name" />
                                 <asp:BoundField DataField="Member_NRIC" HeaderText="Member_NRIC" SortExpression="Member_NRIC" />
-                                <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" />
+                                <asp:CommandField ShowEditButton="True" />
+                                <asp:TemplateField ShowHeader="False">
+                                    <ItemTemplate>
+                                        <asp:LinkButton ID="LinkButton1" runat="server" CausesValidation="False" CommandName="Delete" ForeColor="Black" Text="Delete"  OnClientClick="return confirm('Are you sure you want to delete?'); " ></asp:LinkButton>
+                                    </ItemTemplate>
+                                </asp:TemplateField>
                             </Columns>
                             <FooterStyle BackColor="#CCCCCC" />
                             <HeaderStyle BackColor="Black" Font-Bold="True" ForeColor="White" />

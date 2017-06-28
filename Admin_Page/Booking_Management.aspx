@@ -53,10 +53,10 @@
                     Search:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     <asp:TextBox ID="txt_search" runat="server" CssClass="auto-style21" Width="264px" placeHolder="Enter Details Except Booking ID"></asp:TextBox>
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <asp:Button ID="btn_Search" runat="server" OnClick="txt_search_TextChanged" Text="Search" />
+                    <asp:Button ID="btn_Search" runat="server" OnClick="txt_search_Click" Text="Search" />
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     <asp:Button ID="btn_Refresh" runat="server" Text="Refresh" OnClick="Refresh_Click" />
-                    <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txt_search" ErrorMessage="Please fill in the text box!" ForeColor="Red"></asp:RequiredFieldValidator>
+                    <asp:Label ID="lbl_requiredsearch" runat="server" ForeColor="Red" Text="Label"></asp:Label>
                     <br />
                     <br />
                     <div class="auto-style12" style="overflow-x: auto;">
@@ -77,7 +77,11 @@
                                     <asp:BoundField DataField="Member_Name" HeaderText="Member_Name" SortExpression="Member_Name" />
                                     <asp:BoundField DataField="Member_NRIC" HeaderText="Member_NRIC" SortExpression="Member_NRIC" />
                                     <asp:CommandField ShowEditButton="True" />
-                                    <asp:CommandField ShowDeleteButton="True" />
+                                    <asp:TemplateField ShowHeader="False">
+                                        <ItemTemplate>
+                                            <asp:LinkButton ID="LinkButton1" runat="server" CausesValidation="False" CommandName="Delete" ForeColor="Black" Text="Delete" OnClientClick="return confirm('Are you sure you want to delete?');"></asp:LinkButton>
+                                        </ItemTemplate>
+                                    </asp:TemplateField>
                                 </Columns>
                                 <FooterStyle BackColor="#CCCCCC" />
                                 <HeaderStyle BackColor="Black" Font-Bold="True" ForeColor="White" />
@@ -109,7 +113,12 @@
                                 <asp:BoundField DataField="Member_ID" HeaderText="Member_ID" SortExpression="Member_ID" />
                                 <asp:BoundField DataField="Member_Name" HeaderText="Member_Name" SortExpression="Member_Name" />
                                 <asp:BoundField DataField="Member_NRIC" HeaderText="Member_NRIC" SortExpression="Member_NRIC" />
-                                <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" />
+                                <asp:CommandField ShowEditButton="True" />
+                                <asp:TemplateField ShowHeader="False">
+                                    <ItemTemplate>
+                                        <asp:LinkButton ID="LinkButton1" runat="server" CausesValidation="False" CommandName="Delete" ForeColor="Black" Text="Delete" OnClientClick="return confirm('Are you sure you want to delete?');"></asp:LinkButton>
+                                    </ItemTemplate>
+                                </asp:TemplateField>
                             </Columns>
                             <FooterStyle BackColor="#CCCCCC" />
                             <HeaderStyle BackColor="Black" Font-Bold="True" ForeColor="White" />
