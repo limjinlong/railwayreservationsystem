@@ -112,7 +112,7 @@
             </td>
         </tr>
         <tr>
-            <td class="auto-style2" rowspan="4">
+            <td class="auto-style2" rowspan="3">
                 <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [Admins]"></asp:SqlDataSource>
             </td>
             <td class="auto-style17">Username</td>
@@ -122,24 +122,18 @@
             </td>
         </tr>
         <tr>
-            <td class="auto-style17">Password</td>
-            <td class="auto-style18">:</td>
-            <td class="auto-style19">
-                <asp:TextBox ID="tb_password" runat="server" TextMode="Password" Width="308px"></asp:TextBox>
-            </td>
-        </tr>
-        <tr>
-            <td class="auto-style17">Confirm Password</td>
-            <td class="auto-style18">:</td>
-            <td class="auto-style19">
-                <asp:TextBox ID="tb_confirmpassword" runat="server" TextMode="Password" Width="308px"></asp:TextBox>
+            <td class="auto-style6">&nbsp;</td>
+            <td class="auto-style5">&nbsp;</td>
+            <td>
+                <asp:Button ID="btn_change" runat="server" Text="Change Username / Password" Width="308px" OnClick="btn_change_Click" />
+                &nbsp;<asp:Label ID="lbl_test" runat="server" Text="[ID]"></asp:Label>
             </td>
         </tr>
         <tr>
             <td class="auto-style6">&nbsp;</td>
             <td class="auto-style5">&nbsp;</td>
             <td>
-                <asp:Button ID="btn_save" runat="server" Text="Save" Width="148px"  />
+                <asp:Button ID="btn_save" runat="server" Text="Save" Width="148px" OnClick="btn_save_Click"  />
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <asp:Button ID="btn_reset" runat="server" Text="Reset" Width="127px" />
             </td>

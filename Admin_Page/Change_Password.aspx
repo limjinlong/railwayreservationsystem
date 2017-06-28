@@ -62,16 +62,18 @@
             <td class="auto-style12">Enter Current Password</td>
             <td class="auto-style13">:</td>
             <td class="auto-style14">
-                <asp:TextBox ID="TextBox1" runat="server" Width="224px"></asp:TextBox>
+                <asp:TextBox ID="tb_currentpassword" runat="server" Width="224px"></asp:TextBox>
             </td>
-            <td class="auto-style15"></td>
+            <td class="auto-style15">
+                <asp:Label ID="lbl_warning1" runat="server" ForeColor="Red" Text="Invalid Password"></asp:Label>
+            </td>
         </tr>
         <tr>
             <td class="auto-style11"></td>
             <td class="auto-style12">Enter New Password</td>
             <td class="auto-style13">:</td>
             <td class="auto-style14">
-                <asp:TextBox ID="TextBox2" runat="server" Width="224px"></asp:TextBox>
+                <asp:TextBox ID="tb_newpassword" runat="server" Width="224px"></asp:TextBox>
             </td>
             <td class="auto-style15"></td>
         </tr>
@@ -80,17 +82,21 @@
             <td class="auto-style12">Retype Password</td>
             <td class="auto-style13">:</td>
             <td class="auto-style14">
-                <asp:TextBox ID="TextBox3" runat="server" Width="224px"></asp:TextBox>
+                <asp:TextBox ID="tb_retypepassword" runat="server" Width="224px"></asp:TextBox>
             </td>
-            <td class="auto-style15"></td>
+            <td class="auto-style15">
+                <asp:Label ID="lbl_warning2" runat="server" ForeColor="Red" Text="Password Not Match With Your New Password"></asp:Label>
+            </td>
         </tr>
         <tr>
             <td class="auto-style3"></td>
-            <td class="auto-style5">&nbsp;</td>
+            <td class="auto-style5">
+                <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [Admins]"></asp:SqlDataSource>
+            </td>
             <td class="auto-style7"></td>
             <td class="auto-style10">
                 <br />
-                <asp:Button ID="Confirm" runat="server" Text="Button" />
+                <asp:Button ID="btn_confirm" runat="server" OnClick="btn_confirm_Click" Text="Confirm" />
             </td>
             <td></td>
         </tr>
