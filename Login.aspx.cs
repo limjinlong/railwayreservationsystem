@@ -53,7 +53,8 @@ public partial class Login_Register_Login : System.Web.UI.Page
             {
                 SqlCommand cmdUname1 = new SqlCommand("Select Username from Admins where Username = '" + txt_uname.Text + "'", con1);
                 string uname = cmdUname1.ExecuteScalar().ToString().Replace(" ", "");
-                Response.Redirect("Home_Admin.aspx");
+                Session["admin"] = uname;
+                Response.Redirect("Admin_Page/Home_Admin.aspx");
             }
             else
             {
