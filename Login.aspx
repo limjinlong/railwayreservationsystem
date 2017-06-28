@@ -98,7 +98,10 @@
         </tr>
         <tr>
             <td class="auto-style2">&nbsp;</td>
-            <td class="auto-style3">&nbsp;</td>
+            <td class="auto-style3">
+                <asp:LinkButton ID="LinkButton1" runat="server" onclick="LinkButton1_Click">Forget Password??  
+                            </asp:LinkButton>
+            </td>
             <td class="auto-style4">&nbsp;</td>
             <td>
                 &nbsp;<asp:Button ID="btn_login" runat="server" Text="Login" OnClick="btn_login_Click" />
