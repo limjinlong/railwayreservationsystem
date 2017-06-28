@@ -51,7 +51,7 @@
                 <td class="auto-style15">Booking Management<br />
                     <br />
                     Search:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <asp:TextBox ID="txt_search" runat="server" CssClass="auto-style21" Width="264px" placeHolder="Except Booking_ID"></asp:TextBox>
+                    <asp:TextBox ID="txt_search" runat="server" CssClass="auto-style21" Width="264px" placeHolder="Enter Details Except Booking ID"></asp:TextBox>
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     <asp:Button ID="btn_Search" runat="server" OnClick="txt_search_TextChanged" Text="Search" />
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;

@@ -71,7 +71,7 @@
                         <tr>
                             <td class="auto-style20">Search:</td>
                             <td class="auto-style22">
-                                <asp:TextBox ID="txt_search" runat="server" CssClass="auto-style21" OnTextChanged="txt_search_TextChanged" placeHolder="Except Booking_ID"></asp:TextBox>
+                                <asp:TextBox ID="txt_search" runat="server" CssClass="auto-style21" OnTextChanged="txt_search_TextChanged" placeHolder="Enter Details Except Booking ID"></asp:TextBox>
                             </td>
                             <td class="auto-style23">
                                 <asp:Button ID="btn_Search" runat="server" Text="Search" OnClick="txt_search_TextChanged" />
