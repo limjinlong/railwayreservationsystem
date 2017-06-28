@@ -45,7 +45,18 @@
     .auto-style20 {
         height: 28px;
     }
-</style>
+        .auto-style21 {
+            width: 168px;
+            height: 33px;
+        }
+        .auto-style22 {
+            width: 18px;
+            height: 33px;
+        }
+        .auto-style23 {
+            height: 33px;
+        }
+    </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
     
@@ -69,6 +80,8 @@
             <td class="auto-style5">:</td>
             <td>
                 <asp:TextBox ID="tb_adminname" runat="server" Width="308px"></asp:TextBox>
+                &nbsp;&nbsp;
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="tb_adminname" ErrorMessage="*This Field Is Required" ForeColor="Red" ValidationGroup="1"></asp:RequiredFieldValidator>
             </td>
         </tr>
         <tr>
@@ -86,13 +99,19 @@
             <td class="auto-style5">:</td>
             <td>
                 <asp:TextBox ID="tb_nric" runat="server" Width="308px"></asp:TextBox>
+                &nbsp;&nbsp;
+                <asp:CompareValidator ID="CompareValidator1" runat="server" ControlToValidate="tb_nric" Display="Dynamic" ErrorMessage="Please Enter Valid NRIC Number" ForeColor="Red" Operator="DataTypeCheck" Type="Integer" ValidationGroup="1"></asp:CompareValidator>
+                &nbsp;<asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="tb_nric" Display="Dynamic" ErrorMessage="*This Field Is Required" ForeColor="Red" ValidationGroup="1"></asp:RequiredFieldValidator>
             </td>
         </tr>
         <tr>
-            <td class="auto-style6">Email</td>
-            <td class="auto-style5">:</td>
-            <td>
+            <td class="auto-style21">Email</td>
+            <td class="auto-style22">:</td>
+            <td class="auto-style23">
                 <asp:TextBox ID="tb_email" runat="server" Width="308px"></asp:TextBox>
+                &nbsp;&nbsp;
+                <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="tb_email" Display="Dynamic" ErrorMessage="Please Enter Valid Email Format" ForeColor="Red" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" ValidationGroup="1"></asp:RegularExpressionValidator>
+                &nbsp;<asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="tb_email" Display="Dynamic" ErrorMessage="*This Field Is Required" ForeColor="Red" ValidationGroup="1"></asp:RequiredFieldValidator>
             </td>
         </tr>
         <tr>
@@ -100,6 +119,9 @@
             <td class="auto-style5">:</td>
             <td>
                 <asp:TextBox ID="tb_phone" runat="server" Width="308px"></asp:TextBox>
+                &nbsp;&nbsp;
+                <asp:CompareValidator ID="CompareValidator2" runat="server" ControlToValidate="tb_nric" Display="Dynamic" ErrorMessage="Please Enter Valid Phone Number" ForeColor="Red" Operator="DataTypeCheck" Type="Integer" ValidationGroup="1"></asp:CompareValidator>
+                &nbsp;<asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="tb_phone" Display="Dynamic" ErrorMessage="*This Field Is Required" ForeColor="Red" ValidationGroup="1"></asp:RequiredFieldValidator>
             </td>
         </tr>
         <tr>
@@ -109,6 +131,8 @@
             <td class="auto-style18">:</td>
             <td class="auto-style19">
                 <asp:TextBox ID="tb_address" runat="server" Width="308px"></asp:TextBox>
+                &nbsp;&nbsp;
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ControlToValidate="tb_address" ErrorMessage="*This Field Is Required" ForeColor="Red" ValidationGroup="1"></asp:RequiredFieldValidator>
             </td>
         </tr>
         <tr>
@@ -122,6 +146,8 @@
             <td class="auto-style18">:</td>
             <td class="auto-style19">
                 <asp:TextBox ID="tb_username" runat="server" Width="308px"></asp:TextBox>
+                &nbsp;&nbsp;
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ControlToValidate="tb_username" ErrorMessage="*This Field Is Required" ForeColor="Red" ValidationGroup="1"></asp:RequiredFieldValidator>
             </td>
         </tr>
         <tr>
@@ -135,7 +161,7 @@
             <td class="auto-style6">&nbsp;</td>
             <td class="auto-style5">&nbsp;</td>
             <td>
-                <asp:Button ID="btn_save" runat="server" Text="Save" Width="148px" OnClick="btn_save_Click"  />
+                <asp:Button ID="btn_save" runat="server" Text="Save" Width="148px" OnClick="btn_save_Click" ValidationGroup="1"  />
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <asp:Button ID="btn_reset" runat="server" Text="Reset" Width="127px" OnClick="btn_reset_Click" />
             </td>
