@@ -24,10 +24,7 @@
         .auto-style17 {
             width: 35px;
         }
-        .auto-style18 {
-            margin-left: 10px;
-        }
-    </style>
+        </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
     <h1 class="auto-style1" style="font-size: 40px">Booking History</h1>
@@ -42,11 +39,7 @@
         <tr>
             <td class="auto-style14">&nbsp;</td>
             <td>
-                <asp:DropDownList ID="DropDownList1" runat="server" CssClass="auto-style18" Height="16px" Width="118px">
-                    <asp:ListItem>Booking_ID</asp:ListItem>
-                    <asp:ListItem>Date</asp:ListItem>
-                </asp:DropDownList>
-            </td>
+                Search</td>
             <td class="auto-style17"><strong>:</strong></td>
             <td>
                 <asp:TextBox ID="TextBox1" runat="server" Width="449px"></asp:TextBox>
@@ -72,18 +65,52 @@
         <tr>
             <td class="auto-style14">&nbsp;</td>
             <td class="auto-style4" colspan="3">
-                <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="Booking_ID" DataSourceID="SqlDataSource1" AllowPaging="True" Width="608px" PageSize="5">
-                    <Columns>
-                        <asp:BoundField DataField="Booking_ID" HeaderText="Booking_ID" SortExpression="Booking_ID" ReadOnly="True" />
-                        <asp:BoundField DataField="Member_ID" HeaderText="Member_ID" SortExpression="Member_ID" />
-                        <asp:BoundField DataField="Member_Name" HeaderText="Member_Name" SortExpression="Member_Name" />
-                        <asp:BoundField DataField="Origin" HeaderText="Origin" SortExpression="Origin" />
-                        <asp:BoundField DataField="Destination" HeaderText="Destination" SortExpression="Destination" />
-                        <asp:BoundField DataField="Date" HeaderText="Date" SortExpression="Date" />
-                        <asp:BoundField DataField="Time" HeaderText="Time" SortExpression="Time" />
-                        <asp:CommandField ShowSelectButton="True" />
-                    </Columns>
-                </asp:GridView>
+                <asp:Panel ID="Panel1" runat="server" Width="635px">
+                    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="Booking_ID" DataSourceID="SqlDataSource1" AllowPaging="True" Width="599px" PageSize="5" BackColor="#CCCCCC" BorderColor="#999999" BorderStyle="Solid" BorderWidth="3px" CellPadding="4" CellSpacing="2" ForeColor="Black">
+                        <Columns>
+                            <asp:BoundField DataField="Booking_ID" HeaderText="Booking_ID" SortExpression="Booking_ID" ReadOnly="True" />
+                            <asp:BoundField DataField="Member_ID" HeaderText="Member_ID" SortExpression="Member_ID" />
+                            <asp:BoundField DataField="Member_Name" HeaderText="Member_Name" SortExpression="Member_Name" />
+                            <asp:BoundField DataField="Origin" HeaderText="Origin" SortExpression="Origin" />
+                            <asp:BoundField DataField="Destination" HeaderText="Destination" SortExpression="Destination" />
+                            <asp:BoundField DataField="Date" HeaderText="Date" SortExpression="Date" />
+                            <asp:BoundField DataField="Time" HeaderText="Time" SortExpression="Time" />
+                            <asp:CommandField ShowSelectButton="True" />
+                        </Columns>
+                        <FooterStyle BackColor="#CCCCCC" />
+                        <HeaderStyle BackColor="Black" Font-Bold="True" ForeColor="White" />
+                        <PagerStyle BackColor="#CCCCCC" ForeColor="Black" HorizontalAlign="Left" />
+                        <RowStyle BackColor="White" />
+                        <SelectedRowStyle BackColor="#000099" Font-Bold="True" ForeColor="White" />
+                        <SortedAscendingCellStyle BackColor="#F1F1F1" />
+                        <SortedAscendingHeaderStyle BackColor="#808080" />
+                        <SortedDescendingCellStyle BackColor="#CAC9C9" />
+                        <SortedDescendingHeaderStyle BackColor="#383838" />
+                    </asp:GridView>
+                </asp:Panel>
+                <asp:Panel ID="Panel2" runat="server" Width="598px">
+                    <asp:GridView ID="GridView2" runat="server" AutoGenerateColumns="False" BackColor="#CCCCCC" BorderColor="#999999" BorderStyle="Solid" BorderWidth="3px" CellPadding="4" CellSpacing="2" DataKeyNames="Booking_ID" DataSourceID="SqlDataSource3" ForeColor="Black">
+                        <Columns>
+                            <asp:BoundField DataField="Booking_ID" HeaderText="Booking_ID" InsertVisible="False" ReadOnly="True" SortExpression="Booking_ID" />
+                            <asp:BoundField DataField="Member_ID" HeaderText="Member_ID" SortExpression="Member_ID" />
+                            <asp:BoundField DataField="Member_Name" HeaderText="Member_Name" SortExpression="Member_Name" />
+                            <asp:BoundField DataField="Origin" HeaderText="Origin" SortExpression="Origin" />
+                            <asp:BoundField DataField="Destination" HeaderText="Destination" SortExpression="Destination" />
+                            <asp:BoundField DataField="Date" HeaderText="Date" SortExpression="Date" />
+                            <asp:BoundField DataField="Time" HeaderText="Time" SortExpression="Time" />
+                            <asp:CommandField ShowSelectButton="True" />
+                        </Columns>
+                        <FooterStyle BackColor="#CCCCCC" />
+                        <HeaderStyle BackColor="Black" Font-Bold="True" ForeColor="White" />
+                        <PagerStyle BackColor="#CCCCCC" ForeColor="Black" HorizontalAlign="Left" />
+                        <RowStyle BackColor="White" />
+                        <SelectedRowStyle BackColor="#000099" Font-Bold="True" ForeColor="White" />
+                        <SortedAscendingCellStyle BackColor="#F1F1F1" />
+                        <SortedAscendingHeaderStyle BackColor="#808080" />
+                        <SortedDescendingCellStyle BackColor="#CAC9C9" />
+                        <SortedDescendingHeaderStyle BackColor="#383838" />
+                    </asp:GridView>
+                </asp:Panel>
             </td>
             <td class="auto-style14">&nbsp;</td>
         </tr>
@@ -129,6 +156,18 @@
                         <asp:Parameter Name="Booking_ID" Type="Int32" />
                     </UpdateParameters>
                 </asp:SqlDataSource>
+                <asp:SqlDataSource ID="SqlDataSource3" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [Booking_ID], [Member_Name], [Member_ID], [Time], [Date], [Origin], [Destination] FROM [Bookings] WHERE (([Booking_ID] = @Booking_ID) OR ([Destination] = @Destination) OR ([Member_ID] = @Member_ID) OR ([Member_Name] = @Member_Name) OR ([Origin] = @Origin) OR ([Time] = @Time) OR ([Date] = @Date))">
+                    <SelectParameters>
+                        <asp:Parameter Name="Booking_ID" />
+                        <asp:ControlParameter ControlID="TextBox1" Name="Destination" PropertyName="Text" />
+                        <asp:ControlParameter ControlID="TextBox1" Name="Member_ID" PropertyName="Text" />
+                        <asp:ControlParameter ControlID="TextBox1" Name="Member_Name" PropertyName="Text" />
+                        <asp:ControlParameter ControlID="TextBox1" Name="Origin" PropertyName="Text" />
+                        <asp:ControlParameter ControlID="TextBox1" Name="Time" PropertyName="Text" />
+                        <asp:ControlParameter ControlID="TextBox1" Name="Date" PropertyName="Text" />
+                    </SelectParameters>
+                </asp:SqlDataSource>
+                <asp:SqlDataSource ID="SqlDataSource4" runat="server"></asp:SqlDataSource>
             </td>
             <td class="auto-style14">&nbsp;</td>
         </tr>
@@ -137,23 +176,34 @@
             <td class="auto-style15">
                 &nbsp;</td>
             <td class="auto-style16">
-                <asp:DetailsView ID="DetailsView1" runat="server" AutoGenerateRows="False" DataKeyNames="Booking_ID" DataSourceID="SqlDataSource2" Height="50px" Width="302px">
-                    <Fields>
-                        <asp:BoundField DataField="Booking_ID" HeaderText="Booking_ID" ReadOnly="True" SortExpression="Booking_ID" />
-                        <asp:BoundField DataField="Seat_ID" HeaderText="Seat_ID" SortExpression="Seat_ID" />
-                        <asp:BoundField DataField="Train_ID" HeaderText="Train_ID" SortExpression="Train_ID" />
-                        <asp:BoundField DataField="Train_Name" HeaderText="Train_Name" SortExpression="Train_Name" />
-                        <asp:BoundField DataField="Route_ID" HeaderText="Route_ID" SortExpression="Route_ID" />
-                        <asp:BoundField DataField="Origin" HeaderText="Origin" SortExpression="Origin" />
-                        <asp:BoundField DataField="Destination" HeaderText="Destination" SortExpression="Destination" />
-                        <asp:BoundField DataField="Date" HeaderText="Date" SortExpression="Date" />
-                        <asp:BoundField DataField="Time" HeaderText="Time" SortExpression="Time" />
-                        <asp:BoundField DataField="Price" HeaderText="Price" SortExpression="Price" />
-                        <asp:BoundField DataField="Member_ID" HeaderText="Member_ID" SortExpression="Member_ID" />
-                        <asp:BoundField DataField="Member_Name" HeaderText="Member_Name" SortExpression="Member_Name" />
-                        <asp:BoundField DataField="Member_NRIC" HeaderText="Member_NRIC" SortExpression="Member_NRIC" />
-                    </Fields>
-                </asp:DetailsView>
+                <asp:Panel ID="Panel3" runat="server" Width="305px">
+                    <asp:DetailsView ID="DetailsView1" runat="server" AutoGenerateRows="False" DataKeyNames="Booking_ID" DataSourceID="SqlDataSource2" Height="50px" Width="302px" BackColor="#CCCCCC" BorderColor="#999999" BorderStyle="Solid" BorderWidth="3px" CellPadding="4" CellSpacing="2" ForeColor="Black">
+                        <EditRowStyle BackColor="#000099" Font-Bold="True" ForeColor="White" />
+                        <Fields>
+                            <asp:BoundField DataField="Booking_ID" HeaderText="Booking_ID" ReadOnly="True" SortExpression="Booking_ID" />
+                            <asp:BoundField DataField="Seat_ID" HeaderText="Seat_ID" SortExpression="Seat_ID" />
+                            <asp:BoundField DataField="Train_ID" HeaderText="Train_ID" SortExpression="Train_ID" />
+                            <asp:BoundField DataField="Train_Name" HeaderText="Train_Name" SortExpression="Train_Name" />
+                            <asp:BoundField DataField="Route_ID" HeaderText="Route_ID" SortExpression="Route_ID" />
+                            <asp:BoundField DataField="Origin" HeaderText="Origin" SortExpression="Origin" />
+                            <asp:BoundField DataField="Destination" HeaderText="Destination" SortExpression="Destination" />
+                            <asp:BoundField DataField="Date" HeaderText="Date" SortExpression="Date" />
+                            <asp:BoundField DataField="Time" HeaderText="Time" SortExpression="Time" />
+                            <asp:BoundField DataField="Price" HeaderText="Price" SortExpression="Price" />
+                            <asp:BoundField DataField="Member_ID" HeaderText="Member_ID" SortExpression="Member_ID" />
+                            <asp:BoundField DataField="Member_Name" HeaderText="Member_Name" SortExpression="Member_Name" />
+                            <asp:BoundField DataField="Member_NRIC" HeaderText="Member_NRIC" SortExpression="Member_NRIC" />
+                        </Fields>
+                        <FooterStyle BackColor="#CCCCCC" />
+                        <HeaderStyle BackColor="Black" Font-Bold="True" ForeColor="White" />
+                        <PagerStyle BackColor="#CCCCCC" ForeColor="Black" HorizontalAlign="Left" />
+                        <RowStyle BackColor="White" />
+                    </asp:DetailsView>
+                </asp:Panel>
+                <asp:Panel ID="Panel4" runat="server">
+                    <asp:DetailsView ID="DetailsView2" runat="server" Height="50px" Width="125px">
+                    </asp:DetailsView>
+                </asp:Panel>
             </td>
             <td class="auto-style15">
                 &nbsp;</td>
