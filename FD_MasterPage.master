@@ -1,4 +1,4 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="FD_MasterPage.master.cs" Inherits="MasterPage" %>
 
 <!DOCTYPE html>
 
@@ -41,6 +41,12 @@
                     <li>
                         <a href="#">Contact Us</a>
                     </li>
+                                        <li>
+                        <a href="#">My Profile</a>
+                          </li>
+                           <li>
+                        <a href="#">Booking Management</a>
+                          </li>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->

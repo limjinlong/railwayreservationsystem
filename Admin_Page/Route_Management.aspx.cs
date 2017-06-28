@@ -100,7 +100,7 @@ public partial class Admin_Page_Route_Management : System.Web.UI.Page
 
     protected void GridView1_RowDataBound(object sender, GridViewRowEventArgs e)
     {
-        if (e.Row.RowState != DataControlRowState.Edit) // check for RowState
+      /*  if (e.Row.RowState != DataControlRowState.Edit) // check for RowState
         {
             if (e.Row.RowType == DataControlRowType.DataRow) //check for RowType
             {
@@ -113,6 +113,6 @@ public partial class Admin_Page_Route_Management : System.Web.UI.Page
                     lb.Attributes.Add("onclick", "return ConfirmOnDelete('" + id + "');");
                 }
             }
-        }
+        }*/
     }
 }
