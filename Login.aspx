@@ -66,12 +66,26 @@
             </td>
         </tr>
         <tr>
+            <td class="auto-style9">&nbsp;</td>
+            <td class="auto-style10">Role</td>
+            <td class="auto-style11">:</td>
+            <td class="auto-style12">
+                <asp:DropDownList ID="ddl_roles" runat="server">
+                    <asp:ListItem>Members</asp:ListItem>
+                    <asp:ListItem>Admin</asp:ListItem>
+                    <asp:ListItem>FrontDesk</asp:ListItem>
+                </asp:DropDownList>
+            </td>
+        </tr>
+        <tr>
             <td class="auto-style2">&nbsp;</td>
             <td class="auto-style3">&nbsp;</td>
             <td class="auto-style4">&nbsp;</td>
             <td>
                 <asp:Button ID="btn_login" runat="server" Text="Login" OnClick="btn_login_Click" />
                 <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [Members]"></asp:SqlDataSource>
+                <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [Admins]"></asp:SqlDataSource>
+                <asp:SqlDataSource ID="SqlDataSource3" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [FrontDesks]"></asp:SqlDataSource>
             </td>
         </tr>
     </table>

@@ -18,24 +18,74 @@ public partial class Login_Register_Login : System.Web.UI.Page
 
     protected void btn_login_Click(object sender, EventArgs e)
     {
-        SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
-        con.Open();
-        SqlCommand cmd = new SqlCommand("select count(*) from Members where Username = '" + txt_uname.Text +
-            "' and Password = '" + txt_pwd.Text + "'", con);
-        int count = Convert.ToInt32(cmd.ExecuteScalar().ToString());
+        if (ddl_roles.SelectedItem.ToString() == "Members")
+        {
+            SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
+            con.Open();
+            SqlCommand cmd = new SqlCommand("select count(*) from Members where Username = '" + txt_uname.Text +
+                "' and Password = '" + txt_pwd.Text + "'", con);
+            int count = Convert.ToInt32(cmd.ExecuteScalar().ToString());
 
-        if (count > 0)
-        {
-            SqlCommand cmdUname = new SqlCommand("Select Username from Members where Username = '" + txt_uname.Text + "'", con);
-            string uname = cmdUname.ExecuteScalar().ToString().Replace(" ", "");
-            Response.Redirect("Home.aspx");
+            if (count > 0)
+            {
+                SqlCommand cmdUname = new SqlCommand("Select Username from Members where Username = '" + txt_uname.Text + "'", con);
+                string uname = cmdUname.ExecuteScalar().ToString().Replace(" ", "");
+                Response.Redirect("Home.aspx");
+            }
+            else
+            {
+                Response.Write("<script>alert('invalid username or password');</script>");
+                txt_uname.Text = string.Empty;
+                txt_pwd.Text = string.Empty;
+            }
+            con.Close();
         }
-        else
+
+        else if (ddl_roles.SelectedItem.ToString() == "Admin")
         {
-            Response.Write("<script>alert('invalid username or password');</script>");
-            txt_uname.Text = string.Empty;
-            txt_pwd.Text = string.Empty;
+            SqlConnection con1 = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
+            con1.Open();
+            SqlCommand cmd1 = new SqlCommand("select count(*) from Admins where Username = '" + txt_uname.Text +
+                "' and Password = '" + txt_pwd.Text + "'", con1);
+            int count2 = Convert.ToInt32(cmd1.ExecuteScalar().ToString());
+
+            if (count2 > 0)
+            {
+                SqlCommand cmdUname1 = new SqlCommand("Select Username from Admins where Username = '" + txt_uname.Text + "'", con1);
+                string uname = cmdUname1.ExecuteScalar().ToString().Replace(" ", "");
+                Response.Redirect("Home_Admin.aspx");
+            }
+            else
+            {
+                Response.Write("<script>alert('invalid username or password');</script>");
+                txt_uname.Text = string.Empty;
+                txt_pwd.Text = string.Empty;
+            }
+            con1.Close();
         }
-        con.Close();
+
+        else 
+        {
+            SqlConnection con2 = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
+            con2.Open();
+            SqlCommand cmd2 = new SqlCommand("select count(*) from FrontDesks where Username = '" + txt_uname.Text +
+                "' and Password = '" + txt_pwd.Text + "'", con2);
+            int count2 = Convert.ToInt32(cmd2.ExecuteScalar().ToString());
+
+            if (count2 > 0)
+            {
+                SqlCommand cmdUname2 = new SqlCommand("Select Username from FrontDesks where Username = '" + txt_uname.Text + "'", con2);
+                string uname = cmdUname2.ExecuteScalar().ToString().Replace(" ", "");
+                Response.Redirect("Home.aspx");
+            }
+            else
+            {
+                Response.Write("<script>alert('invalid username or password');</script>");
+                txt_uname.Text = string.Empty;
+                txt_pwd.Text = string.Empty;
+            }
+            con2.Close();
+        }
     }
+    
 }

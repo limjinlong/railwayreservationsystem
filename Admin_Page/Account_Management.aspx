@@ -71,7 +71,7 @@
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-    <asp:Panel ID="Panel1" runat="server" Height="610px">
+    <asp:Panel ID="Panel1" runat="server" Height="553px">
         <table class="auto-style27">
             <tr>
                 <td class="auto-style2">&nbsp;</td>
