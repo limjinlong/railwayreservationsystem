@@ -69,6 +69,11 @@
         width: 168px;
     }
     </style>
+    <script type="text/javascript">
+        function OpenNewWindow() {
+            window.open('Create_New_User.aspx', 'location=no,resizable=no', true);
+        }
+</script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
     <asp:Panel ID="Panel1" runat="server" Height="610px">
