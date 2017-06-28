@@ -49,6 +49,18 @@
         .auto-style23 {
             width: 202px;
         }
+        .auto-style24 {
+            height: 44px;
+            width: 1515px;
+        }
+        .auto-style25 {
+            height: 38px;
+            width: 1515px;
+        }
+        .auto-style26 {
+            height: 42px;
+            width: 1515px;
+        }
     </style>
          <script type="text/javascript">
         function ConfirmOnDelete(item)
@@ -65,7 +77,7 @@
         <table class="auto-style1">
             <tr>
                 <td class="auto-style14"></td>
-                <td class="auto-style15">
+                <td class="auto-style24">
                     <h1>Booking Management</h1>
                     <table class="auto-style19">
                         <tr>
@@ -142,12 +154,6 @@
                                 <asp:BoundField DataField="Member_ID" HeaderText="Member_ID" SortExpression="Member_ID" />
                                 <asp:BoundField DataField="Member_Name" HeaderText="Member_Name" SortExpression="Member_Name" />
                                 <asp:BoundField DataField="Member_NRIC" HeaderText="Member_NRIC" SortExpression="Member_NRIC" />
-                                <asp:CommandField ShowEditButton="True" />
-                                <asp:TemplateField ShowHeader="False">
-                                    <ItemTemplate>
-                                        <asp:LinkButton ID="LinkButton1" runat="server" CausesValidation="False" CommandName="Delete" ForeColor="Black" Text="Delete"  OnClientClick="return confirm('Are you sure you want to delete?'); " ></asp:LinkButton>
-                                    </ItemTemplate>
-                                </asp:TemplateField>
                             </Columns>
                             <FooterStyle BackColor="#CCCCCC" />
                             <HeaderStyle BackColor="Black" Font-Bold="True" ForeColor="White" />
@@ -166,21 +172,21 @@
             </tr>
             <tr>
                 <td class="auto-style14">&nbsp;</td>
-                <td class="auto-style15">
+                <td class="auto-style24">
                     
                 </td>
                 <td class="auto-style15">&nbsp;</td>
             </tr>
             <tr>
                 <td class="auto-style16"></td>
-                <td class="auto-style17">
+                <td class="auto-style25">
                     <asp:Label ID="lbl_feedback" runat="server" ForeColor="Lime" Text="[Feedback Msg]"></asp:Label>
                     </td>
                 <td class="auto-style17"></td>
             </tr>
             <tr>
                 <td class="auto-style4"></td>
-                <td class="auto-style18">
+                <td class="auto-style26">
                     <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" DeleteCommand="DELETE FROM [Bookings] WHERE [Booking_ID] = @Booking_ID" InsertCommand="INSERT INTO [Bookings] ([Booking_ID], [Seat_ID], [Train_ID], [Train_Name], [Route_ID], [Origin], [Destination], [Date], [Time], [Price], [Member_ID], [Member_Name], [Member_NRIC]) VALUES (@Booking_ID, @Seat_ID, @Train_ID, @Train_Name, @Route_ID, @Origin, @Destination, @Date, @Time, @Price, @Member_ID, @Member_Name, @Member_NRIC)" SelectCommand="SELECT * FROM [Bookings]" UpdateCommand="UPDATE [Bookings] SET [Seat_ID] = @Seat_ID, [Train_ID] = @Train_ID, [Train_Name] = @Train_Name, [Route_ID] = @Route_ID, [Origin] = @Origin, [Destination] = @Destination, [Date] = @Date, [Time] = @Time, [Price] = @Price, [Member_ID] = @Member_ID, [Member_Name] = @Member_Name, [Member_NRIC] = @Member_NRIC WHERE [Booking_ID] = @Booking_ID">
                         <DeleteParameters>
                             <asp:Parameter Name="Booking_ID" Type="Int32" />
@@ -216,7 +222,7 @@
                             <asp:Parameter Name="Booking_ID" Type="Int32" />
                         </UpdateParameters>
                     </asp:SqlDataSource>
-                    <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" DeleteCommand="DELETE FROM [Bookings] WHERE [Booking_ID] = @Booking_ID" InsertCommand="INSERT INTO [Bookings] ([Booking_ID], [Seat_ID], [Train_ID], [Train_Name], [Route_ID], [Origin], [Destination], [Date], [Time], [Price], [Member_ID], [Member_Name], [Member_NRIC]) VALUES (@Booking_ID, @Seat_ID, @Train_ID, @Train_Name, @Route_ID, @Origin, @Destination, @Date, @Time, @Price, @Member_ID, @Member_Name, @Member_NRIC)" SelectCommand="SELECT * FROM [Bookings] WHERE (([Date] = @Date) AND ([Destination] = @Destination) OR ([Member_ID] = @Member_ID) OR ([Member_Name] = @Member_Name) OR ([Member_NRIC] = @Member_NRIC) OR ([Origin] = @Origin) OR ([Price] = @Price) OR ([Route_ID] = @Route_ID) OR ([Seat_ID] = @Seat_ID) OR ([Time] = @Time) OR ([Train_ID] = @Train_ID) OR ([Train_Name] = @Train_Name))" UpdateCommand="UPDATE [Bookings] SET [Seat_ID] = @Seat_ID, [Train_ID] = @Train_ID, [Train_Name] = @Train_Name, [Route_ID] = @Route_ID, [Origin] = @Origin, [Destination] = @Destination, [Date] = @Date, [Time] = @Time, [Price] = @Price, [Member_ID] = @Member_ID, [Member_Name] = @Member_Name, [Member_NRIC] = @Member_NRIC WHERE [Booking_ID] = @Booking_ID">
+                    <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" DeleteCommand="DELETE FROM [Bookings] WHERE [Booking_ID] = @Booking_ID" InsertCommand="INSERT INTO [Bookings] ([Booking_ID], [Seat_ID], [Train_ID], [Train_Name], [Route_ID], [Origin], [Destination], [Date], [Time], [Price], [Member_ID], [Member_Name], [Member_NRIC]) VALUES (@Booking_ID, @Seat_ID, @Train_ID, @Train_Name, @Route_ID, @Origin, @Destination, @Date, @Time, @Price, @Member_ID, @Member_Name, @Member_NRIC)" SelectCommand="SELECT * FROM [Bookings] WHERE (([Date] = @Date) OR ([Destination] = @Destination) OR([Member_ID] = @Member_ID) OR ([Member_Name] = @Member_Name) OR ([Member_NRIC] = @Member_NRIC) OR ([Origin] = @Origin) OR ([Price] = @Price) OR ([Route_ID] = @Route_ID) OR([Seat_ID] = @Seat_ID) OR ([Time] = @Time) OR ([Train_ID] = @Train_ID) OR ([Train_Name] = @Train_Name))" UpdateCommand="UPDATE [Bookings] SET [Seat_ID] = @Seat_ID, [Train_ID] = @Train_ID, [Train_Name] = @Train_Name, [Route_ID] = @Route_ID, [Origin] = @Origin, [Destination] = @Destination, [Date] = @Date, [Time] = @Time, [Price] = @Price, [Member_ID] = @Member_ID, [Member_Name] = @Member_Name, [Member_NRIC] = @Member_NRIC WHERE [Booking_ID] = @Booking_ID">
                         <DeleteParameters>
                             <asp:Parameter Name="Booking_ID" Type="Int32" />
                         </DeleteParameters>

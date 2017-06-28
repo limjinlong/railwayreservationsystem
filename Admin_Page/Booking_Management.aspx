@@ -113,12 +113,7 @@
                                 <asp:BoundField DataField="Member_ID" HeaderText="Member_ID" SortExpression="Member_ID" />
                                 <asp:BoundField DataField="Member_Name" HeaderText="Member_Name" SortExpression="Member_Name" />
                                 <asp:BoundField DataField="Member_NRIC" HeaderText="Member_NRIC" SortExpression="Member_NRIC" />
-                                <asp:CommandField ShowEditButton="True" />
-                                <asp:TemplateField ShowHeader="False">
-                                    <ItemTemplate>
-                                        <asp:LinkButton ID="LinkButton1" runat="server" CausesValidation="False" CommandName="Delete" ForeColor="Black" Text="Delete" OnClientClick="return confirm('Are you sure you want to delete?');"></asp:LinkButton>
-                                    </ItemTemplate>
-                                </asp:TemplateField>
+                                <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" />
                             </Columns>
                             <FooterStyle BackColor="#CCCCCC" />
                             <HeaderStyle BackColor="Black" Font-Bold="True" ForeColor="White" />
@@ -184,7 +179,7 @@
                             <asp:Parameter Name="Booking_ID" Type="Int32" />
                         </UpdateParameters>
                     </asp:SqlDataSource>
-                    <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" DeleteCommand="DELETE FROM [Bookings] WHERE [Booking_ID] = @Booking_ID" InsertCommand="INSERT INTO [Bookings] ([Booking_ID], [Seat_ID], [Train_ID], [Train_Name], [Route_ID], [Origin], [Destination], [Date], [Time], [Price], [Member_ID], [Member_Name], [Member_NRIC]) VALUES (@Booking_ID, @Seat_ID, @Train_ID, @Train_Name, @Route_ID, @Origin, @Destination, @Date, @Time, @Price, @Member_ID, @Member_Name, @Member_NRIC)" SelectCommand="SELECT * FROM [Bookings] WHERE (([Date] = @Date) AND ([Destination] = @Destination) OR ([Member_ID] = @Member_ID) OR ([Member_Name] = @Member_Name) OR ([Member_NRIC] = @Member_NRIC) OR ([Origin] = @Origin) OR ([Price] = @Price) OR ([Route_ID] = @Route_ID) OR ([Seat_ID] = @Seat_ID) OR ([Time] = @Time) OR ([Train_ID] = @Train_ID) OR ([Train_Name] = @Train_Name))" UpdateCommand="UPDATE [Bookings] SET [Seat_ID] = @Seat_ID, [Train_ID] = @Train_ID, [Train_Name] = @Train_Name, [Route_ID] = @Route_ID, [Origin] = @Origin, [Destination] = @Destination, [Date] = @Date, [Time] = @Time, [Price] = @Price, [Member_ID] = @Member_ID, [Member_Name] = @Member_Name, [Member_NRIC] = @Member_NRIC WHERE [Booking_ID] = @Booking_ID">
+                    <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" DeleteCommand="DELETE FROM [Bookings] WHERE [Booking_ID] = @Booking_ID" InsertCommand="INSERT INTO [Bookings] ([Booking_ID], [Seat_ID], [Train_ID], [Train_Name], [Route_ID], [Origin], [Destination], [Date], [Time], [Price], [Member_ID], [Member_Name], [Member_NRIC]) VALUES (@Booking_ID, @Seat_ID, @Train_ID, @Train_Name, @Route_ID, @Origin, @Destination, @Date, @Time, @Price, @Member_ID, @Member_Name, @Member_NRIC)" SelectCommand="SELECT * FROM [Bookings] WHERE (([Date] = @Date) OR ([Destination] = @Destination) OR([Member_ID] = @Member_ID) OR ([Member_Name] = @Member_Name) OR ([Member_NRIC] = @Member_NRIC) OR ([Origin] = @Origin) OR ([Price] = @Price) OR ([Route_ID] = @Route_ID) OR([Seat_ID] = @Seat_ID) OR ([Time] = @Time) OR ([Train_ID] = @Train_ID) OR ([Train_Name] = @Train_Name))" UpdateCommand="UPDATE [Bookings] SET [Seat_ID] = @Seat_ID, [Train_ID] = @Train_ID, [Train_Name] = @Train_Name, [Route_ID] = @Route_ID, [Origin] = @Origin, [Destination] = @Destination, [Date] = @Date, [Time] = @Time, [Price] = @Price, [Member_ID] = @Member_ID, [Member_Name] = @Member_Name, [Member_NRIC] = @Member_NRIC WHERE [Booking_ID] = @Booking_ID">
                         <DeleteParameters>
                             <asp:Parameter Name="Booking_ID" Type="Int32" />
                         </DeleteParameters>
