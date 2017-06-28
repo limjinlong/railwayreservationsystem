@@ -72,7 +72,7 @@
         <tr>
             <td class="auto-style14">&nbsp;</td>
             <td class="auto-style4" colspan="3">
-                <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="Booking_ID" DataSourceID="SqlDataSource1" AllowPaging="True" OnSelectedIndexChanged="GridView1_SelectedIndexChanged" Width="608px" PageSize="5">
+                <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="Booking_ID" DataSourceID="SqlDataSource1" AllowPaging="True" Width="608px" PageSize="5">
                     <Columns>
                         <asp:BoundField DataField="Booking_ID" HeaderText="Booking_ID" SortExpression="Booking_ID" ReadOnly="True" />
                         <asp:BoundField DataField="Member_ID" HeaderText="Member_ID" SortExpression="Member_ID" />
