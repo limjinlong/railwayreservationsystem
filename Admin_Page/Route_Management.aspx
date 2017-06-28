@@ -178,7 +178,11 @@
                             <asp:BoundField DataField="Train_ID" HeaderText="Train_ID" SortExpression="Train_ID" />
                             <asp:BoundField DataField="Price" HeaderText="Price" SortExpression="Price" />
                             <asp:CommandField ShowEditButton="True" />
-                            <asp:CommandField ShowDeleteButton="True" />
+                            <asp:TemplateField ShowHeader="False">
+                                <ItemTemplate>
+                                    <asp:LinkButton ID="LinkButton1" runat="server" CausesValidation="False" CommandName="Delete" ForeColor="Black" Text="Delete"  OnClientClick="return confirm('Are you sure you want to delete?'); " ></asp:LinkButton>
+                                </ItemTemplate>
+                            </asp:TemplateField>
                         </Columns>
                         <FooterStyle BackColor="#CCCCCC" />
                         <HeaderStyle BackColor="Black" Font-Bold="True" ForeColor="White" />

@@ -4,9 +4,10 @@
     <style type="text/css">
         .auto-style1 {
             width: 100%;
-        }
+        height: 270px;
+    }
         .auto-style2 {
-            width: 475px;
+            width: 530px;
         }
         .auto-style3 {
             width: 179px;
@@ -15,7 +16,7 @@
             width: 17px;
         }
         .auto-style5 {
-            width: 475px;
+            width: 530px;
             height: 49px;
         }
         .auto-style6 {
@@ -30,9 +31,9 @@
             height: 49px;
         }
         .auto-style9 {
-            width: 475px;
-            height: 51px;
-        }
+        width: 530px;
+        height: 51px;
+    }
         .auto-style10 {
             width: 179px;
             height: 51px;
@@ -44,10 +45,28 @@
         .auto-style12 {
             height: 51px;
         }
+    .auto-style13 {
+        text-align: center;
+    }
+    .auto-style14 {
+        width: 530px;
+        height: 169px;
+    }
+    .auto-style15 {
+        width: 179px;
+        height: 169px;
+    }
+    .auto-style16 {
+        width: 17px;
+        height: 169px;
+    }
+    .auto-style17 {
+        height: 169px;
+    }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-    <h1>Login</h1>
+    <h1 class="auto-style13">&nbsp;Login</h1>
     <table class="auto-style1">
         <tr>
             <td class="auto-style5"></td>
@@ -82,10 +101,18 @@
             <td class="auto-style3">&nbsp;</td>
             <td class="auto-style4">&nbsp;</td>
             <td>
-                <asp:Button ID="btn_login" runat="server" Text="Login" OnClick="btn_login_Click" />
+                &nbsp;<asp:Button ID="btn_login" runat="server" Text="Login" OnClick="btn_login_Click" />
+            </td>
+        </tr>
+        <tr>
+            <td class="auto-style14"></td>
+            <td class="auto-style15"></td>
+            <td class="auto-style16"></td>
+            <td class="auto-style17">
                 <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [Members]"></asp:SqlDataSource>
                 <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [Admins]"></asp:SqlDataSource>
                 <asp:SqlDataSource ID="SqlDataSource3" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [FrontDesks]"></asp:SqlDataSource>
+                <asp:SqlDataSource ID="SqlDataSource4" runat="server"></asp:SqlDataSource>
             </td>
         </tr>
     </table>

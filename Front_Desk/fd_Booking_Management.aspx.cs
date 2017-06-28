@@ -13,6 +13,7 @@ public partial class Admin_Page_Booking_Management : System.Web.UI.Page
     protected void Page_Load(object sender, EventArgs e)
     {
         lbl_feedback.Visible = false;
+        lbl_requiredsearch.Visible = false;
     }
 
     protected void GridView1_RowUpdated(object sender, GridViewUpdatedEventArgs e)
@@ -60,17 +61,26 @@ public partial class Admin_Page_Booking_Management : System.Web.UI.Page
     }
 
 
-    protected void txt_search_TextChanged(object sender, EventArgs e)
-    {
-        Panel2.Visible = false;
-        Panel3.Visible = true;
 
-    }
 
     protected void Refresh_Click(object sender, EventArgs e)
     {
         Panel2.Visible = true;
         Panel3.Visible = false;
         txt_search.Text = "";
+    }
+
+    protected void txt_search_Click(object sender, EventArgs e)
+    {
+        if (txt_search.Text == "")
+        {
+            lbl_requiredsearch.Text = "Please fill in the textbox";
+            lbl_requiredsearch.Visible = true;
+        }
+        else
+        {
+            Panel2.Visible = false;
+            Panel3.Visible = true;
+        }
     }
 }
