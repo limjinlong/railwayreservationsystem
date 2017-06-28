@@ -76,6 +76,8 @@
             <td class="auto-style8">:</td>
             <td class="auto-style9">
                 <asp:DropDownList ID="ddl_gender" runat="server" Width="149px">
+                    <asp:ListItem>Male</asp:ListItem>
+                    <asp:ListItem>Female</asp:ListItem>
                 </asp:DropDownList>
             </td>
         </tr>
@@ -110,7 +112,9 @@
             </td>
         </tr>
         <tr>
-            <td class="auto-style2" rowspan="3">&nbsp;</td>
+            <td class="auto-style2" rowspan="4">
+                <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [Admins]"></asp:SqlDataSource>
+            </td>
             <td class="auto-style17">Username</td>
             <td class="auto-style18">:</td>
             <td class="auto-style19">
@@ -118,10 +122,17 @@
             </td>
         </tr>
         <tr>
-            <td class="auto-style6"></td>
-            <td class="auto-style5"></td>
-            <td>
-                <asp:Button ID="btn_change" runat="server" Text="Change Username / Password" Width="308px" />
+            <td class="auto-style17">Password</td>
+            <td class="auto-style18">:</td>
+            <td class="auto-style19">
+                <asp:TextBox ID="tb_password" runat="server" TextMode="Password" Width="308px"></asp:TextBox>
+            </td>
+        </tr>
+        <tr>
+            <td class="auto-style17">Confirm Password</td>
+            <td class="auto-style18">:</td>
+            <td class="auto-style19">
+                <asp:TextBox ID="tb_confirmpassword" runat="server" TextMode="Password" Width="308px"></asp:TextBox>
             </td>
         </tr>
         <tr>
