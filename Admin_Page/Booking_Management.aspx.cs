@@ -28,7 +28,7 @@ public partial class Admin_Page_Booking_Management : System.Web.UI.Page
 
     protected void GridView1_RowDataBound(object sender, GridViewRowEventArgs e)
     {
-        if (e.Row.RowState != DataControlRowState.Edit) // check for RowState
+        /*if (e.Row.RowState != DataControlRowState.Edit) // check for RowState
         {
             if (e.Row.RowType == DataControlRowType.DataRow) //check for RowType
             {
@@ -41,6 +41,20 @@ public partial class Admin_Page_Booking_Management : System.Web.UI.Page
                     lb.Attributes.Add("onclick", "return ConfirmOnDelete('" + id + "');");
                 }
             }
-        }
+        }*/
+    }
+
+    protected void txt_search_TextChanged(object sender, EventArgs e)
+    {
+        Panel2.Visible = false;
+        Panel3.Visible = true;
+
+    }
+
+    protected void Refresh_Click(object sender, EventArgs e)
+    {
+        Panel2.Visible = true;
+        Panel3.Visible = false;
+        txt_search.Text = "";
     }
 }

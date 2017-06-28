@@ -100,7 +100,7 @@
                     <asp:TextBox ID="tb_NRIC" runat="server" Width="500px" Enabled="False"></asp:TextBox>
                 </td>
                 <td class="auto-style5">
-                    <asp:Button ID="btn_Save" runat="server" Font-Size="Medium" Height="40px" OnClick="btn_Save_Click" Text="Save" Width="80px" />
+                    <asp:Button ID="btn_Save" runat="server" Font-Size="Medium" Height="40px" OnClick="btn_Save_Click" Text="Update" Width="80px" />
                 </td>
             </tr>
             <tr>
