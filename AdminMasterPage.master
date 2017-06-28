@@ -17,6 +17,9 @@
             <div class="navbar-header">
               
                 <a class="navbar-brand" href="#">Railway Reservation System - Admin</a>
+               
+                 
+               
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
       
@@ -40,6 +43,8 @@
                              <a href="Booking_Management.aspx" class="list-group-item">Booking Management</a>
                              <a href="Account_Management.aspx" class="list-group-item">Account Management</a>
                              <a href="Report.aspx" class="list-group-item">Report</a>
+                            <a href="../Login.aspx" class="list-group-item" onclick="return confirm('Are you sure you want to logout?');" >Logout</a>
+                            
 
                            </div>
                     </div>

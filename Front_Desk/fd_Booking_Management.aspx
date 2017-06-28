@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="fd_Booking_Management.aspx.cs" Inherits="Admin_Page_Booking_Management" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/FD_MasterPage.master" AutoEventWireup="true" CodeFile="fd_Booking_Management.aspx.cs" Inherits="Admin_Page_Booking_Management" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
     <style type="text/css">

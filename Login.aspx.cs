@@ -88,5 +88,10 @@ public partial class Login_Register_Login : System.Web.UI.Page
             con2.Close();
         }
     }
-    
+
+
+    protected void LinkButton1_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("Forgot_Password.aspx");
+    }
 }
