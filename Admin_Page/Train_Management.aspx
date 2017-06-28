@@ -162,11 +162,37 @@
                     <br />
                     <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" BackColor="#CCCCCC" BorderColor="#999999" BorderStyle="Solid" BorderWidth="3px" CellPadding="6" CellSpacing="4" DataKeyNames="Train_ID" DataSourceID="SqlDataSource1" ForeColor="Black" Width="521px" OnRowUpdated="GridView1_RowUpdated" OnRowDeleted="GridView1_RowDeleted" OnRowDataBound="GridView1_RowDataBound1">
                         <Columns>
-                            <asp:BoundField DataField="Train_ID" HeaderText="Train_ID" ReadOnly="True" SortExpression="Train_ID" />
-                            <asp:BoundField DataField="Name" HeaderText="Name" SortExpression="Name" />
-                            <asp:BoundField DataField="Capacity" HeaderText="Capacity" SortExpression="Capacity" />
+                            <asp:TemplateField HeaderText="Train_ID" SortExpression="Train_ID">
+                                <EditItemTemplate>
+                                    <asp:TextBox ID="tb_edittrainid" runat="server" Text='<%# Bind("Train_ID") %>'></asp:TextBox>
+                                </EditItemTemplate>
+                                <ItemTemplate>
+                                    <asp:Label ID="Label1" runat="server" Text='<%# Bind("Train_ID") %>'></asp:Label>
+                                </ItemTemplate>
+                            </asp:TemplateField>
+                            <asp:TemplateField HeaderText="Name" SortExpression="Name">
+                                <EditItemTemplate>
+                                    <asp:TextBox ID="tb_editname" runat="server" Text='<%# Bind("Name") %>'></asp:TextBox>
+                                </EditItemTemplate>
+                                <ItemTemplate>
+                                    <asp:Label ID="Label2" runat="server" Text='<%# Bind("Name") %>'></asp:Label>
+                                </ItemTemplate>
+                            </asp:TemplateField>
+                            <asp:TemplateField HeaderText="Capacity" SortExpression="Capacity">
+                                <EditItemTemplate>
+                                    <asp:TextBox ID="tb_editcapacity" runat="server" Text='<%# Bind("Capacity") %>' TextMode="Number"></asp:TextBox>
+                                </EditItemTemplate>
+                                <ItemTemplate>
+                                    <asp:Label ID="Label3" runat="server" Text='<%# Bind("Capacity") %>'></asp:Label>
+                                </ItemTemplate>
+                            </asp:TemplateField>
                             <asp:CommandField ShowEditButton="True" />
-                            <asp:CommandField ShowDeleteButton="True" />
+                            <asp:TemplateField ShowHeader="False" AccessibleHeaderText="Delete">
+                                
+                                <ItemTemplate>
+                                    <asp:LinkButton ID="LinkButton1" runat="server" CausesValidation="False" CommandName="Delete" Text="Delete" OnClientClick="return confirm('Are you sure you want to delete?'); " ForeColor="Black"></asp:LinkButton>
+                                </ItemTemplate>
+                            </asp:TemplateField>
                         </Columns>
                         <FooterStyle BackColor="#CCCCCC" />
                         <HeaderStyle BackColor="Black" Font-Bold="True" ForeColor="White" />
