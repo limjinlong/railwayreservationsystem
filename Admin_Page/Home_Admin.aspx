@@ -113,6 +113,9 @@
         </tr>
         <tr>
             <td class="auto-style2" rowspan="3">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <asp:Button ID="btn_upload" runat="server" OnClick="btn_upload_Click" Text="Upload Image" Width="148px" />
+                <br />
                 <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [Admins]"></asp:SqlDataSource>
             </td>
             <td class="auto-style17">Username</td>
@@ -126,8 +129,7 @@
             <td class="auto-style5">&nbsp;</td>
             <td>
                 <asp:Button ID="btn_change" runat="server" Text="Change Username / Password" Width="308px" OnClick="btn_change_Click" />
-                &nbsp;<asp:Label ID="lbl_test" runat="server" Text="[ID]"></asp:Label>
-            </td>
+                &nbsp;</td>
         </tr>
         <tr>
             <td class="auto-style6">&nbsp;</td>
@@ -135,7 +137,7 @@
             <td>
                 <asp:Button ID="btn_save" runat="server" Text="Save" Width="148px" OnClick="btn_save_Click"  />
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <asp:Button ID="btn_reset" runat="server" Text="Reset" Width="127px" />
+                <asp:Button ID="btn_reset" runat="server" Text="Reset" Width="127px" OnClick="btn_reset_Click" />
             </td>
         </tr>
     </table>

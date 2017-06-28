@@ -62,7 +62,7 @@
             <td class="auto-style12">Enter Current Password</td>
             <td class="auto-style13">:</td>
             <td class="auto-style14">
-                <asp:TextBox ID="tb_currentpassword" runat="server" Width="224px"></asp:TextBox>
+                <asp:TextBox ID="tb_currentpassword" runat="server" Width="224px" TextMode="Password"></asp:TextBox>
             </td>
             <td class="auto-style15">
                 <asp:Label ID="lbl_warning1" runat="server" ForeColor="Red" Text="Invalid Password"></asp:Label>
@@ -73,7 +73,7 @@
             <td class="auto-style12">Enter New Password</td>
             <td class="auto-style13">:</td>
             <td class="auto-style14">
-                <asp:TextBox ID="tb_newpassword" runat="server" Width="224px"></asp:TextBox>
+                <asp:TextBox ID="tb_newpassword" runat="server" Width="224px" TextMode="Password"></asp:TextBox>
             </td>
             <td class="auto-style15"></td>
         </tr>
@@ -82,7 +82,7 @@
             <td class="auto-style12">Retype Password</td>
             <td class="auto-style13">:</td>
             <td class="auto-style14">
-                <asp:TextBox ID="tb_retypepassword" runat="server" Width="224px"></asp:TextBox>
+                <asp:TextBox ID="tb_retypepassword" runat="server" Width="224px" TextMode="Password"></asp:TextBox>
             </td>
             <td class="auto-style15">
                 <asp:Label ID="lbl_warning2" runat="server" ForeColor="Red" Text="Password Not Match With Your New Password"></asp:Label>

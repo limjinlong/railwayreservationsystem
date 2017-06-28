@@ -115,4 +115,15 @@ public partial class Admin_Page_Route_Management : System.Web.UI.Page
             }
         }*/
     }
+
+    protected void btn_clear_Click(object sender, EventArgs e)
+    {
+        tb_routeid.Text = "";
+        tb_origin.Text = "";
+        tb_destination.Text = "";
+        tb_date.Text = "";
+        tb_price.Text = "";
+        tb_time.Text = "";
+        ddl_trainid.SelectedIndex = 0;
+    }
 }

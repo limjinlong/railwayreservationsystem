@@ -150,7 +150,7 @@
                 <td class="auto-style14">
                     <asp:Button ID="btn_addroute" runat="server" Text="Add Route" Width="132px" OnClick="btn_addroute_Click" />
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <asp:Button ID="btn_clear" runat="server" Text="Clear" Width="132px" />
+                    <asp:Button ID="btn_clear" runat="server" Text="Clear" Width="132px" OnClick="btn_clear_Click" />
                     <br />
                     <asp:Label ID="lbl_feedback" runat="server" ForeColor="Lime" Text="[Feedback Msg]"></asp:Label>
                     <br />
