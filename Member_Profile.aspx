@@ -32,13 +32,10 @@
         }
         .auto-style20 {
             height: 19px;
-            width: 500px;
+            width: 435px;
         }
         .auto-style21 {
             width: 216px;
-        }
-        .auto-style22 {
-            width: 500px;
         }
         .auto-style23 {
             width: 129px;
@@ -46,6 +43,9 @@
         .auto-style24 {
             width: 129px;
             text-align: left;
+        }
+        .auto-style25 {
+            width: 435px;
         }
     </style>
 </asp:Content>
@@ -57,7 +57,8 @@
                 <td class="auto-style21">&nbsp;</td>
                 <td class="auto-style17">&nbsp;</td>
                 <td class="auto-style15">&nbsp;</td>
-                <td class="auto-style22">&nbsp;</td>
+                <td class="auto-style25">&nbsp;</td>
+                <td class="auto-style23">&nbsp;</td>
                 <td class="auto-style23">&nbsp;</td>
             </tr>
             <tr>
@@ -68,9 +69,11 @@
                 <td class="auto-style15">
                     <asp:Label ID="Label15" runat="server" Font-Size="Large" Text=":"></asp:Label>
                 </td>
-                <td class="auto-style22">
-                    <asp:TextBox ID="tb_ID" runat="server" Enabled="False" Width="500px"></asp:TextBox>
+                <td class="auto-style25">
+                    <asp:TextBox ID="tb_ID" runat="server" Enabled="False" Width="400px"></asp:TextBox>
                 </td>
+                <td class="auto-style24">
+                    &nbsp;</td>
                 <td class="auto-style24">
                     <asp:Button ID="btn_Edit" runat="server" Font-Size="Medium" Height="40px" OnClick="btn_Edit_Click" Text="Edit" Width="80px" />
                 </td>
@@ -83,8 +86,11 @@
                 <td class="auto-style15">
                     <asp:Label ID="Label8" runat="server" Font-Size="Large" Text=":"></asp:Label>
                 </td>
-                <td class="auto-style22">
-                    <asp:TextBox ID="tb_Name" runat="server" Enabled="False" Width="500px"></asp:TextBox>
+                <td class="auto-style25">
+                    <asp:TextBox ID="tb_Name" runat="server" Enabled="False" Width="400px"></asp:TextBox>
+                </td>
+                <td class="auto-style24">
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="tb_Name" ErrorMessage="This Field is required."></asp:RequiredFieldValidator>
                 </td>
                 <td class="auto-style24">&nbsp;</td>
             </tr>
@@ -97,7 +103,11 @@
                     <asp:Label ID="Label9" runat="server" Font-Size="Large" Text=":"></asp:Label>
                 </td>
                 <td class="auto-style20">
-                    <asp:TextBox ID="tb_NRIC" runat="server" Width="500px" Enabled="False"></asp:TextBox>
+                    <asp:TextBox ID="tb_NRIC" runat="server" Width="400px" Enabled="False"></asp:TextBox>
+                </td>
+                <td class="auto-style5">
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="tb_NRIC" Display="Dynamic" ErrorMessage="This Field is required."></asp:RequiredFieldValidator>
+                    <asp:CompareValidator ID="CompareValidator2" runat="server" ControlToValidate="tb_NRIC" Display="Dynamic" ErrorMessage="Only Number" Operator="DataTypeCheck" Type="Integer"></asp:CompareValidator>
                 </td>
                 <td class="auto-style5">
                     <asp:Button ID="btn_Save" runat="server" Font-Size="Medium" Height="40px" OnClick="btn_Save_Click" Text="Update" Width="80px" />
@@ -111,11 +121,14 @@
                 <td class="auto-style15">
                     <asp:Label ID="Label10" runat="server" Font-Size="Large" Text=":"></asp:Label>
                 </td>
-                <td class="auto-style22">
-                    <asp:TextBox ID="tb_Email" runat="server" Width="500px" Enabled="False"></asp:TextBox>
+                <td class="auto-style25">
+                    <asp:TextBox ID="tb_Email" runat="server" Width="400px" Enabled="False"></asp:TextBox>
                 </td>
                 <td class="auto-style24">
-                    &nbsp;</td>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="tb_Email" Display="Dynamic" ErrorMessage="This Field is required."></asp:RequiredFieldValidator>
+                    <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="tb_Email" Display="Dynamic" ErrorMessage="Format Not Correct." ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"></asp:RegularExpressionValidator>
+                </td>
+                <td class="auto-style24">&nbsp;</td>
             </tr>
             <tr>
                 <td class="auto-style21">&nbsp;</td>
@@ -125,8 +138,12 @@
                 <td class="auto-style15">
                     <asp:Label ID="Label11" runat="server" Font-Size="Large" Text=":"></asp:Label>
                 </td>
-                <td class="auto-style22">
-                    <asp:TextBox ID="tb_PhoneNo" runat="server" Enabled="False" Width="500px"></asp:TextBox>
+                <td class="auto-style25">
+                    <asp:TextBox ID="tb_PhoneNo" runat="server" Enabled="False" Width="400px"></asp:TextBox>
+                </td>
+                <td class="auto-style23">
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ControlToValidate="tb_PhoneNo" Display="Dynamic" ErrorMessage="This Field is required."></asp:RequiredFieldValidator>
+                    <asp:CompareValidator ID="CompareValidator1" runat="server" ControlToValidate="tb_PhoneNo" Display="Dynamic" ErrorMessage="Only Number" Operator="DataTypeCheck" Type="Integer"></asp:CompareValidator>
                 </td>
                 <td class="auto-style23">&nbsp;</td>
             </tr>
@@ -138,8 +155,11 @@
                 <td class="auto-style15">
                     <asp:Label ID="Label12" runat="server" Font-Size="Large" Text=":"></asp:Label>
                 </td>
-                <td class="auto-style22">
-                    <asp:TextBox ID="tb_Gender" runat="server" Width="500px" Enabled="False"></asp:TextBox>
+                <td class="auto-style25">
+                    <asp:TextBox ID="tb_Gender" runat="server" Width="400px" Enabled="False"></asp:TextBox>
+                </td>
+                <td class="auto-style23">
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ControlToValidate="tb_Gender" ErrorMessage="This Field is required."></asp:RequiredFieldValidator>
                 </td>
                 <td class="auto-style23">&nbsp;</td>
             </tr>
@@ -151,8 +171,11 @@
                 <td class="auto-style15">
                     <asp:Label ID="Label13" runat="server" Font-Size="Large" Text=":"></asp:Label>
                 </td>
-                <td class="auto-style22">
-                    <asp:TextBox ID="tb_Username" runat="server" Width="500px" Enabled="False"></asp:TextBox>
+                <td class="auto-style25">
+                    <asp:TextBox ID="tb_Username" runat="server" Width="400px" Enabled="False"></asp:TextBox>
+                </td>
+                <td class="auto-style23">
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator7" runat="server" ControlToValidate="tb_Username" ErrorMessage="This Field is required."></asp:RequiredFieldValidator>
                 </td>
                 <td class="auto-style23">&nbsp;</td>
             </tr>
@@ -164,8 +187,11 @@
                 <td class="auto-style15">
                     <asp:Label ID="Label14" runat="server" Font-Size="Large" Text=":"></asp:Label>
                 </td>
-                <td class="auto-style22">
-                    <asp:TextBox ID="tb_Password" runat="server" Width="500px" Enabled="False"></asp:TextBox>
+                <td class="auto-style25">
+                    <asp:TextBox ID="tb_Password" runat="server" Width="400px" Enabled="False"></asp:TextBox>
+                </td>
+                <td class="auto-style23">
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator8" runat="server" ControlToValidate="tb_Password" ErrorMessage="This Field is required."></asp:RequiredFieldValidator>
                 </td>
                 <td class="auto-style23">&nbsp;</td>
             </tr>
@@ -173,14 +199,16 @@
                 <td class="auto-style21">&nbsp;</td>
                 <td class="auto-style17">&nbsp;</td>
                 <td class="auto-style15">&nbsp;</td>
-                <td class="auto-style22">&nbsp;</td>
+                <td class="auto-style25">&nbsp;</td>
+                <td class="auto-style23">&nbsp;</td>
                 <td class="auto-style23">&nbsp;</td>
             </tr>
             <tr>
                 <td class="auto-style21">&nbsp;</td>
                 <td class="auto-style17">&nbsp;</td>
                 <td class="auto-style15">&nbsp;</td>
-                <td class="auto-style22">&nbsp;</td>
+                <td class="auto-style25">&nbsp;</td>
+                <td class="auto-style23">&nbsp;</td>
                 <td class="auto-style23">&nbsp;</td>
             </tr>
         </table>
