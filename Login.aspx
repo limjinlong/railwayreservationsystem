@@ -7,20 +7,20 @@
         height: 270px;
     }
         .auto-style2 {
-            width: 530px;
+            width: 518px;
         }
         .auto-style3 {
-            width: 179px;
+            width: 193px;
         }
         .auto-style4 {
             width: 17px;
         }
         .auto-style5 {
-            width: 530px;
+            width: 518px;
             height: 49px;
         }
         .auto-style6 {
-            width: 179px;
+            width: 193px;
             height: 49px;
         }
         .auto-style7 {
@@ -31,11 +31,11 @@
             height: 49px;
         }
         .auto-style9 {
-        width: 530px;
-        height: 51px;
-    }
+            width: 518px;
+            height: 51px;
+        }
         .auto-style10 {
-            width: 179px;
+            width: 193px;
             height: 51px;
         }
         .auto-style11 {
@@ -49,11 +49,11 @@
         text-align: center;
     }
     .auto-style14 {
-        width: 530px;
+        width: 518px;
         height: 169px;
     }
     .auto-style15 {
-        width: 179px;
+        width: 193px;
         height: 169px;
     }
     .auto-style16 {
@@ -101,10 +101,14 @@
             <td class="auto-style3">
                 <asp:LinkButton ID="LinkButton1" runat="server" onclick="LinkButton1_Click">Forget Password??  
                             </asp:LinkButton>
+                <br />
+                <br />
+                <asp:LinkButton ID="LinkButton2" runat="server" onclick="LinkButton2_Click">Sign Up New Account
+                            </asp:LinkButton>
             </td>
             <td class="auto-style4">&nbsp;</td>
             <td>
-                &nbsp;<asp:Button ID="btn_login" runat="server" Text="Login" OnClick="btn_login_Click" />
+                &nbsp;&nbsp; <asp:Button ID="btn_login" runat="server" Text="Login" OnClick="btn_login_Click" />
             </td>
         </tr>
         <tr>

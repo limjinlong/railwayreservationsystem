@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="Booking_History.aspx.cs" Inherits="Booking_History" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Member_MasterPage.master" AutoEventWireup="true" CodeFile="Booking_History.aspx.cs" Inherits="Booking_History" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
     <style type="text/css">
@@ -29,24 +29,6 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
     <h1 class="auto-style1" style="font-size: 40px">Booking History</h1>
     <table class="auto-style2">
-        <tr>
-            <td class="auto-style14">&nbsp;</td>
-            <td>&nbsp;</td>
-            <td class="auto-style17">&nbsp;</td>
-            <td>&nbsp;</td>
-            <td class="auto-style14">&nbsp;</td>
-        </tr>
-        <tr>
-            <td class="auto-style14">&nbsp;</td>
-            <td>
-                &nbsp;</td>
-            <td class="auto-style17">&nbsp;</td>
-            <td>
-                &nbsp;</td>
-            <td class="auto-style14">
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            </td>
-        </tr>
         <tr>
             <td class="auto-style14">&nbsp;</td>
             <td>&nbsp;</td>

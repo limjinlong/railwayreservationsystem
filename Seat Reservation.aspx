@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="Seat Reservation.aspx.cs" Inherits="Seat_Reservation" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Member_MasterPage.master" AutoEventWireup="true" CodeFile="Seat Reservation.aspx.cs" Inherits="Seat_Reservation" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
     <style type="text/css">
@@ -93,13 +93,13 @@
             <td class="auto-style10">&nbsp;</td>
             <td>&nbsp;</td>
             <td colspan="3" rowspan="16">
-                <asp:Image ID="Image1" runat="server" ImageUrl="~/Seat Plan.JPG" />
+                <asp:Image ID="Image1" runat="server" ImageUrl="~/Image/Seat Plan.JPG" />
             </td>
             <td class="auto-style23"></td>
             <td class="auto-style11">Route ID</td>
             <td class="auto-style12">:</td>
             <td class="auto-style13">
-                <asp:DropDownList ID="ddl_routeid" runat="server" Height="22px" Width="145px">
+                <asp:DropDownList ID="ddl_routeid" runat="server" Height="22px" Width="145px" OnSelectedIndexChanged="ddl_routeid_SelectedIndexChanged">
                 </asp:DropDownList>
             </td>
             <td class="auto-style26">&nbsp;</td>

@@ -61,6 +61,9 @@
         .auto-style29 {
             width: 37px;
         }
+        .auto-style30 {
+            font-size: large;
+        }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
@@ -78,9 +81,9 @@
             <td class="auto-style17">Credit Cards </td>
             <td class="auto-style14">:</td>
             <td class="auto-style15" colspan="3">
-                <asp:CheckBox ID="cb_visa" runat="server" Text="Visa" />
+                <asp:RadioButton ID="rb_visa" runat="server" Checked="True" GroupName="1" Text="Visa" />
 &nbsp;
-                <asp:CheckBox ID="cb_master" runat="server" Text="Master" />
+                <asp:RadioButton ID="rb_master" runat="server" GroupName="1" Text="Master" />
             </td>
             <td class="auto-style12"></td>
         </tr>
@@ -89,7 +92,7 @@
             <td class="auto-style19">Name on Card</td>
             <td class="auto-style20">:</td>
             <td class="auto-style21" colspan="3">
-                <asp:TextBox ID="TextBox1" runat="server" Width="415px"></asp:TextBox>
+                <asp:TextBox ID="txt_name" runat="server" Width="415px"></asp:TextBox>
             </td>
             <td class="auto-style18"></td>
         </tr>
@@ -98,33 +101,44 @@
             <td class="auto-style19">Card Number</td>
             <td class="auto-style20">:</td>
             <td class="auto-style21" colspan="3">
-                <asp:TextBox ID="TextBox2" runat="server" Width="415px"></asp:TextBox>
+                <asp:TextBox ID="txt_card" runat="server" Width="415px"></asp:TextBox>
             </td>
-            <td class="auto-style18"></td>
+            <td class="auto-style18">
+                <asp:CompareValidator ID="CompareValidator1" runat="server" ControlToValidate="txt_card" ErrorMessage="Only Number." ForeColor="Red" Operator="DataTypeCheck" Type="Integer"></asp:CompareValidator>
+            </td>
         </tr>
         <tr>
             <td class="auto-style18"></td>
             <td class="auto-style19">Expiry Date</td>
             <td class="auto-style20">:</td>
             <td class="auto-style21" colspan="3">
-                <asp:TextBox ID="TextBox3" runat="server" Width="415px"></asp:TextBox>
+                <asp:TextBox ID="txt_date" runat="server" Width="192px"></asp:TextBox>
+            &nbsp;<span class="auto-style30">/</span>
+                <asp:TextBox ID="txt_date0" runat="server" Width="188px"></asp:TextBox>
             </td>
-            <td class="auto-style18"></td>
+            <td class="auto-style18">
+                <asp:CompareValidator ID="CompareValidator2" runat="server" ControlToValidate="txt_date" ErrorMessage="Only Number." ForeColor="Red" Operator="DataTypeCheck" Type="Integer"></asp:CompareValidator>
+                <asp:CompareValidator ID="CompareValidator4" runat="server" ControlToValidate="txt_date0" ErrorMessage="Only Number." ForeColor="Red" Operator="DataTypeCheck" Type="Integer"></asp:CompareValidator>
+            </td>
         </tr>
         <tr>
             <td class="auto-style18"></td>
             <td class="auto-style19">CVV</td>
             <td class="auto-style20">:</td>
             <td class="auto-style21" colspan="3">
-                <asp:TextBox ID="TextBox4" runat="server" Width="415px"></asp:TextBox>
+                <asp:TextBox ID="txt_cvv" runat="server" Width="415px"></asp:TextBox>
             </td>
-            <td class="auto-style18"></td>
+            <td class="auto-style18">
+                <asp:CompareValidator ID="CompareValidator3" runat="server" ControlToValidate="txt_cvv" ErrorMessage="Only Number." ForeColor="Red" Operator="DataTypeCheck" Type="Integer"></asp:CompareValidator>
+            </td>
         </tr>
         <tr>
             <td class="auto-style7">&nbsp;</td>
             <td class="auto-style5">&nbsp;</td>
             <td class="auto-style9">&nbsp;</td>
-            <td class="auto-style23" colspan="3">&nbsp;</td>
+            <td class="auto-style23" colspan="3">
+                <asp:Label ID="lbl_required" runat="server" ForeColor="Red" Text="Label"></asp:Label>
+            </td>
             <td class="auto-style7">&nbsp;</td>
         </tr>
         <tr>
@@ -133,7 +147,7 @@
             <td class="auto-style9">&nbsp;</td>
             <td class="auto-style28">&nbsp;</td>
             <td>
-                <asp:Button ID="Button1" runat="server" Text="Proceed" Width="99px" />
+                <asp:Button ID="Button1" runat="server" Text="Proceed" Width="99px" OnClick="Button1_Click" />
             </td>
             <td class="auto-style29">&nbsp;</td>
             <td class="auto-style7">&nbsp;</td>
