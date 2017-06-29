@@ -33,13 +33,13 @@
                         <a href="Home_Member.aspx">Home</a>
                     </li>
                     <li>
-                        <a href="About_Us.aspx">About Us</a>
+                        <a href="About_Us_Member.aspx">About Us</a>
                     </li>
                     <li>
                         <a href="Seat Reservation.aspx">Reservation</a>
                     </li>
                     <li>
-                        <a href="Contact_Us.aspx">Contact Us</a>
+                        <a href="Contact_Us_Member.aspx">Contact Us</a>
                     </li>
                                         <li>
                         <a href="Member_Profile.aspx">My Profile</a>

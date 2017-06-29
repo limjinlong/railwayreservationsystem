@@ -13,12 +13,7 @@ public partial class Admin_Page_Booking_Management : System.Web.UI.Page
         lbl_requiredsearch.Visible = false;
     }
 
-    protected void GridView1_RowUpdated(object sender, GridViewUpdatedEventArgs e)
-    {
-        lbl_feedback.Text = "BOOKING HAS BEEN UPDATED SUCCESSFULLY";
-        lbl_feedback.Visible = true;
-        GridView1.DataBind();
-    }
+ 
 
     protected void GridView1_RowDeleted(object sender, GridViewDeletedEventArgs e)
     {
@@ -27,13 +22,7 @@ public partial class Admin_Page_Booking_Management : System.Web.UI.Page
         GridView1.DataBind();
     }
 
-    protected void GridView2_RowUpdated(object sender, GridViewUpdatedEventArgs e)
-    {
-        lbl_feedback.Text = "BOOKING HAS BEEN UPDATED SUCCESSFULLY";
-        lbl_feedback.Visible = true;
-        GridView2.DataBind();
 
-    }
 
     protected void GridView2_RowDeleted(object sender, GridViewDeletedEventArgs e)
     {
