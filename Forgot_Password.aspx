@@ -45,6 +45,7 @@ width: 155px;
             <td class="style2">EmailID: </td>
             <td>
                 <asp:TextBox ID="txt_email" runat="server"></asp:TextBox>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txt_email" ErrorMessage="Required!" ForeColor="Red"></asp:RequiredFieldValidator>
             </td>
             <td></td>
         </tr>
