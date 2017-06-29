@@ -41,7 +41,9 @@
         <tr>
             <td class="auto-style14">&nbsp;</td>
             <td class="auto-style4" colspan="3">&nbsp;</td>
-            <td class="auto-style14">&nbsp;</td>
+            <td class="auto-style14">
+                <asp:Label ID="lbl_id" runat="server"></asp:Label>
+            </td>
         </tr>
         <tr>
             <td class="auto-style14">&nbsp;</td>
@@ -77,7 +79,11 @@
         <tr>
             <td class="auto-style14">&nbsp;</td>
             <td class="auto-style4" colspan="3">
-                <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [Member_ID], [Member_Name], [Booking_ID], [Origin], [Destination], [Date], [Time] FROM [Bookings]"></asp:SqlDataSource>
+                <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [Member_ID], [Member_Name], [Booking_ID], [Origin], [Destination], [Date], [Time] FROM [Bookings] WHERE ([Booking_ID] = @Booking_ID)">
+                    <SelectParameters>
+                        <asp:ControlParameter ControlID="lbl_id" Name="Booking_ID" PropertyName="Text" Type="Int32" />
+                    </SelectParameters>
+                </asp:SqlDataSource>
                 <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" DeleteCommand="DELETE FROM [Bookings] WHERE [Booking_ID] = @Booking_ID" InsertCommand="INSERT INTO [Bookings] ([Booking_ID], [Seat_ID], [Train_ID], [Train_Name], [Route_ID], [Origin], [Destination], [Date], [Time], [Price], [Member_ID], [Member_Name], [Member_NRIC]) VALUES (@Booking_ID, @Seat_ID, @Train_ID, @Train_Name, @Route_ID, @Origin, @Destination, @Date, @Time, @Price, @Member_ID, @Member_Name, @Member_NRIC)" SelectCommand="SELECT * FROM [Bookings] WHERE ([Booking_ID] = @Booking_ID)" UpdateCommand="UPDATE [Bookings] SET [Seat_ID] = @Seat_ID, [Train_ID] = @Train_ID, [Train_Name] = @Train_Name, [Route_ID] = @Route_ID, [Origin] = @Origin, [Destination] = @Destination, [Date] = @Date, [Time] = @Time, [Price] = @Price, [Member_ID] = @Member_ID, [Member_Name] = @Member_Name, [Member_NRIC] = @Member_NRIC WHERE [Booking_ID] = @Booking_ID">
                     <DeleteParameters>
                         <asp:Parameter Name="Booking_ID" Type="Int32" />

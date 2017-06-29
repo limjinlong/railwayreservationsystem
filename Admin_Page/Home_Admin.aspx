@@ -67,8 +67,7 @@
         </tr>
         <tr>
             <td class="auto-style2" rowspan="6">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <asp:Image ID="image" runat="server" Height="200px" style="text-align: center" Width="150px" />
-            </td>
+                </td>
             <td class="auto-style7">Admin ID</td>
             <td class="auto-style8">:</td>
             <td class="auto-style9">
@@ -125,8 +124,7 @@
             </td>
         </tr>
         <tr>
-            <td class="auto-style10">&nbsp;<asp:FileUpload ID="FileUpload1" runat="server" Width="197px" />
-            </td>
+            <td class="auto-style10">&nbsp;</td>
             <td class="auto-style17">Address</td>
             <td class="auto-style18">:</td>
             <td class="auto-style19">
@@ -138,7 +136,6 @@
         <tr>
             <td class="auto-style2" rowspan="3">
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <asp:Button ID="btn_upload" runat="server" OnClick="btn_upload_Click" Text="Upload Image" Width="148px" />
                 <br />
                 <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [Admins]"></asp:SqlDataSource>
             </td>
