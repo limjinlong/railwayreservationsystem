@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Configuration;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
@@ -12,7 +13,16 @@ public partial class Seat_Reservation : System.Web.UI.Page
     SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
     protected void Page_Load(object sender, EventArgs e)
     {
+        if (!IsPostBack)
+        {
+            SqlDataAdapter da = new SqlDataAdapter("select * from Routes", con);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            ddl_routeid.DataSource = dt;
+            ddl_routeid.DataTextField = "Route_ID";
+            DataBind();
 
+        }
     }
 
 
@@ -41,4 +51,16 @@ public partial class Seat_Reservation : System.Web.UI.Page
         GridView1.DataBind();
     }
 
+
+    protected void ddl_routeid_SelectedIndexChanged(object sender, EventArgs e)
+    {
+        SqlDataAdapter da = new SqlDataAdapter("select * from Routes where Route_ID='" + ddl_routeid.Text + "'", con);
+        DataTable dt = new DataTable();
+        da.Fill(dt);
+        tb_origin.Text = dt.Rows[0][1].ToString();
+        tb_destination.Text = dt.Rows[0][2].ToString();
+        tb_date.Text = dt.Rows[0][3].ToString();
+        tb_time.Text = dt.Rows[0][4].ToString();
+        tb_price.Text = dt.Rows[0][6].ToString();
+    }
 }
