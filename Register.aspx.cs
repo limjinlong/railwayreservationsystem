@@ -73,4 +73,9 @@ true);
             Response.Write("Error:" + ex.ToString());
         }
     }
+
+    protected void btn_Back_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("Login.aspx");
+    }
 }
