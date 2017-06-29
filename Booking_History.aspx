@@ -36,24 +36,6 @@
             <td>&nbsp;</td>
             <td class="auto-style14">&nbsp;</td>
         </tr>
-        <tr>
-            <td class="auto-style14">&nbsp;</td>
-            <td>
-                &nbsp;</td>
-            <td class="auto-style17">&nbsp;</td>
-            <td>
-                &nbsp;</td>
-            <td class="auto-style14">
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            </td>
-        </tr>
-        <tr>
-            <td class="auto-style14">&nbsp;</td>
-            <td>&nbsp;</td>
-            <td class="auto-style17">&nbsp;</td>
-            <td>&nbsp;</td>
-            <td class="auto-style14">&nbsp;</td>
-        </tr>
     </table>
     <table cellspacing="1" class="auto-style2">
         <tr>
