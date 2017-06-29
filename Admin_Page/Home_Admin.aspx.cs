@@ -49,11 +49,6 @@ public partial class Home_Admin : System.Web.UI.Page
 
     protected void btn_save_Click(object sender, EventArgs e)
     {
-        //photo
-        Stream fs = FileUpload1.PostedFile.InputStream;
-        BinaryReader br = new BinaryReader(fs);
-        byte[] bytes = br.ReadBytes((Int32)fs.Length);
-
         con.Open();
         string query = "UPDATE Admins SET [Name] ='" + tb_adminname.Text + "', [NRIC] = '" + tb_nric.Text + "', [Email] = '" + tb_email.Text + "', [Phone_No] = '" + tb_phone.Text + "', [Address] = '" + tb_address.Text + "', [Gender] = '" + ddl_gender.SelectedItem.ToString() + "', [Username] = '" + tb_username.Text + "' where [ID] = '" + lbl_adminid.Text + "'";
 
@@ -62,20 +57,6 @@ public partial class Home_Admin : System.Web.UI.Page
         con.Close();
 
         ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "alert('Information Update Successfully! Please Re-Login Into The System');window.location ='../Login.aspx';", true);
-    }
-
-
-    protected void btn_upload_Click(object sender, EventArgs e)
-    {
-        Stream fs = FileUpload1.PostedFile.InputStream;
-        BinaryReader br = new BinaryReader(fs);
-        byte[] bytes = br.ReadBytes((Int32)fs.Length);
-
-        con.Open();
-        string query = "Update Admins set Photo ='" + bytes + "' where ID = '" + lbl_adminid.Text + "'";
-        SqlCommand cmd = new SqlCommand(query, con);
-        cmd.ExecuteNonQuery();
-        con.Close();
     }
 
     protected void btn_reset_Click(object sender, EventArgs e)

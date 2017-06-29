@@ -124,8 +124,7 @@
             <tr>
                 <td class="auto-style2" rowspan="6">&nbsp;</td>
                 <td class="auto-style2" rowspan="6">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <asp:Image ID="Image1" runat="server" Height="200px" style="text-align: center" Width="150px" />
-                </td>
+                    </td>
                 <td class="auto-style7">&nbsp;ID</td>
                 <td class="auto-style8">:</td>
                 <td class="auto-style9">
