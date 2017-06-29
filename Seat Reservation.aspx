@@ -256,7 +256,9 @@
             <td class="auto-style22">&nbsp;</td>
             <td class="auto-style2">&nbsp;</td>
             <td class="auto-style3">&nbsp;</td>
-            <td class="auto-style4">&nbsp;</td>
+            <td class="auto-style4">
+                <asp:Label ID="lbl_repeatseat" runat="server" ForeColor="Red" Text="This seat has already reserved. Please choose another seat." Visible="False"></asp:Label>
+            </td>
             <td class="auto-style25">&nbsp;</td>
             <td class="auto-style8">&nbsp;</td>
         </tr>
