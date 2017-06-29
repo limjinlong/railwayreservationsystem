@@ -142,6 +142,6 @@ public partial class Seat_Reservation_FD : System.Web.UI.Page
 
         con.Close();
 
-        Response.Redirect("Payment.aspx");
+        Response.Redirect("Payment_SD.aspx");
     }
 }
