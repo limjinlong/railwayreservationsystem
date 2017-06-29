@@ -16,19 +16,8 @@
         .auto-style7 {
             width: 180px;
         }
-        .auto-style9 {
-            width: 43px;
-        }
-        .auto-style10 {
-            height: 31px;
-            width: 50px;
-        }
         .auto-style12 {
             width: 180px;
-            height: 32px;
-        }
-        .auto-style13 {
-            width: 43px;
             height: 32px;
         }
         .auto-style14 {
@@ -91,6 +80,8 @@
                 <td class="auto-style21">:</td>
                 <td class="auto-style14">
                     <asp:TextBox ID="tb_routeid" runat="server" Width="300px"></asp:TextBox>
+                    &nbsp;&nbsp;
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="tb_routeid" ErrorMessage="*This Field Is Required" ForeColor="Red" ValidationGroup="1"></asp:RequiredFieldValidator>
                 </td>
             </tr>
             <tr>
@@ -99,6 +90,8 @@
                 <td class="auto-style22">:</td>
                 <td class="auto-style5">
                     <asp:TextBox ID="tb_origin" runat="server" Width="300px"></asp:TextBox>
+                    &nbsp;&nbsp;
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="tb_origin" ErrorMessage="*This Field Is Required" ForeColor="Red" ValidationGroup="1"></asp:RequiredFieldValidator>
                 </td>
             </tr>
             <tr>
@@ -107,6 +100,8 @@
                 <td class="auto-style21">:</td>
                 <td class="auto-style14">
                     <asp:TextBox ID="tb_destination" runat="server" Width="300px"></asp:TextBox>
+                    &nbsp;&nbsp;
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ControlToValidate="tb_destination" ErrorMessage="*This Field Is Required" ForeColor="Red" ValidationGroup="1"></asp:RequiredFieldValidator>
                 </td>
             </tr>
             <tr>
@@ -115,6 +110,8 @@
                 <td class="auto-style21">:</td>
                 <td class="auto-style14">                  
                     <asp:TextBox ID="tb_date" runat="server" TextMode="Date" Width="300px"></asp:TextBox>
+                    &nbsp;&nbsp;
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ControlToValidate="tb_date" ErrorMessage="*This Field Is Required" ForeColor="Red" ValidationGroup="1"></asp:RequiredFieldValidator>
                 </td>
             </tr>
             <tr>
@@ -123,6 +120,8 @@
                 <td class="auto-style23">:</td>
                 <td>
                     <asp:TextBox ID="tb_time" runat="server" Width="300px"></asp:TextBox>
+                    &nbsp;&nbsp;
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator7" runat="server" ControlToValidate="tb_time" ErrorMessage="*This Field Is Required" ForeColor="Red" ValidationGroup="1"></asp:RequiredFieldValidator>
                 </td>
             </tr>
             <tr>
@@ -141,6 +140,9 @@
                 <td class="auto-style14">
                     <asp:Label ID="Label1" runat="server" Text="RM"></asp:Label>
                     <asp:TextBox ID="tb_price" runat="server" Width="258px" CssClass="auto-style17"></asp:TextBox>
+                    &nbsp;&nbsp;
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator8" runat="server" ControlToValidate="tb_price" Display="Dynamic" ErrorMessage="*This Field Is Required" ForeColor="Red" ValidationGroup="1"></asp:RequiredFieldValidator>
+                    &nbsp;<asp:CompareValidator ID="CompareValidator1" runat="server" ControlToValidate="tb_price" Display="Dynamic" ErrorMessage="Please Enter Valid Value" ForeColor="Red" Type="Currency" ValidationGroup="1" Operator="DataTypeCheck"></asp:CompareValidator>
                 </td>
             </tr>
             <tr>
@@ -148,11 +150,13 @@
                 <td class="auto-style12">&nbsp;</td>
                 <td class="auto-style21">&nbsp;</td>
                 <td class="auto-style14">
-                    <asp:Button ID="btn_addroute" runat="server" Text="Add Route" Width="132px" OnClick="btn_addroute_Click" />
+                    <asp:Button ID="btn_addroute" runat="server" Text="Add Route" Width="132px" OnClick="btn_addroute_Click" ValidationGroup="1" />
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     <asp:Button ID="btn_clear" runat="server" Text="Clear" Width="132px" OnClick="btn_clear_Click" />
                     <br />
                     <asp:Label ID="lbl_feedback" runat="server" ForeColor="Lime" Text="[Feedback Msg]"></asp:Label>
+                    <br />
+                    <asp:ValidationSummary ID="ValidationSummary1" runat="server" />
                     <br />
                 </td>
             </tr>

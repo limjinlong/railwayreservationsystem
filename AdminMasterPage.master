@@ -4,7 +4,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>Railway Reservation System - Admin</title>
+    <title>EZTrain Railway Reservation System - Admin</title>
     <asp:ContentPlaceHolder id="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
@@ -15,8 +15,8 @@
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
-              
-                <a class="navbar-brand" href="#">Railway Reservation System - Admin</a>
+               
+                <a class="navbar-brand" href="#">EZTrain Railway Reservation System - Admin</a>
                
                  
                
@@ -35,8 +35,8 @@
 
                     <div class="col-md-3" style="width:200px">
 
-                        <div class="list-group">
-                           
+                        <div class="list-group" style="text-align:center">
+                           <a class="list-group-item"><img src="../Image/logo.png" style="height:50px;width:150px" alt=""/></a>
                             <a href="Home_Admin.aspx" class="list-group-item">Home</a>
                              <a href="Train_Management.aspx" class="list-group-item">Train Management</a>
                              <a href="Route_Management.aspx" class="list-group-item">Route Management</a>

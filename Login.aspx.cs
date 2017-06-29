@@ -30,7 +30,8 @@ public partial class Login_Register_Login : System.Web.UI.Page
             {
                 SqlCommand cmdUname = new SqlCommand("Select Username from Members where Username = '" + txt_uname.Text + "'", con);
                 string uname = cmdUname.ExecuteScalar().ToString().Replace(" ", "");
-                Response.Redirect("Home.aspx");
+                Session["member"] = uname;
+                Response.Redirect("Home_Member.aspx");
             }
             else
             {
@@ -77,7 +78,8 @@ public partial class Login_Register_Login : System.Web.UI.Page
             {
                 SqlCommand cmdUname2 = new SqlCommand("Select Username from FrontDesks where Username = '" + txt_uname.Text + "'", con2);
                 string uname = cmdUname2.ExecuteScalar().ToString().Replace(" ", "");
-                Response.Redirect("Home.aspx");
+                Session["frontdesk"] = uname;
+                Response.Redirect("Home_FD.aspx");
             }
             else
             {
