@@ -114,7 +114,7 @@
             <td class="auto-style19">Origin</td>
             <td class="auto-style20">:</td>
             <td class="auto-style21">
-                <asp:TextBox ID="tb_origin" runat="server" Width="145px"></asp:TextBox>
+                <asp:TextBox ID="tb_origin" runat="server" Width="145px" Enabled="False"></asp:TextBox>
             </td>
             <td class="auto-style27">&nbsp;</td>
             <td class="auto-style18">&nbsp;</td>
@@ -126,7 +126,7 @@
             <td class="auto-style11">Destination</td>
             <td class="auto-style12">:</td>
             <td class="auto-style13">
-                <asp:TextBox ID="tb_destination" runat="server" Width="145px"></asp:TextBox>
+                <asp:TextBox ID="tb_destination" runat="server" Width="145px" Enabled="False"></asp:TextBox>
             </td>
             <td class="auto-style26">&nbsp;</td>
             <td class="auto-style10">&nbsp;</td>
@@ -138,7 +138,7 @@
             <td class="auto-style11">Date</td>
             <td class="auto-style12">:</td>
             <td class="auto-style13">
-                <asp:TextBox ID="tb_date" runat="server" Width="145px"></asp:TextBox>
+                <asp:TextBox ID="tb_date" runat="server" Width="145px" Enabled="False"></asp:TextBox>
             </td>
             <td class="auto-style26">&nbsp;</td>
             <td class="auto-style10">&nbsp;</td>
@@ -150,7 +150,7 @@
             <td class="auto-style11">Time</td>
             <td class="auto-style12">:</td>
             <td class="auto-style13">
-                <asp:TextBox ID="tb_time" runat="server" Width="145px"></asp:TextBox>
+                <asp:TextBox ID="tb_time" runat="server" Width="145px" Enabled="False"></asp:TextBox>
             </td>
             <td class="auto-style26">&nbsp;</td>
             <td class="auto-style10">&nbsp;</td>
@@ -162,7 +162,7 @@
             <td class="auto-style11">Price</td>
             <td class="auto-style12">:</td>
             <td class="auto-style13">RM
-                <asp:TextBox ID="tb_price" runat="server" Width="119px"></asp:TextBox>
+                <asp:TextBox ID="tb_price" runat="server" Width="119px" Enabled="False"></asp:TextBox>
             </td>
             <td class="auto-style26">&nbsp;</td>
             <td class="auto-style10">&nbsp;</td>
