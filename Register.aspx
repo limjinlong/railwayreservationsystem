@@ -148,7 +148,9 @@
             <td class="auto-style3">&nbsp;</td>
             <td>
                 <asp:Button ID="btn_Submit" runat="server" Text="Submit" Width="110px" OnClick="btn_Submit_Click" />
-                <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [Members]"></asp:SqlDataSource>
+                &nbsp;
+                <asp:Button ID="btn_Back" runat="server" CausesValidation="False" OnClick="btn_Back_Click" Text="Back to Login" Width="110px" />
+&nbsp;<asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [Members]"></asp:SqlDataSource>
             </td>
         </tr>
     </table>

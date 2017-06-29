@@ -96,4 +96,9 @@ public partial class Login_Register_Login : System.Web.UI.Page
     {
         Response.Redirect("Forgot_Password.aspx");
     }
+
+    protected void LinkButton2_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("Register.aspx");
+    }
 }
