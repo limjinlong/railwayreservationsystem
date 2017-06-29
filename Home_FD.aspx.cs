@@ -9,6 +9,6 @@ public partial class Home_FD : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-
+        string uname = (string)(Session["frontdesk"]);
     }
 }

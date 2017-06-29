@@ -11,5 +11,7 @@ public partial class MasterPage : System.Web.UI.MasterPage
 
     protected void Page_Load(object sender, EventArgs e)
     {
+        string uname = (string)(Session["frontdesk"]);
+        Label1.Text = "Welcome, " + uname;
     }
 }
