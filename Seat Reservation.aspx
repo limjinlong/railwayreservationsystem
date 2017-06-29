@@ -267,7 +267,7 @@
             <td colspan="4">
                 <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" BackColor="#CCCCCC" BorderColor="#999999" BorderStyle="Solid" BorderWidth="3px" CellPadding="4" CellSpacing="2" DataKeyNames="Booking_ID" DataSourceID="SqlDataSource1" ForeColor="Black">
                     <Columns>
-                        <asp:BoundField DataField="Booking_ID" HeaderText="Booking_ID" ReadOnly="True" SortExpression="Booking_ID" />
+                        <asp:BoundField DataField="Booking_ID" HeaderText="Booking_ID" SortExpression="Booking_ID" InsertVisible="False" ReadOnly="True" />
                         <asp:BoundField DataField="Seat_ID" HeaderText="Seat_ID" SortExpression="Seat_ID" />
                         <asp:BoundField DataField="Origin" HeaderText="Origin" SortExpression="Origin" />
                         <asp:BoundField DataField="Destination" HeaderText="Destination" SortExpression="Destination" />
@@ -275,7 +275,7 @@
                         <asp:BoundField DataField="Time" HeaderText="Time" SortExpression="Time" />
                         <asp:TemplateField ShowHeader="False">
                             <ItemTemplate>
-                                <asp:LinkButton ID="LinkButton1" runat="server" CausesValidation="False" CommandName="Delete" ForeColor="Black" Text="Delete" OnClientClick="return confirm('Are you sure you want to delete?');"></asp:LinkButton>
+                                <asp:LinkButton ID="LinkButton1" runat="server" CausesValidation="False" CommandName="Delete" Text="Delete" OnClientClick="return confirm('Are you sure you want to delete?');"></asp:LinkButton>
                             </ItemTemplate>
                         </asp:TemplateField>
                     </Columns>
@@ -326,7 +326,9 @@
             <td class="auto-style8">&nbsp;</td>
             <td class="auto-style8">&nbsp;</td>
             <td class="auto-style22">&nbsp;</td>
-            <td class="auto-style2">&nbsp;</td>
+            <td class="auto-style2">
+                <asp:Label ID="Label2" runat="server"></asp:Label>
+            </td>
             <td class="auto-style3">&nbsp;</td>
             <td class="auto-style4">&nbsp;</td>
             <td class="auto-style25">
@@ -388,7 +390,7 @@
         </tr>
     </table>
     <br />
-    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" DeleteCommand="DELETE FROM [Bookings] WHERE [Booking_ID] = @Booking_ID" InsertCommand="INSERT INTO [Bookings] ([Seat_ID], [Booking_ID], [Origin], [Destination], [Date], [Time]) VALUES (@Seat_ID, @Booking_ID, @Origin, @Destination, @Date, @Time)" SelectCommand="SELECT [Seat_ID], [Booking_ID], [Origin], [Destination], [Date], [Time] FROM [Bookings]" UpdateCommand="UPDATE [Bookings] SET [Seat_ID] = @Seat_ID, [Origin] = @Origin, [Destination] = @Destination, [Date] = @Date, [Time] = @Time WHERE [Booking_ID] = @Booking_ID">
+    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" DeleteCommand="DELETE FROM [Bookings] WHERE [Booking_ID] = @Booking_ID" InsertCommand="INSERT INTO [Bookings] ([Seat_ID], [Booking_ID], [Origin], [Destination], [Date], [Time]) VALUES (@Seat_ID, @Booking_ID, @Origin, @Destination, @Date, @Time)" SelectCommand="SELECT [Seat_ID], [Booking_ID], [Origin], [Destination], [Date], [Time] FROM [DummyBookings]" UpdateCommand="UPDATE [Bookings] SET [Seat_ID] = @Seat_ID, [Origin] = @Origin, [Destination] = @Destination, [Date] = @Date, [Time] = @Time WHERE [Booking_ID] = @Booking_ID">
         <DeleteParameters>
             <asp:Parameter Name="Booking_ID" Type="Int32" />
         </DeleteParameters>
