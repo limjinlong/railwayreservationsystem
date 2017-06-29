@@ -62,10 +62,11 @@
             <td class="auto-style12">Enter Current Password</td>
             <td class="auto-style13">:</td>
             <td class="auto-style14">
-                <asp:TextBox ID="tb_currentpassword" runat="server" Width="224px"></asp:TextBox>
+                <asp:TextBox ID="tb_currentpassword" runat="server" Width="224px" TextMode="Password"></asp:TextBox>
             </td>
             <td class="auto-style15">
                 <asp:Label ID="lbl_warning1" runat="server" ForeColor="Red" Text="Invalid Password"></asp:Label>
+            &nbsp;<asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="tb_currentpassword" ErrorMessage="*This Field Is Required" ForeColor="Red" ValidationGroup="1"></asp:RequiredFieldValidator>
             </td>
         </tr>
         <tr>
@@ -73,16 +74,18 @@
             <td class="auto-style12">Enter New Password</td>
             <td class="auto-style13">:</td>
             <td class="auto-style14">
-                <asp:TextBox ID="tb_newpassword" runat="server" Width="224px"></asp:TextBox>
+                <asp:TextBox ID="tb_newpassword" runat="server" Width="224px" TextMode="Password"></asp:TextBox>
             </td>
-            <td class="auto-style15"></td>
+            <td class="auto-style15">
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="tb_newpassword" ErrorMessage="*This Field Is Required" ForeColor="Red" ValidationGroup="1"></asp:RequiredFieldValidator>
+            </td>
         </tr>
         <tr>
             <td class="auto-style11"></td>
             <td class="auto-style12">Retype Password</td>
             <td class="auto-style13">:</td>
             <td class="auto-style14">
-                <asp:TextBox ID="tb_retypepassword" runat="server" Width="224px"></asp:TextBox>
+                <asp:TextBox ID="tb_retypepassword" runat="server" Width="224px" TextMode="Password"></asp:TextBox>
             </td>
             <td class="auto-style15">
                 <asp:Label ID="lbl_warning2" runat="server" ForeColor="Red" Text="Password Not Match With Your New Password"></asp:Label>
@@ -96,7 +99,7 @@
             <td class="auto-style7"></td>
             <td class="auto-style10">
                 <br />
-                <asp:Button ID="btn_confirm" runat="server" OnClick="btn_confirm_Click" Text="Confirm" />
+                <asp:Button ID="btn_confirm" runat="server" OnClick="btn_confirm_Click" Text="Confirm" ValidationGroup="1" />
             </td>
             <td></td>
         </tr>

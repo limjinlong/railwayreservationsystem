@@ -101,6 +101,8 @@
                 <td class="auto-style29">:</td>
                 <td class="auto-style30">
                     <asp:TextBox ID="tb_trainid" runat="server" Width="300px"></asp:TextBox>
+                    &nbsp;&nbsp;
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="tb_trainid" ErrorMessage="*This Field Is Required" ForeColor="Red" ValidationGroup="1"></asp:RequiredFieldValidator>
                 </td>
             </tr>
             <tr>
@@ -109,6 +111,8 @@
                 <td class="auto-style17">:</td>
                 <td class="auto-style18">
                     <asp:TextBox ID="tb_trainname" runat="server" Width="300px"></asp:TextBox>
+                    &nbsp;&nbsp;
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="tb_trainname" ErrorMessage="*This Field Is Required" ForeColor="Red" ValidationGroup="1"></asp:RequiredFieldValidator>
                 </td>
             </tr>
             <tr>
@@ -117,6 +121,9 @@
                 <td class="auto-style9">:</td>
                 <td>
                     <asp:TextBox ID="tb_traincapacity" runat="server" TextMode="Number" Width="300px"></asp:TextBox>
+                    &nbsp;&nbsp;
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="tb_traincapacity" Display="Dynamic" ErrorMessage="*This Field Is Required" ForeColor="Red" ValidationGroup="1"></asp:RequiredFieldValidator>
+                    &nbsp;<asp:CompareValidator ID="CompareValidator1" runat="server" ControlToValidate="tb_traincapacity" Display="Dynamic" ErrorMessage="Enter Number Only" ForeColor="Red" Type="Integer" ValidationGroup="1" Operator="DataTypeCheck"></asp:CompareValidator>
                 </td>
             </tr>
             <tr>
@@ -124,7 +131,7 @@
                 <td class="auto-style12"></td>
                 <td class="auto-style13"></td>
                 <td class="auto-style14">
-                    <asp:Button ID="btn_addtrain" runat="server" Text="Add Train" Width="132px" OnClick="btn_addtrain_Click" />
+                    <asp:Button ID="btn_addtrain" runat="server" Text="Add Train" Width="132px" OnClick="btn_addtrain_Click" ValidationGroup="1" />
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     <asp:Button ID="btn_clear" runat="server" Text="Clear" Width="132px" OnClick="btn_clear_Click" />
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -152,6 +159,7 @@
                             <asp:Parameter Name="Train_ID" Type="String" />
                         </UpdateParameters>
                     </asp:SqlDataSource>
+                    <asp:ValidationSummary ID="ValidationSummary1" runat="server" />
                 </td>
             </tr>
             <tr>
