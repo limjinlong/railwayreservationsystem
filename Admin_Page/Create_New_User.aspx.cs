@@ -62,11 +62,11 @@ public partial class Admin_Page_Create_New_User : System.Web.UI.Page
                         string query1 = null;
                         if (rb_admin.Checked == true)
                         {
-                            query1 = "insert into Admins (ID, Name, NRIC, Email, Phone_No, Address, Photo, Gender, Username, Password) values (@id,@name,@nric,@email,@phone,@address,@photo,@gender,@username,@password)";
+                            query1 = "insert into Admins (ID, Name, NRIC, Email, Phone_No, Address, Gender, Username, Password) values (@id,@name,@nric,@email,@phone,@address,@gender,@username,@password)";
                         }
                         else if (rb_frontdesk.Checked == true)
                         {
-                            query1 = "insert into FrontDesks (ID, Name, NRIC, Email, Phone_No, Address, Photo, Gender, Username, Password) values (@id,@name,@nric,@email,@phone,@address,@photo,@gender,@username,@password)";
+                            query1 = "insert into FrontDesks (ID, Name, NRIC, Email, Phone_No, Address, Gender, Username, Password) values (@id,@name,@nric,@email,@phone,@address,@gender,@username,@password)";
                         }
 
                         SqlCommand cmd1 = new SqlCommand(query1, con);
@@ -76,12 +76,6 @@ public partial class Admin_Page_Create_New_User : System.Web.UI.Page
                         cmd1.Parameters.AddWithValue("@email", tb_email.Text);
                         cmd1.Parameters.AddWithValue("@phone", tb_phone.Text);
                         cmd1.Parameters.AddWithValue("@address", tb_address.Text);
-
-                        Stream fs = FileUpload1.PostedFile.InputStream;
-                        BinaryReader br = new BinaryReader(fs);
-                        byte[] bytes = br.ReadBytes((Int32)fs.Length);
-
-                        cmd1.Parameters.AddWithValue("@photo", bytes);
                         if (rb_male.Checked == true)
                         {
                             cmd1.Parameters.AddWithValue("@gender", "Male");
