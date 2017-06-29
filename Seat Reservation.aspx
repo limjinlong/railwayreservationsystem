@@ -99,10 +99,12 @@
             <td class="auto-style11">Route ID</td>
             <td class="auto-style12">:</td>
             <td class="auto-style13">
-                <asp:DropDownList ID="ddl_routeid" runat="server" Height="22px" Width="145px" OnSelectedIndexChanged="ddl_routeid_SelectedIndexChanged">
+                <asp:DropDownList ID="ddl_routeid" runat="server" Height="22px" Width="145px">
                 </asp:DropDownList>
             </td>
-            <td class="auto-style26">&nbsp;</td>
+            <td class="auto-style26">
+                <asp:Button ID="btn_show" runat="server" OnClick="btn_show_Click" Text="Show" />
+            </td>
             <td class="auto-style10">&nbsp;</td>
         </tr>
         <tr>
@@ -112,7 +114,7 @@
             <td class="auto-style19">Origin</td>
             <td class="auto-style20">:</td>
             <td class="auto-style21">
-                <asp:TextBox ID="tb_origin" runat="server" Width="145px"></asp:TextBox>
+                <asp:TextBox ID="tb_origin" runat="server" Width="145px" Enabled="False"></asp:TextBox>
             </td>
             <td class="auto-style27">&nbsp;</td>
             <td class="auto-style18">&nbsp;</td>
@@ -124,7 +126,7 @@
             <td class="auto-style11">Destination</td>
             <td class="auto-style12">:</td>
             <td class="auto-style13">
-                <asp:TextBox ID="tb_destination" runat="server" Width="145px"></asp:TextBox>
+                <asp:TextBox ID="tb_destination" runat="server" Width="145px" Enabled="False"></asp:TextBox>
             </td>
             <td class="auto-style26">&nbsp;</td>
             <td class="auto-style10">&nbsp;</td>
@@ -136,7 +138,7 @@
             <td class="auto-style11">Date</td>
             <td class="auto-style12">:</td>
             <td class="auto-style13">
-                <asp:TextBox ID="tb_date" runat="server" Width="145px"></asp:TextBox>
+                <asp:TextBox ID="tb_date" runat="server" Width="145px" Enabled="False"></asp:TextBox>
             </td>
             <td class="auto-style26">&nbsp;</td>
             <td class="auto-style10">&nbsp;</td>
@@ -148,7 +150,7 @@
             <td class="auto-style11">Time</td>
             <td class="auto-style12">:</td>
             <td class="auto-style13">
-                <asp:TextBox ID="tb_time" runat="server" Width="145px"></asp:TextBox>
+                <asp:TextBox ID="tb_time" runat="server" Width="145px" Enabled="False"></asp:TextBox>
             </td>
             <td class="auto-style26">&nbsp;</td>
             <td class="auto-style10">&nbsp;</td>
@@ -160,7 +162,7 @@
             <td class="auto-style11">Price</td>
             <td class="auto-style12">:</td>
             <td class="auto-style13">RM
-                <asp:TextBox ID="tb_price" runat="server" Width="119px"></asp:TextBox>
+                <asp:TextBox ID="tb_price" runat="server" Width="119px" Enabled="False"></asp:TextBox>
             </td>
             <td class="auto-style26">&nbsp;</td>
             <td class="auto-style10">&nbsp;</td>
@@ -254,7 +256,9 @@
             <td class="auto-style22">&nbsp;</td>
             <td class="auto-style2">&nbsp;</td>
             <td class="auto-style3">&nbsp;</td>
-            <td class="auto-style4">&nbsp;</td>
+            <td class="auto-style4">
+                <asp:Label ID="lbl_repeatseat" runat="server" ForeColor="Red" Text="This seat has already reserved. Please choose another seat." Visible="False"></asp:Label>
+            </td>
             <td class="auto-style25">&nbsp;</td>
             <td class="auto-style8">&nbsp;</td>
         </tr>
@@ -265,7 +269,7 @@
             <td colspan="4">
                 <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" BackColor="#CCCCCC" BorderColor="#999999" BorderStyle="Solid" BorderWidth="3px" CellPadding="4" CellSpacing="2" DataKeyNames="Booking_ID" DataSourceID="SqlDataSource1" ForeColor="Black">
                     <Columns>
-                        <asp:BoundField DataField="Booking_ID" HeaderText="Booking_ID" ReadOnly="True" SortExpression="Booking_ID" />
+                        <asp:BoundField DataField="Booking_ID" HeaderText="Booking_ID" SortExpression="Booking_ID" InsertVisible="False" ReadOnly="True" />
                         <asp:BoundField DataField="Seat_ID" HeaderText="Seat_ID" SortExpression="Seat_ID" />
                         <asp:BoundField DataField="Origin" HeaderText="Origin" SortExpression="Origin" />
                         <asp:BoundField DataField="Destination" HeaderText="Destination" SortExpression="Destination" />
@@ -273,7 +277,7 @@
                         <asp:BoundField DataField="Time" HeaderText="Time" SortExpression="Time" />
                         <asp:TemplateField ShowHeader="False">
                             <ItemTemplate>
-                                <asp:LinkButton ID="LinkButton1" runat="server" CausesValidation="False" CommandName="Delete" ForeColor="Black" Text="Delete" OnClientClick="return confirm('Are you sure you want to delete?');"></asp:LinkButton>
+                                <asp:LinkButton ID="LinkButton1" runat="server" CausesValidation="False" CommandName="Delete" Text="Delete" OnClientClick="return confirm('Are you sure you want to delete?');"></asp:LinkButton>
                             </ItemTemplate>
                         </asp:TemplateField>
                     </Columns>
@@ -324,10 +328,14 @@
             <td class="auto-style8">&nbsp;</td>
             <td class="auto-style8">&nbsp;</td>
             <td class="auto-style22">&nbsp;</td>
-            <td class="auto-style2">&nbsp;</td>
+            <td class="auto-style2">
+                <asp:Label ID="Label2" runat="server"></asp:Label>
+            </td>
             <td class="auto-style3">&nbsp;</td>
             <td class="auto-style4">&nbsp;</td>
-            <td class="auto-style25">&nbsp;</td>
+            <td class="auto-style25">
+                <asp:Button ID="btn_confirm" runat="server" OnClick="btn_confirm_Click" Text="Confirm" />
+            </td>
             <td class="auto-style8">&nbsp;</td>
         </tr>
         <tr>
@@ -384,7 +392,7 @@
         </tr>
     </table>
     <br />
-    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" DeleteCommand="DELETE FROM [Bookings] WHERE [Booking_ID] = @Booking_ID" InsertCommand="INSERT INTO [Bookings] ([Seat_ID], [Booking_ID], [Origin], [Destination], [Date], [Time]) VALUES (@Seat_ID, @Booking_ID, @Origin, @Destination, @Date, @Time)" SelectCommand="SELECT [Seat_ID], [Booking_ID], [Origin], [Destination], [Date], [Time] FROM [Bookings]" UpdateCommand="UPDATE [Bookings] SET [Seat_ID] = @Seat_ID, [Origin] = @Origin, [Destination] = @Destination, [Date] = @Date, [Time] = @Time WHERE [Booking_ID] = @Booking_ID">
+    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" DeleteCommand="DELETE FROM [Bookings] WHERE [Booking_ID] = @Booking_ID" InsertCommand="INSERT INTO [Bookings] ([Seat_ID], [Booking_ID], [Origin], [Destination], [Date], [Time]) VALUES (@Seat_ID, @Booking_ID, @Origin, @Destination, @Date, @Time)" SelectCommand="SELECT [Seat_ID], [Booking_ID], [Origin], [Destination], [Date], [Time] FROM [DummyBookings]" UpdateCommand="UPDATE [Bookings] SET [Seat_ID] = @Seat_ID, [Origin] = @Origin, [Destination] = @Destination, [Date] = @Date, [Time] = @Time WHERE [Booking_ID] = @Booking_ID">
         <DeleteParameters>
             <asp:Parameter Name="Booking_ID" Type="Int32" />
         </DeleteParameters>

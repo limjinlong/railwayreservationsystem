@@ -44,15 +44,17 @@ width: 155px;
             <td class="style1"></td>
             <td class="style2">EmailID: </td>
             <td>
-                <asp:TextBox ID="TextBox1" runat="server">  
-                            </asp:TextBox>
+                <asp:TextBox ID="txt_email" runat="server"></asp:TextBox>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txt_email" ErrorMessage="Required!" ForeColor="Red"></asp:RequiredFieldValidator>
             </td>
             <td></td>
         </tr>
         <tr>
             <td class="style1"></td>
             <td class="style2"></td>
-            <td></td>
+            <td>
+                <asp:Label ID="Label1" runat="server"></asp:Label>
+            </td>
             <td></td>
         </tr>
         <tr>

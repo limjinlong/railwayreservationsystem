@@ -14,6 +14,6 @@ public partial class Payment_Successful : System.Web.UI.Page
 
     protected void btn_ok_Click(object sender, EventArgs e)
     {
-        Response.Redirect("Home_Member.aspx");
+        Response.Redirect("Home.aspx");
     }
 }

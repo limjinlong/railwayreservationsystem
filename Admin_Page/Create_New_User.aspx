@@ -77,8 +77,7 @@
                 </tr>
                 <tr>
                     <td class="auto-style2" rowspan="7">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <asp:Image ID="Image1" runat="server" Height="200px" style="text-align: center" Width="150px" />
-                    </td>
+                        </td>
                     <td class="auto-style26">Role</td>
                     <td class="auto-style27">:</td>
                     <td class="auto-style23">
@@ -152,8 +151,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <td class="auto-style10">&nbsp;<asp:FileUpload ID="FileUpload1" runat="server" Width="197px" />
-                    </td>
+                    <td class="auto-style10">&nbsp;</td>
                     <td class="auto-style26">Address</td>
                     <td class="auto-style29">:</td>
                     <td class="auto-style25">

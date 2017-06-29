@@ -53,7 +53,8 @@ public partial class Member_Profile : System.Web.UI.Page
     private void LoadData()
     {
         con.Open();
-        SqlDataAdapter da = new SqlDataAdapter("select * from Members", con);
+        string uname = (string)(Session["member"]);
+        SqlDataAdapter da = new SqlDataAdapter("select * from Members where Username='" + uname + "'", con);
         DataTable dt = new DataTable();
         da.Fill(dt);
 
