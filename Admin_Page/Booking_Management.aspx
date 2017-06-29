@@ -61,7 +61,7 @@
                     <br />
                     <div class="auto-style12" style="overflow-x: auto;">
                         <asp:Panel ID="Panel2" runat="server">
-                            <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AutoGenerateColumns="False" BackColor="#CCCCCC" BorderColor="#999999" BorderStyle="Solid" BorderWidth="3px" CellPadding="4" CellSpacing="2" CssClass="auto-style13" DataKeyNames="Booking_ID" DataSourceID="SqlDataSource1" ForeColor="Black" Height="16px" OnRowDataBound="GridView1_RowDataBound" OnRowDeleted="GridView1_RowDeleted" OnRowUpdated="GridView1_RowUpdated" Width="1149px">
+                            <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AutoGenerateColumns="False" BackColor="#CCCCCC" BorderColor="#999999" BorderStyle="Solid" BorderWidth="3px" CellPadding="4" CellSpacing="2" CssClass="auto-style13" DataKeyNames="Booking_ID" DataSourceID="SqlDataSource1" ForeColor="Black" Height="16px" OnRowDataBound="GridView1_RowDataBound" OnRowDeleted="GridView1_RowDeleted" Width="1149px">
                                 <Columns>
                                     <asp:BoundField DataField="Booking_ID" HeaderText="Booking_ID" ReadOnly="True" SortExpression="Booking_ID" />
                                     <asp:BoundField DataField="Seat_ID" HeaderText="Seat_ID" SortExpression="Seat_ID" />
@@ -97,7 +97,7 @@
                      </div>
                     <div class="auto-style12" style="overflow-x: auto;">
                     <asp:Panel ID="Panel3" runat="server">
-                        <asp:GridView ID="GridView2" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" BackColor="#CCCCCC" BorderColor="#999999" BorderStyle="Solid" BorderWidth="3px" CellPadding="4" CellSpacing="2" CssClass="auto-style13" DataKeyNames="Booking_ID" DataSourceID="SqlDataSource2" ForeColor="Black" Height="16px" OnRowDataBound="GridView1_RowDataBound" OnRowDeleted="GridView1_RowDeleted" OnRowUpdated="GridView1_RowUpdated" Width="1511px">
+                        <asp:GridView ID="GridView2" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" BackColor="#CCCCCC" BorderColor="#999999" BorderStyle="Solid" BorderWidth="3px" CellPadding="4" CellSpacing="2" CssClass="auto-style13" DataKeyNames="Booking_ID" DataSourceID="SqlDataSource2" ForeColor="Black" Height="16px" OnRowDataBound="GridView1_RowDataBound" OnRowDeleted="GridView1_RowDeleted" Width="1511px">
                             <Columns>
                                 <asp:BoundField DataField="Booking_ID" HeaderText="Booking_ID" ReadOnly="True" SortExpression="Booking_ID" />
                                 <asp:BoundField DataField="Seat_ID" HeaderText="Seat_ID" SortExpression="Seat_ID" />
