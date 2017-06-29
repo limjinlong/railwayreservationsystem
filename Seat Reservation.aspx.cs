@@ -36,7 +36,7 @@ public partial class Seat_Reservation : System.Web.UI.Page
         sql.Parameters.AddWithValue("@seatid", tb_date.Text);
         sql.Parameters.AddWithValue("@trainid", tb_date.Text);
         sql.Parameters.AddWithValue("@trainname", tb_date.Text);
-        sql.Parameters.AddWithValue("@routeid", tb_destination.Text /*ddl_routeid.SelectedItem.ToString()*/);
+        sql.Parameters.AddWithValue("@routeid", ddl_routeid.SelectedItem.ToString());
         sql.Parameters.AddWithValue("@origin", tb_origin.Text);
         sql.Parameters.AddWithValue("@destination", tb_destination.Text);
         sql.Parameters.AddWithValue("@date", tb_date.Text);
@@ -52,15 +52,23 @@ public partial class Seat_Reservation : System.Web.UI.Page
     }
 
 
-    protected void ddl_routeid_SelectedIndexChanged(object sender, EventArgs e)
+
+    protected void btn_show_Click(object sender, EventArgs e)
     {
-        SqlDataAdapter da = new SqlDataAdapter("select * from Routes where Route_ID='" + ddl_routeid.Text + "'", con);
-        DataTable dt = new DataTable();
-        da.Fill(dt);
-        tb_origin.Text = dt.Rows[0][1].ToString();
-        tb_destination.Text = dt.Rows[0][2].ToString();
-        tb_date.Text = dt.Rows[0][3].ToString();
-        tb_time.Text = dt.Rows[0][4].ToString();
-        tb_price.Text = dt.Rows[0][6].ToString();
+        SqlDataAdapter da1 = new SqlDataAdapter("select * from Routes where Route_ID='" + ddl_routeid.Text + "'", con);
+        DataTable dt1 = new DataTable();
+        da1.Fill(dt1);
+        tb_origin.Text = dt1.Rows[0][1].ToString();
+        tb_destination.Text = dt1.Rows[0][2].ToString();
+        tb_date.Text = dt1.Rows[0][3].ToString();
+        tb_time.Text = dt1.Rows[0][4].ToString();
+        tb_price.Text = dt1.Rows[0][6].ToString();
+    }
+
+
+
+    protected void btn_confirm_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("Payment.aspx");
     }
 }

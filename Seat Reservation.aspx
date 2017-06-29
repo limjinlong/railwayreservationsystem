@@ -99,10 +99,12 @@
             <td class="auto-style11">Route ID</td>
             <td class="auto-style12">:</td>
             <td class="auto-style13">
-                <asp:DropDownList ID="ddl_routeid" runat="server" Height="22px" Width="145px" OnSelectedIndexChanged="ddl_routeid_SelectedIndexChanged">
+                <asp:DropDownList ID="ddl_routeid" runat="server" Height="22px" Width="145px">
                 </asp:DropDownList>
             </td>
-            <td class="auto-style26">&nbsp;</td>
+            <td class="auto-style26">
+                <asp:Button ID="btn_show" runat="server" OnClick="btn_show_Click" Text="Show" />
+            </td>
             <td class="auto-style10">&nbsp;</td>
         </tr>
         <tr>
@@ -327,7 +329,9 @@
             <td class="auto-style2">&nbsp;</td>
             <td class="auto-style3">&nbsp;</td>
             <td class="auto-style4">&nbsp;</td>
-            <td class="auto-style25">&nbsp;</td>
+            <td class="auto-style25">
+                <asp:Button ID="btn_confirm" runat="server" OnClick="btn_confirm_Click" Text="Confirm" />
+            </td>
             <td class="auto-style8">&nbsp;</td>
         </tr>
         <tr>
