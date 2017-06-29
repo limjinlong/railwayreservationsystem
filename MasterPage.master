@@ -4,7 +4,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>Railway Reservation System</title>
+    <title>EZTrain Railway Reservation System</title>
             <asp:ContentPlaceHolder id="head" runat="server">
     </asp:ContentPlaceHolder>
   
@@ -22,7 +22,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">
+                <a class="navbar-brand" href="Home.aspx">
                     <img src="Image/logo.png" style="height:50px;width:150px" alt=""/>
                 </a>
             </div>
@@ -30,17 +30,22 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li>
-                        <a href="#">Home</a>
+                        <a href="Home.aspx">Home</a>
                     </li>
                     <li>
-                        <a href="#">About Us</a>
+                        <a href="About_Us.aspx">About Us</a>
                     </li>
                     <li>
-                        <a href="#">Reservation</a>
+                        <a href="Login.aspx">Reservation</a>
                     </li>
                     <li>
-                        <a href="#">Contact Us</a>
+                        <a href="Contact_Us.aspx">Contact Us</a>
                     </li>
+                    <li>
+                        <a href="Login.aspx">Login/SignUp</a>
+                    </li>
+                                        
+
                 </ul>
             </div>
             <!-- /.navbar-collapse -->

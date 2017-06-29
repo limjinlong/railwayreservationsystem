@@ -4,7 +4,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>Railway Reservation System</title>
+    <title>EZTrain Railway Reservation System</title>
             <asp:ContentPlaceHolder id="head" runat="server">
     </asp:ContentPlaceHolder>
   
@@ -22,37 +22,41 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">
-                    <img src="http://placehold.it/150x50&text=Logo" alt=""/>
+                <a class="navbar-brand" href="Home_FD.aspx">
+                   <img src="Image/logo.png" style="height:50px;width:150px" alt=""/>
                 </a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li>
-                        <a href="#">Home</a>
+                        <a href="Home_FD.aspx">Home</a>
                     </li>
-                    <li>
-                        <a href="#">About Us</a>
+                     <li>
+                        <a href="Seat_Reservation_FD.aspx">Reservation</a>
                     </li>
-                    <li>
-                        <a href="#">Reservation</a>
-                    </li>
-                    <li>
-                        <a href="#">Contact Us</a>
-                    </li>
-                                        <li>
-                        <a href="#">My Profile</a>
+                   
+                       <li>
+                        <a href="FD_Profile.aspx">My Profile</a>
                           </li>
                            <li>
-                        <a href="#">Booking Management</a>
+                        <a href="fd_Booking_Management.aspx">Booking Management</a>
                           </li>
+                    <li>
+                        <a href="Login.aspx"  onclick="return confirm('Are you sure you want to logout?');" >Logout</a>
+                                            
+                    </li>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
         </div>
         <!-- /.container -->
     </nav>
+            <div class="container" style="text-align:right">
+            
+                <asp:Label ID="Label1" runat="server" Text="Welcome"></asp:Label><br/><br/>
+                
+        </div>
             <div>
         <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
         
